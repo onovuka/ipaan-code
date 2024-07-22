@@ -16,19 +16,19 @@ export const cardData: cardProp[] = [
     },
     {
         label: "Tests",
-        total: "100 000",
+        total: "17247741",
         icon: Pen,
         discription: "Total tests collected"
     },
     {
         label: "Upload",
-        total: "12Mps",
+        total: "15.58MBps",
         icon: Upload,
         discription: "Average upload speed"
     },
     {
         label: "Download",
-        total: "12Mps",
+        total: "25.83MBPs",
         icon: Download,
         discription: "Average download speed"
     },

@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import MultipleSelector, { Option } from '@/components/ui/multiple-selector';
 
 interface FilterListProps {
@@ -16,7 +16,13 @@ function FilterList({ initialOptions, onChange, selectionType, max }: FilterList
 
     const [tempSelectedOptions, setTempSelectedOptions] = useState<Option[]>([]);
     const [options, setOptions] = useState<Option[]>(initialOptions);
+
+      // Update options when initialOptions changes
+  useEffect(() => {
+    setOptions(initialOptions);
+  }, [initialOptions]);
   
+
 // Handle change event for temporary selection
 const handleTempChange = (selected: Option[]) => {
   if (selected.some(option => option.value === 'select all')) {

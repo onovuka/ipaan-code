@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 interface Requests {
   filters: {
@@ -17,6 +17,9 @@ interface QueryProps {
 }
 
 function Query({ request,api, onDataFetched }: QueryProps) {
+
+  console.log(JSON.stringify(request, null, 2));
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -29,7 +32,7 @@ function Query({ request,api, onDataFetched }: QueryProps) {
         });
 
         const data = await response.json();
-        onDataFetched(data); // Call the callback with the fetched data
+        onDataFetched(data);
       } catch (error) {
         console.error('Error:', error);
       }

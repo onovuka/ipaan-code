@@ -9,14 +9,15 @@ import { Button } from "../ui/button";
 
 // Data
 import {countrylist as countries} from "../../data/countrylist"
-import {citylist as cities} from "../../data/citylist"
+import filterData from "@/data/FilterData";
+
 
 // saved filters
 interface SelectedOptions {
   filters: {
-    countries: string[]; // Array of country codes
-    cities: string[]; // Array of city names
-    isps: string[]; // Array of ISP names (if needed)
+    countries: string[]; 
+    cities: string[]; 
+    isps: string[]; 
   };
   startDate: string;
   endDate: string;
@@ -29,39 +30,128 @@ interface FiltersProps {
 // component body
 function Filters ({onSave}: FiltersProps){
 
-  const [selectedOptions, setSelectedOptions] = useState<SelectedOptions>({
-    filters: {
-      countries: [],
-      cities: [],
-      isps: []
-    },
-    startDate: "",
-    endDate: ""
-  });
+  // changing the way we filter. -> save the value of country = country code
+  const [countryCode, setCountryCode] = useState<string>("");
+
+  // inital city options
+  const [cityOptions, setCities] = useState<FilterOptions[]>([])
+
+  // inital ISP options
+  const [ispOptions, setISP] = useState<FilterOptions[]>([])
 
 
-    const [selectedCountryOptions, setSelectedCountryOptions] = useState<FilterOptions[]>([]);
-    const [selectedCityOptions, setSelectedCityOptions] = useState<FilterOptions[]>([]);
+  const [selectedCountryOptions, setSelectedCountryOptions] = useState<FilterOptions[]>([]);
+  const [selectedCityOptions, setSelectedCityOptions] = useState<FilterOptions[]>([]);
+  const [selectedIspOptions, setSelectedIspOptions] = useState<FilterOptions[]>([]);
+
+
+    // state for button enabled/disabled
+    const [isSaveEnabled, setIsSaveEnabled] = useState<boolean>(false);
+
+
+
+    // these are the SAVED filters btw
+    const [selectedOptions, setSelectedOptions] = useState<SelectedOptions>({
+      filters: {
+        countries: [],
+        cities: [],
+        isps: []
+      },
+      startDate: "",
+      endDate: ""
+    });
+
+
+
+
+
   
+
+    // when country is set
       const handleCountryChange = (selectedOptions: FilterOptions[]) => {
-        setSelectedCountryOptions(selectedOptions);
+
+          setSelectedCountryOptions(selectedOptions);
+
+          setCountryCode(selectedOptions[0].value);
+
+          changeCityOptions(countryCode);
+
+          changeIspOptions(countryCode);
+
+          console.log(cityOptions);
       };
       
       const handleCityChange = (selectedOptions: FilterOptions[]) => {
         setSelectedCityOptions(selectedOptions);
       };
 
+      const handleIspChange = (selectedOptions: FilterOptions[]) => {
+        setSelectedIspOptions(selectedOptions);
+      };
+
+
+      // Function to change city initial options
+      function changeCityOptions(countryCode: string) {
+        if (countryCode in filterData) {
+          const cities = filterData[countryCode].cities;
+          const cityOptions: FilterOptions[] = cities.map(city => ({
+            label: city,
+            value: city
+          }));
+          setCities(cityOptions);
+          console.log(cityOptions);
+        } else {
+          setCities([]);
+        }
+      }
+
+
+      function changeIspOptions(countryCode: string) {
+        if (countryCode in filterData) {
+          const isps = filterData[countryCode].isps;
+          const ispOptions: FilterOptions[] = isps.map(isps => ({
+            label: isps,
+            value: isps
+          }));
+          setISP(ispOptions);
+          console.log(cityOptions);
+        } else {
+          setISP([]);
+        }
+      }
+
+
+        // useEffect to update city options when countryCode changes
+      useEffect(() => {
+        if (countryCode) {
+          changeCityOptions(countryCode);
+          changeIspOptions(countryCode);
+        }
+      }, [countryCode]);
+
+
+        // useEffect to update the save button enabled/disabled state
+      useEffect(() => {
+        const isAnyOptionSelected =
+          selectedCountryOptions.length > 0 &&
+          selectedCityOptions.length > 0 &&
+          selectedIspOptions.length > 0;
+          setIsSaveEnabled(isAnyOptionSelected);
+      }, [selectedCountryOptions, selectedCityOptions, selectedIspOptions]);
+
+
 
   // Function to handle saving selected options
   const handleSave = () => {
-    const countryLabels = selectedCountryOptions.map(option => option.label);
+    const countryLabels = selectedCountryOptions.map(option => option.value);
     const cityLabels = selectedCityOptions.map(option => option.label);
+    const ispLabels = selectedIspOptions.map(option => option.label);
 
     const newOptions: SelectedOptions = {
       filters: {
         countries: countryLabels,
         cities: cityLabels,
-        isps: [] // Update this if you add ISP filtering
+        isps: ispLabels // Update this if you add ISP filtering
       },
       startDate: '2024-01-01',
       endDate: '2024-01-04'
@@ -84,19 +174,37 @@ function Filters ({onSave}: FiltersProps){
                 initialOptions={countries}
                 onChange={handleCountryChange}
                 selectionType="Country"
+                max={1}
               />
             </div>
 
             <div className="col-span-4"> {/* Adjust margin as needed */}
+
               <FilterList
-                initialOptions={cities}
+                initialOptions={cityOptions}
                 onChange={handleCityChange}
                 selectionType="City"
+                max={6}
               />
+
+            </div>
+
+            
+            <div className="col-span-4"> {/* Adjust margin as needed */}
+
+              <FilterList
+                initialOptions={ispOptions}
+                onChange={handleIspChange}
+                selectionType="ISP"
+                max={6}
+              />
+
             </div>
 
             <div className="col-span-12 flex justify-end mt-4">
-              <Button onClick={handleSave} className="px-4 py-2 bg-blue-500 text-white rounded">
+              <Button onClick={handleSave}
+                      className={`px-4 py-2 rounded ${isSaveEnabled ? 'bg-blue-500 text-white' : 'bg-gray-300 text-gray-600'}`}
+                      disabled={!isSaveEnabled}>
                  Save
             </Button>
             </div>

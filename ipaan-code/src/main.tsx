@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-// import Query from './components/Tools/requestDemo'
+// import ChartLine2 from './components/Dashboard/Line'
 import Home from './page'
 
 import './index.css'
