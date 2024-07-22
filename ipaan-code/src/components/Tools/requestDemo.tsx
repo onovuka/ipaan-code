@@ -1,45 +1,44 @@
 import { useEffect } from 'react';
 
-function Query() {
+interface Requests {
+  filters: {
+    countries: string[]; // Array of country codes
+    cities: string[]; // Array of city names
+    isps: string[]; // Array of ISP names (if needed)
+  };
+  startDate: string;
+  endDate: string;
+}
+
+interface QueryProps {
+  request: Requests;
+  api: string
+  onDataFetched: (data: any) => void;
+}
+
+function Query({ request,api, onDataFetched }: QueryProps) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://196.42.81.143:3000/execute-query', {
+        const response = await fetch(api, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({
-            sql: `select
-	AVG(x.meanthroughputmbps),y.city
-from
-	Download x
-join
-	descriptors y
-on
-	x.descriptorid = y.id
-where
-y.city IN ('Cape Town','Johannesburg','Pretoria') and date >= '2024-01-01' and date < '2024-02-01'
-group by y.city`,
-            params: [],
-          }),
+          body: JSON.stringify(request), 
         });
 
         const data = await response.json();
-        console.log(data);
+        onDataFetched(data); // Call the callback with the fetched data
       } catch (error) {
         console.error('Error:', error);
       }
     };
 
     fetchData();
-  }, []);
+  }, [request, api, onDataFetched]); 
 
-  return (
-    <div>
-      <h1>SQL Query Executor</h1>
-    </div>
-  );
+  return null; 
 }
 
 export default Query;

@@ -1,16 +1,55 @@
 "use client"
 
 import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
+import { useState } from "react"
 
 import { ChartContainer, ChartTooltip, ChartTooltipContent, ChartLegend, ChartLegendContent} from "@/components/ui/chart"
 import { chartConfig } from "./chartConfigs"
 import { mockBar } from "@/data/BarData"
 
+import Query from "../Tools/requestDemo"
 
 
-function ChartBar() {
+interface requests{
+  request:{
+      filters: {
+      countries: string[];
+      cities: string[];
+      isps: string[]; 
+  }
+    startDate: string;
+    endDate: string;
+
+  }
+}
+
+
+
+
+
+function ChartBar({request} : requests) {
+  const [data, setData] = useState<any[]>([]); // State to hold fetched data
+
+  const handleDataFetched = (fetchedData: any) => {
+    // Ensure the data is in the correct format for the chart
+    if (Array.isArray(fetchedData)) {
+      setData(fetchedData);
+      console.log(data)
+    } else {
+      console.error('Unexpected data format:', fetchedData);
+    }
+  };
+  
 
   return (
+
+    <div>
+      <Query
+              request={request}
+              api='http://196.42.81.143:3000/execute-query/bar'
+              onDataFetched={handleDataFetched}
+      />
+
     <ChartContainer config={chartConfig} className="min-h-[200px] w-full">
       <BarChart accessibilityLayer data={mockBar}>
         
@@ -33,6 +72,8 @@ function ChartBar() {
 
       </BarChart>
     </ChartContainer>
+
+    </div>
   )
 }
 

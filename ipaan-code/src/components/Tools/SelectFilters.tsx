@@ -13,19 +13,31 @@ import {citylist as cities} from "../../data/citylist"
 
 // saved filters
 interface SelectedOptions {
+  filters: {
     countries: string[]; // Array of country codes
     cities: string[]; // Array of city names
-  }
+    isps: string[]; // Array of ISP names (if needed)
+  };
+  startDate: string;
+  endDate: string;
+}
 
+interface FiltersProps {
+  onSave: (options: SelectedOptions) => void;
+}
 
 // component body
-function Filters (){
+function Filters ({onSave}: FiltersProps){
 
-    const [selectedOptions, setSelectedOptions] = useState<SelectedOptions>({
-        countries: [],
-        cities: [],
-      });
-
+  const [selectedOptions, setSelectedOptions] = useState<SelectedOptions>({
+    filters: {
+      countries: [],
+      cities: [],
+      isps: []
+    },
+    startDate: "",
+    endDate: ""
+  });
 
 
     const [selectedCountryOptions, setSelectedCountryOptions] = useState<FilterOptions[]>([]);
@@ -39,25 +51,25 @@ function Filters (){
         setSelectedCityOptions(selectedOptions);
       };
 
-    // Function to handle saving selected options
-  // Effect to log selectedOptions whenever it changes
-  useEffect(() => {
-    console.log(selectedOptions);
-  }, [selectedOptions]);
 
   // Function to handle saving selected options
   const handleSave = () => {
     const countryLabels = selectedCountryOptions.map(option => option.label);
     const cityLabels = selectedCityOptions.map(option => option.label);
-    
-    setSelectedOptions({
-      countries: countryLabels,
-      cities: cityLabels,
-    });
 
-    // Additional logic can be added here, such as sending data to backend
+    const newOptions: SelectedOptions = {
+      filters: {
+        countries: countryLabels,
+        cities: cityLabels,
+        isps: [] // Update this if you add ISP filtering
+      },
+      startDate: '2024-01-01',
+      endDate: '2024-01-04'
+    };
+
+    setSelectedOptions(newOptions);
+    onSave(newOptions); // Pass the options to the parent component
   };
-
 
     return(
       <div className="flex justify-end">
