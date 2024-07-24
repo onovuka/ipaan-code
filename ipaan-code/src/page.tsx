@@ -1,66 +1,68 @@
-"use client"
-import { useState } from "react";
-import Card, {CardContent} from "@/components/Tools/Card";
-import { cardData } from "./data/CardData";
-import ChartBar from "./components/Dashboard/BarChart";
-import ChartPie from "./components/Dashboard/PieChart";
-import { ChartLine } from "./components/Dashboard/LineChart";
-import Header from './components/Header'
-import Filters from "./components/Tools/SelectFilters";
-import Map from "./components/Dashboard/Map";
-import ChartLine2 from './components/Dashboard/Line'
-import { summaryLine } from "./data/summaryLine";
-import { chartConfigLine as chartConfig } from "./data/linechartconfig";
+import React, { useState, useMemo, useEffect } from 'react';
+import Card, { CardContent } from '@/components/Tools/Card';
+import { cardData } from './data/CardData';
+import ChartBar from './components/Dashboard/BarChart';
+import ChartPie from './components/Dashboard/PieChart';
+import { ChartLine } from './components/Dashboard/LineChart';
+import Header from './components/Header';
+import Filters from './components/Tools/SelectFilters';
+import Map from './components/Dashboard/Map';
+import ChartLine2 from './components/Dashboard/Line';
+import { summaryLine } from './data/summaryLine';
+import { chartConfigLine as chartConfig } from './data/linechartconfig';
 
-interface requests{
+interface Requests {
     filters: {
-        countries: string[]; // Array of country codes
-        cities: string[]; // Array of city names
-        isps: string[]; // Array of ISP names (if needed)
-      };
-      startDate: string;
-      endDate: string;
+        countries: string[];
+        cities: string[];
+        isps: string[];
+    };
+    startDate: string;
+    endDate: string;
 }
 
-const keys = ["download", "upload"] as Array<keyof typeof chartConfig>;
+const Home: React.FC = () => {
+    const [shouldFetch, setShouldFetch] = useState<boolean>(false);
 
-
-function Home(){
-
-    // boolean to trigger fetching from API
-    const [request, sendRequest] = useState<boolean>(false);
-
-    const [selectedOptions, setSelectedOptions] = useState<requests>({
+    const [selectedOptions, setSelectedOptions] = useState<Requests>({
         filters: {
-          countries: [],
-          cities: [],
-          isps: []
+            countries: [],
+            cities: [],
+            isps: [],
         },
         startDate: '',
-        endDate: ''
-      });
-    
-      const handleSave = (newOptions: requests) => {
+        endDate: '',
+    });
+
+    const memoizedRequest = useMemo(() => selectedOptions, [selectedOptions]);
+
+    const handleSave = (newOptions: Requests) => {
         setSelectedOptions(newOptions);
+        setShouldFetch(true);
+        console.log('set changes');
+        console.log(JSON.stringify(newOptions, null, 2));
+    };
 
-        console.log("set changes")
-        sendRequest(true);
-        console.log(JSON.stringify(selectedOptions, null, 2));
-        // You can also send `newOptions` to the backend here
-      };
+    useEffect(() => {
+        if (shouldFetch) {
+            setShouldFetch(false);
+        }
+    }, [shouldFetch]);
 
+    return (
+        <div className="flex flex-col gap-5 w-full p-10">
 
+                <section>
 
-    return(
+                <ChartLine2
+                    />
 
-        <div className="flex flex-col gap-5  w-full">
+                </section>
 
-            <Header/>
-
-            <Filters onSave={handleSave}/>
-
+            <Header />
+            <Filters onSave={handleSave} />
             <section className="grid w-full grid-cols-1 gap-4 gap-x-8 transition-all sm:grid-cols-2 xl:grid-cols-4">
-                    {cardData.map((d, i) => (
+                {cardData.map((d, i) => (
                     <Card
                         key={i}
                         total={d.total}
@@ -68,109 +70,187 @@ function Home(){
                         icon={d.icon}
                         label={d.label}
                     />
-                    ))}
+                ))}
+            </section>
+
+            <section>
+                <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Quality of Service in selected countries</span>
+                </h2>
             </section>
 
 
-        <section className="grid grid-cols-1  gap-4 transition-all lg:grid-cols-2">
+            {/* Top half of data contaning country summary */}
+            <section className="grid grid-cols-1 gap-4 transition-all lg:grid-cols-2">
+                <CardContent className="h-full">
+                    <Map />
+                </CardContent>
 
-        <CardContent className="h-full">
-            <Map />
-        </CardContent>
+                <section className="grid grid-cols-1 gap-4 transition-all lg:grid-cols-2">
 
-        <CardContent className="h-full">
+                    {/* Pie chart with country test distibutions by city */}
+                    <div className="col-span-1 lg:col-span-2 text-center mt-4">
+                        <p>Test distribution</p>
+                    </div>
+                    <div className="flex justify-between gap-4">
 
-            <ChartLine
-            data={summaryLine}
-            chartType="download"
-            keys={keys}
-            />
+                        <ChartPie 
+                            request={memoizedRequest}
+                            shouldFetch={shouldFetch}
+                            chartType='Downloads'                
+                        />
 
-        </CardContent >
+                    </div>
+                    <div className="flex justify-between gap-4">
+                        <ChartPie 
+                            request={memoizedRequest}
+                            shouldFetch={shouldFetch}
+                            chartType='Uploads'
+                        />
+                    </div>
+                </section>
 
-
-
-
-          
-        </section>
-
-        <section>
-        <h1 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl"><span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Regional Quality of Service</span></h1>
-        </section>
-
-        <section className="grid grid-cols-1  gap-4 transition-all lg:grid-cols-2">
-        <CardContent className="h-full">
-
-            <ChartLine2/>
-
-        </CardContent >
-
-        <CardContent className="h-full">
-            <ChartBar 
-            request={selectedOptions}
-            fetch={request}
-            barID={1}
-            />
-        </CardContent>
-          
-        </section>
+            </section >
 
 
-        <section className="grid grid-cols-1  gap-4 transition-all lg:grid-cols-2">
-        <CardContent className="h-full">
+            {/* Row 2 */}
+            <section className="grid grid-cols-1 gap-4 transition-all lg:grid-cols-2">
 
-            <ChartLine/>
+                {/* download overtime */}
+                <CardContent className="h-full">
+                    <ChartLine 
+                        request={memoizedRequest}
+                        shouldFetch={shouldFetch}
+                        chartType="download"
+                        description='Upload and Download Performance over time'
+                        keys={["upload", "download"]}
+                         />
+                </CardContent>
 
-        </CardContent >
+                {/* latency over time */}
+                <CardContent className="h-full">
+                    <ChartLine 
+                        request={memoizedRequest}
+                        shouldFetch={shouldFetch}
+                        keys={["latency", "lossrate"]}
+                        description='Latency and Packet Loss over Time' 
+                        chartType="latency" />
+                </CardContent>
 
-        <CardContent className="h-full">
-        <ChartPie className="flex justify-between gap-4 h-1/2"/>
-        <ChartPie className="flex justify-between gap-4 h-1/2"/>
-        </CardContent>
-          
-        </section>
-
-
-
-        <section>
-            Per City ISP statistics
-        </section>
-
-        <section className="grid grid-cols-1  gap-4 transition-all lg:grid-cols-2">
-        <CardContent className="h-full">
-
-            <ChartLine/>
-
-        </CardContent >
-
-        <CardContent className="h-full">
-            <ChartBar 
-                request={selectedOptions}
-                fetch={request}
-                barID={2}
-            />
-        </CardContent>
-          
-        </section>
+            </section>
 
 
-        <section className="grid grid-cols-1  gap-4 transition-all lg:grid-cols-2">
-        <CardContent className="h-full">
+            <section>
+                <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Quality of Service in selected cities</span>
+                </h2>
+            </section>
 
-            <ChartLine/>
+            {/* Rows containing city data information */}
+            <section className="grid grid-cols-1 gap-4 transition-all lg:grid-cols-2">
 
-        </CardContent >
+                {/* cities download overtime */}
+                <CardContent className="h-full">
+                    <ChartLine 
+                        request={memoizedRequest}
+                        shouldFetch={shouldFetch}
+                        keys={["upload", "download"]} 
+                        description='Upload and Download Performance over time'
+                        chartType="download" />
+                </CardContent>
 
-        <CardContent className="h-full">
-        <ChartPie className="flex justify-between gap-4 h-1/2"/>
-        <ChartPie className="flex justify-between gap-4 h-1/2"/>
-        </CardContent>
-          
-        </section>
+                {/* Intercity ISP performance*/}
+                <CardContent className="h-full">
+                    <ChartBar
+                        request={memoizedRequest}
+                        shouldFetch={shouldFetch}
+                        chartType={"city"}
+                    />
+                </CardContent>
+
+            </section>
+
+
+            {/* Rows containing city data information */}
+            <section className="grid grid-cols-1 gap-4 transition-all lg:grid-cols-2">
+
+                {/* latency over time */}
+                <CardContent className="h-full">
+                    <ChartLine 
+                        request={memoizedRequest}
+                        shouldFetch={shouldFetch}
+                        keys={["latency", "lossrate"]}
+                        description='Latency and Packet Loss over Time'
+                        chartType="latency" />
+                </CardContent>
+
+
+                {/* intercity latency per isp*/}
+                <CardContent className="h-full">
+                    <ChartBar
+                        request={memoizedRequest}
+                        shouldFetch={shouldFetch}
+                        chartType={"city"}
+                    />
+                </CardContent>
+
+            </section>
+
+
+
+            {/* ISP related information */}
+            <section>
+                <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Quality of Service in ISPs</span>
+                </h2>
+            </section>
+
+
+            <section className="grid grid-cols-1 gap-4 transition-all lg:grid-cols-2">
+                <CardContent className="h-full">
+                    <Map />
+                </CardContent>
+
+
+                {/* isp download overtime */}
+                <CardContent className="h-full">
+                    <ChartLine 
+                        request={memoizedRequest}
+                        shouldFetch={shouldFetch}
+                        keys={["upload", "download"]} 
+                        description='Upload and Download Performance over time'
+                        chartType="download" />
+                </CardContent>
+
+
+            </section>
+
+            <section className="grid grid-cols-1 gap-4 transition-all lg:grid-cols-2">
+
+                {/* Latency and Loss rate */}
+                <CardContent className="h-full">
+                    <ChartLine 
+                        request={memoizedRequest}
+                        shouldFetch={shouldFetch}
+                        keys={["latency", "lossrate"]}
+                        description='Latency and Packet Loss over Time' 
+                        chartType="latency" />
+                </CardContent>
+
+
+                {/* ISP on x axis */}
+                <CardContent className="h-full">
+                    <ChartBar
+                        request={memoizedRequest}
+                        shouldFetch={shouldFetch}
+                        chartType={"city"}
+                    />
+                </CardContent>
+            </section>
 
 
         </div>
-
     );
-}
+};
+
 export default Home;

@@ -5,6 +5,8 @@ import FilterList from "./Filter";
 import { DatePickerWithRange } from "./DateFilter";
 import { FilterOptions } from "../../data/Filterlist";
 import { Button } from "../ui/button";
+import { DateRange } from "react-day-picker";
+import { format } from "date-fns";
 
 
 // Data
@@ -63,9 +65,13 @@ function Filters ({onSave}: FiltersProps){
 
 
 
+      // State for date range
+    const [dateRange, setDateRange] = useState<DateRange | undefined>({
+      from: new Date(2024, 0, 1),
+      to: new Date(2024, 0, 1),
+    });
 
 
-  
 
     // when country is set
       const handleCountryChange = (selectedOptions: FilterOptions[]) => {
@@ -78,7 +84,6 @@ function Filters ({onSave}: FiltersProps){
 
           changeIspOptions(countryCode);
 
-          console.log(cityOptions);
       };
       
       const handleCityChange = (selectedOptions: FilterOptions[]) => {
@@ -99,7 +104,6 @@ function Filters ({onSave}: FiltersProps){
             value: city
           }));
           setCities(cityOptions);
-          console.log(cityOptions);
         } else {
           setCities([]);
         }
@@ -114,7 +118,6 @@ function Filters ({onSave}: FiltersProps){
             value: isps
           }));
           setISP(ispOptions);
-          console.log(cityOptions);
         } else {
           setISP([]);
         }
@@ -151,21 +154,24 @@ function Filters ({onSave}: FiltersProps){
       filters: {
         countries: countryLabels,
         cities: cityLabels,
-        isps: ispLabels // Update this if you add ISP filtering
+        isps: ispLabels
       },
-      startDate: '2024-01-01',
-      endDate: '2024-01-04'
+      startDate: dateRange?.from ? format(dateRange.from, "yyyy-MM-dd") : "",
+      endDate: dateRange?.to ? format(dateRange.to, "yyyy-MM-dd") : ""
     };
 
     setSelectedOptions(newOptions);
-    onSave(newOptions); // Pass the options to the parent component
+    onSave(newOptions);
   };
 
     return(
       <div className="flex justify-end">
 
             <div className="col-span-4">
-              <DatePickerWithRange />
+              <DatePickerWithRange
+              dateRange={dateRange} 
+              setDateRange={setDateRange}
+               />
             </div>
 
 

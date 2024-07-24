@@ -1,47 +1,49 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 interface Requests {
-  filters: {
-    countries: string[]; // Array of country codes
-    cities: string[]; // Array of city names
-    isps: string[]; // Array of ISP names (if needed)
-  };
-  startDate: string;
-  endDate: string;
+    filters: {
+        countries: string[];
+        cities: string[];
+        isps: string[];
+    };
+    startDate: string;
+    endDate: string;
 }
 
 interface QueryProps {
-  request: Requests;
-  api: string
-  onDataFetched: (data: any) => void;
+    request: Requests;
+    api: string;
+    onDataFetched: (data: any) => void;
+    shouldFetch: boolean;
 }
 
-function Query({ request,api, onDataFetched }: QueryProps) {
+function Query({ request, api, onDataFetched, shouldFetch }: QueryProps) {
+    useEffect(() => {
+        if (!shouldFetch) return;
 
-  console.log(JSON.stringify(request, null, 2));
+        const fetchData = async () => {
+            try {
+                const response = await fetch(api, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(request),
+                });
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(api, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(request), 
-        });
+                const data = await response.json();
+                onDataFetched(data);
+                console.log("Saved data");
+                console.log(data);
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        };
 
-        const data = await response.json();
-        onDataFetched(data);
-      } catch (error) {
-        console.error('Error:', error);
-      }
-    };
+        fetchData();
+    }, [shouldFetch, request, api, onDataFetched]);
 
-    fetchData();
-  }, [request, api, onDataFetched]); 
-
-  return null; 
+    return null;
 }
 
 export default Query;

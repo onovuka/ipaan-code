@@ -6,6 +6,9 @@ import { useState, useEffect } from "react"
 import { ChartContainer, ChartTooltip, ChartTooltipContent, ChartLegend, ChartLegendContent} from "@/components/ui/chart"
 import { chartConfig } from "./chartConfigs"
 import { mockBar } from "@/data/BarData"
+import { mockData2 } from "@/data/BarData"
+
+import {bar} from "@/data/barResponse";
 
 import Query from "../Tools/requestDemo"
 
@@ -21,14 +24,39 @@ interface requests{
     endDate: string;
 
   },
-  fetch:boolean
-  barID:number
+  shouldFetch:boolean
+  chartType:string
 }
 
+type TransformedData = {
+  city: string;
+  [isp: string]: {
+    download: number;
+    upload: number;
+  } | string;
+};
+
+
+const ispColors = [
+  { base: '#1f77b4', light: '#aec7e8' },
+  { base: '#ff7f0e', light: '#ffbb78' },
+  { base: '#2ca02c', light: '#98df8a' },
+  { base: '#d62728', light: '#ff9896' },
+  { base: '#9467bd', light: '#c5b0d5' },
+  { base: '#8c564b', light: '#c49c94' },
+];
+
+
+const getIspColor = (isp: string, isUpload: boolean) => {
+  const ispIndex = Array.from(new Set(mockData2.map(item => item.isp))).indexOf(isp);
+  const colorPair = ispColors[ispIndex % ispColors.length];
+  return isUpload ? colorPair.light : colorPair.base;
+};
 
 
 
-function ChartBar({request, fetch, barID} : requests) {
+
+function ChartBar({request, shouldFetch, chartType} : requests) {
   // State to hold fetched data
   const [data, setData] = useState<any[]>([]);
   
@@ -38,21 +66,58 @@ function ChartBar({request, fetch, barID} : requests) {
 
   };
 
+  const adjustedRequest = { ...request };
+  if (chartType === "city") {
+    adjustedRequest.filters.isps = [];
+  }
+
+
+  // transforming for x axis:
+  const transformedData: TransformedData[] = mockData2.reduce((acc: TransformedData[], curr) => {
+    let city = acc.find(item => item.city === curr.city);
+    if (!city) {
+      city = { city: curr.city };
+      acc.push(city);
+    }
+    city[curr.isp] = { download: curr.download, upload: curr.upload };
+    return acc;
+  }, []);
+
+
+  const getColorForIsp = (isp: string) => {
+    // Create a consistent mapping based on ISP names
+    const ispNames = Array.from(new Set(mockData2.map(item => item.isp)));
+    const index = ispNames.indexOf(isp);
+    return colors[index % colors.length];
+  };
+
+
+  const uniqueISPs: string[] = [...new Set(mockData2.map(item => item.isp))];
+  
+
+  const colors = ["#8884d8", "#82ca9d", "#ffc658", "#d88484", "#a8d8d8", "#d8a884"];
+
+  
+
+  console.log(transformedData);
+
+  console.log(uniqueISPs);
   
 
   return (
 
     <div>
-      {fetch && (
-            <Query
-              request={request}
-              api='http://196.210.49.222:3000/query/bar'
-              onDataFetched={handleDataFetched}
-      />
+            {shouldFetch && (
+                <Query
+                    request={request}
+                    api="http://196.210.49.222:3000/query/bar"
+                    onDataFetched={handleDataFetched}
+                    shouldFetch={shouldFetch}
+                />
     )}
 
     <ChartContainer config={chartConfig} className="min-h-[200px] w-full">
-      <BarChart accessibilityLayer data={mockBar}>
+      <BarChart accessibilityLayer data={transformedData}>
         
       <CartesianGrid vertical={false} />
 
@@ -68,10 +133,20 @@ function ChartBar({request, fetch, barID} : requests) {
     <ChartTooltip content={<ChartTooltipContent />} />
     <ChartLegend content={<ChartLegendContent />} />
     
-      <Bar dataKey="download" fill="var(--color-download)" radius={4} />
-      <Bar dataKey="upload" fill="var(--color-upload)" radius={4} />
+    {uniqueISPs.map((isp, index) => (
+        ['download', 'upload'].map((key) => (
+          <Bar
+            key={`${isp}-${key}`}
+            dataKey={`${isp}.${key}`}
+            name={`${isp} ${key.charAt(0).toUpperCase() + key.slice(1)}`}
+            fill={getColorForIsp(isp)}
+            // stackId="a"
+          />
+        ))
+      ))}
+    </BarChart>
 
-      </BarChart>
+
     </ChartContainer>
 
     </div>

@@ -2,7 +2,14 @@
 
 import * as React from "react"
 import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts"
-import { chartConfigLine as chartConfig } from "@/data/summaryLine"
+// import { chartConfigLine as chartConfig } from "@/data/summaryLine"
+import {chartConfigLine as chartConfig } from "@/data/lineConfig"
+import Query from "../Tools/requestDemo"
+
+import { mockLatency } from "@/data/NoISP"
+
+import { useState } from "react"
+
 
 import {
   Card,
@@ -19,21 +26,43 @@ import {
 
 
 
-interface Props{
-    data: any,
-    chartType: keyof typeof chartConfig,
-    keys: Array<keyof typeof chartConfig>;
 
-    // keys: string[]
+interface requests{
+  request:{
+      filters: {
+      countries: string[];
+      cities: string[];
+      isps: string[]; 
+  }
+    startDate: string;
+    endDate: string;
+
+  },
+  shouldFetch:boolean
+  chartType: keyof typeof chartConfig; // options: download or latency
+  description: string;
+  keys: Array<keyof typeof chartConfig>; // New property
 }
 
+const colorPalette = [
+  "hsl(var(--chart-1))",
+  "hsl(var(--chart-2))",
+  "hsl(var(--chart-3))",
+  "hsl(var(--chart-4))",
+  "hsl(var(--chart-5))",
+  "hsl(var(--chart-6))",
+];
 
-interface LineProps{
-  data: any,
 
-}
 
-export function ChartLine({data, chartType, keys} : Props) {
+export function ChartLine({request, shouldFetch, chartType, description, keys} : requests) {
+
+    // State to hold fetched data
+    const [data, setData] = useState<any[]>([]);
+
+
+    // mockdata for response
+    const [Mockdata, setMockData] = useState<any[]>([]);
 
 
   const [activeChart, setActiveChart] =
@@ -41,34 +70,53 @@ export function ChartLine({data, chartType, keys} : Props) {
     () => chartType
   );
 
+  const handleDataFetched = (fetchedData: any) => {
+    setData(fetchedData);
+
+  };
+
 
   return (
+
+    <div>
+
+    {shouldFetch && (
+                <Query
+                    request={request}
+                    api="http://196.210.49.222:3000/query/line"
+                    onDataFetched={handleDataFetched}
+                    shouldFetch={shouldFetch}
+                />
+    )}
+
+
     <Card>
       <CardHeader className="flex flex-col items-stretch space-y-0 border-b p-0 sm:flex-row h-[100px]">
         <div className="flex flex-1 flex-col justify-center gap-1 px-6 py-5 sm:py-6 text-center">
           <CardTitle >Internet Performance Over Time</CardTitle>
           <CardDescription className="text-sm">
-            Performance in the last 3 months since updated
+            {description}
           </CardDescription>
         </div>
         <div className="flex">
-          {keys.map((key) => {
-            const chart = key as keyof typeof chartConfig;
-            return (
-              <button
-                key={chart}
-                data-active={activeChart === chart}
-                className="flex flex-1 flex-col justify-center gap-1 border-t px-6 py-4 text-left even:border-l data-[active=true]:bg-muted/50 sm:border-l sm:border-t-0 sm:px-8 sm:py-6"
-                onClick={() => setActiveChart(chart)}
-              >
-                <span className="text-xs text-muted-foreground">
-                  {chartConfig[chart].label}
-                </span>
-              </button>
-            )
-          })}
+        {keys.map((key) => {
+                const chart = key as keyof typeof chartConfig;
+                return (
+                  <button
+                    key={chart}
+                    data-active={activeChart === chart}
+                    className="flex flex-1 flex-col justify-center gap-1 border-t px-6 py-4 text-center even:border-l data-[active=true]:bg-muted/50 sm:border-l sm:border-t-0 sm:px-8 sm:py-6"
+                    onClick={() => setActiveChart(chart)}
+                  >
+                    <span className="text-xs text-muted-foreground">
+                      {chartConfig[chart].label}
+                    </span>
+                  </button>
+                );
+              })}
         </div>
       </CardHeader>
+      
       <CardContent className="px-2 sm:p-6">
         <ChartContainer
           config={chartConfig}
@@ -76,7 +124,7 @@ export function ChartLine({data, chartType, keys} : Props) {
         >
           <LineChart
             accessibilityLayer
-            data={data}
+            data={mockLatency}
             margin={{
               left: 12,
               right: 12,
@@ -142,5 +190,7 @@ export function ChartLine({data, chartType, keys} : Props) {
         </ChartContainer>
       </CardContent>
     </Card>
+
+    </div>
   )
 }

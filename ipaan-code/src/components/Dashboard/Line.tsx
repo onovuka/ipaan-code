@@ -1,6 +1,3 @@
-
-// Final Line chart
-
 import * as React from "react";
 import { CartesianGrid, Line, LineChart, XAxis, YAxis, Tooltip } from "recharts";
 import { chartConfigLine } from "@/data/linechartconfig";
@@ -31,43 +28,54 @@ const colorPalette = [
     "hsl(var(--chart-6))",
 ];
 
-interface LineProps{
+interface LineProps {
     data: any,
     dataType: string // for what are we rendering, isp or city or summary
 }
 
-
-
-
-function ChartLine2(){
-
+function ChartLine2() {
     const assignColorsToCities = (cities: string[]) => {
         const cityColorMap: { [key: string]: string } = {};
         cities.forEach((city, index) => {
           cityColorMap[city] = colorPalette[index % colorPalette.length];
         });
         return cityColorMap;
-      };
+    };
 
     // Extract unique cities from mockLine data
     const cities = [...new Set(mockLine.map(item => item.city))];
     const cityColors = assignColorsToCities(cities);
 
+    // Define a type for rest
+    type Rest = {
+        upload: number;
+        download: number;
+    };
 
+    // Group data by date
+    const groupDataByDate = () => {
+        const groupedData: { [key: string]: { [key: string]: number } } = {};
 
-    // const[lines, setLines] = React.useState<string[]>([]);
+        mockLine.forEach(item => {
+            const { date, city, ...rest } = item;
+            if (!groupedData[date]) {
+                groupedData[date] = {};
+            }
+            // Use type assertion to ensure `rest` has the correct type
+            groupedData[date][city] = (rest as Rest)[activeChart];
+        });
+
+        // Convert groupedData to array format suitable for LineChart
+        return Object.keys(groupedData).map(date => ({
+            date,
+            ...groupedData[date],
+        }));
+    };
 
     const [activeChart, setActiveChart] = React.useState<keyof typeof chartConfigLine>("download");
 
-
-    const cityDataMap = React.useMemo(() => {
-        return cities.reduce((acc, city) => {
-          acc[city] = mockLine.filter(d => d.city === city);
-          return acc;
-        }, {} as { [city: string]: typeof mockLine });
-      }, [cities]);
-
-      console.log("cityDataMap:", cityDataMap);
+    // Process grouped data
+    const groupedData = React.useMemo(() => groupDataByDate(), [activeChart]);
 
     return (
         <Card>
@@ -103,8 +111,7 @@ function ChartLine2(){
               className="aspect-auto h-[250px] w-full"
             >
               <LineChart
-                accessibilityLayer
-                // data={mockLine}
+                data={groupedData} // Provide grouped data to LineChart
                 margin={{
                   left: 12,
                   right: 12,
@@ -125,35 +132,25 @@ function ChartLine2(){
                     });
                   }}
                 />
-
-                
-        <Tooltip />
-        {cities.map(city => {
-                console.log("Rendering city:", city, cityDataMap[city]);
-                return (
+                <YAxis />
+                <Tooltip />
+                {cities.map(city => (
                     <Line
-                    key={city}
-                    type="monotone"
-                    dataKey={activeChart}
-                    stroke={cityColors[city]}
-                    strokeWidth={2}
-                    dot={false}
-                    name={city}
-                    data={cityDataMap[city]} // Ensure each line uses its specific data
+                      key={city}
+                      type="monotone"
+                      dataKey={city}
+                      stroke={cityColors[city]}
+                      strokeWidth={2}
+                      dot={false}
+                      name={city}
+                      // data={groupedData} // Ensure each line uses its specific data
                     />
-                );
-                })}
-        
-
-
-
-
-
-          </LineChart>
+                ))}
+              </LineChart>
             </ChartContainer>
           </CardContent>
         </Card>
-      );
+    );
 }
 
 export default ChartLine2;

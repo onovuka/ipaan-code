@@ -1,3 +1,22 @@
+import { ChartConfig } from "@/components/ui/chart";
+
+export const chartConfigPie = {
+	views: {
+		label: "MBps",
+	},
+
+    upload: {
+      label: "Latency",
+	  color: "hsl(var(--chart-1))",
+    },
+    download: {
+      label: "Packet loss",
+	  color: "hsl(var(--chart-2))",
+    },
+} satisfies ChartConfig;
+
+
+
 
 interface PieData {
     chartType: string;
@@ -7,8 +26,8 @@ interface PieData {
 }
 
 export const mockPie: PieData[] = [
-    { chartType: "uploads", country: "Nigeria", value: 275, colour: "#60a5fa" },
-    { chartType: "uploads", country: "South Africa", value: 25, colour: "#f473b9" },
-    { chartType: "uploads", country: "Uganda", value: 67, colour: "#38a3a5" },
-    { chartType: "uploads", country: "Mozambique", value: 99, colour: "#ffc107" },
+    { chartType: "uploads", country: "Nigeria", value: 275, colour: "hsl(var(--chart-1))" },
+    { chartType: "uploads", country: "South Africa", value: 25, colour: "hsl(var(--chart-2))" },
+    { chartType: "uploads", country: "Uganda", value: 67, colour: "hsl(var(--chart-3))" },
+    { chartType: "uploads", country: "Mozambique", value: 99, colour:"hsl(var(--chart-4))" },
   ];

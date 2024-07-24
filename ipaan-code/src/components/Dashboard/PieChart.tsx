@@ -4,6 +4,9 @@ import { TrendingUp } from "lucide-react"
 import { Label, Pie, PieChart } from "recharts"
 import { chartConfigPie } from "./chartConfigs"
 import { mockPie } from "@/data/PieChartData"
+import Query from "../Tools/requestDemo"
+import { useState } from "react"
+
 
 import {
   Card,
@@ -21,9 +24,32 @@ import {
 } from "@/components/ui/chart"
 
 
+interface requests{
+  request:{
+      filters: {
+      countries: string[];
+      cities: string[];
+      isps: string[]; 
+  }
+    startDate: string;
+    endDate: string;
+
+  },
+  shouldFetch:boolean
+  chartType:string
+}
 
 
-function ChartPie() {
+
+function ChartPie({request, shouldFetch, chartType} : requests) {
+
+
+  const [data, setData] = useState<any[]>([]);
+
+  const handleDataFetched = (fetchedData: any) => {
+    setData(fetchedData);
+
+  };
 
     // total collected
   const totalData = React.useMemo(() => {
@@ -32,14 +58,32 @@ function ChartPie() {
 
 
 
+
+
+
   return (
+
+    <div>
+
+    {shouldFetch && (
+                <Query
+                    request={request}
+                    api="http://196.210.49.222:3000/query/pie"
+                    onDataFetched={handleDataFetched}
+                    shouldFetch={shouldFetch}
+                />
+    )}
+
+
+
+
     <Card className="flex flex-col">
       <CardHeader className="items-center pb-0">
         {/*Change*/}
-        <CardTitle>Total Downloads</CardTitle>
+        <CardTitle>Total {chartType}</CardTitle>
 
         {/* Change */}
-        <CardDescription>Date Here</CardDescription>
+        <CardDescription>Number of {chartType} in selected range</CardDescription>
 
       </CardHeader>
 
@@ -104,6 +148,8 @@ function ChartPie() {
         </div>
       </CardFooter>
     </Card>
+
+    </div>
   )
 }
 

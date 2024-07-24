@@ -6,9 +6,7 @@ import Home from './page'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
 
     <Home />
 
-  </React.StrictMode>,
 )

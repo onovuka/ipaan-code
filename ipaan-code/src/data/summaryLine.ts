@@ -5,7 +5,7 @@ export const chartConfigLine = {
 		label: "MBps",
 		
 	  },
-
+	  
     upload: {
       label: "Upload",
 	  color: "hsl(var(--chart-1))",
@@ -15,6 +15,19 @@ export const chartConfigLine = {
 	  color: "hsl(var(--chart-2))",
     },
 } satisfies ChartConfig;
+
+
+interface ChartOption{
+	key: string,
+	label: string
+}
+
+export const chartOptions: ChartOption[] = [
+	{ key: 'upload', label: 'Upload' },
+	{ key: 'download', label: 'Download' },
+	{key: 'latency', label: 'Latency'},
+	{key: 'loss rate', label: 'loss rate'},
+  ];
 
 
 export const summaryLine =
