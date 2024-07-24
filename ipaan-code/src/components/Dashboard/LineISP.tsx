@@ -52,7 +52,7 @@ interface LineProps {
     dataType: string // for what are we rendering, isp or city or summary
 }
 
-function ChartLine2({request, shouldFetch, chartType, description, keys} : requests) {
+function ChartLineISP({request, shouldFetch, chartType, description, keys} : requests) {
 
       // State to hold fetched data
       const [data, setData] = useState<any[]>([]);
@@ -74,17 +74,17 @@ function ChartLine2({request, shouldFetch, chartType, description, keys} : reque
 
 
     // where lineType = city
-    const assignColorsToCities = (cities: string[]) => {
-        const cityColorMap: { [key: string]: string } = {};
-        cities.forEach((city, index) => {
-          cityColorMap[city] = colorPalette[index % colorPalette.length];
+    const assignColorsToisps = (isps: string[]) => {
+        const ispColorMap: { [key: string]: string } = {};
+        isps.forEach((isp, index) => {
+          ispColorMap[isp] = colorPalette[index % colorPalette.length];
         });
-        return cityColorMap;
+        return ispColorMap;
     };
 
     // Extract unique cities from mockLine data
-    const cities = [...new Set(mockLatency.map(item => item.city))];
-    const cityColors = assignColorsToCities(cities);
+    const isps = [...new Set(mockISP.map(item => item.isp))];
+    const ispColors = assignColorsToisps(isps);
 
 
 
@@ -100,13 +100,13 @@ function ChartLine2({request, shouldFetch, chartType, description, keys} : reque
     const groupDataByDate = () => {
         const groupedData: { [key: string]: { [key: string]: number } } = {};
 
-        mockLatency.forEach(item => {
-            const { date, city, ...rest } = item;
+        mockISP.forEach(item => {
+            const { date, isp, ...rest } = item;
             if (!groupedData[date]) {
                 groupedData[date] = {};
             }
             // Use type assertion to ensure `rest` has the correct type
-            groupedData[date][city] = (rest as Rest)[activeChart];
+            groupedData[date][isp] = (rest as Rest)[activeChart];
         });
 
         // Convert groupedData to array format suitable for LineChart
@@ -178,15 +178,15 @@ function ChartLine2({request, shouldFetch, chartType, description, keys} : reque
                 />
                 <YAxis />
                 <Tooltip />
-                {cities.map(city => (
+                {isps.map(isp => (
                     <Line
-                      key={city}
+                      key={isp}
                       type="monotone"
-                      dataKey={city}
-                      stroke={cityColors[city]}
+                      dataKey={isp}
+                      stroke={ispColors[isp]}
                       strokeWidth={2}
                       dot={false}
-                      name={city}
+                      name={isp}
                       // data={groupedData} // Ensure each line uses its specific data
                     />
                 ))}
@@ -197,4 +197,4 @@ function ChartLine2({request, shouldFetch, chartType, description, keys} : reque
     );
 }
 
-export default ChartLine2;
+export default ChartLineISP;

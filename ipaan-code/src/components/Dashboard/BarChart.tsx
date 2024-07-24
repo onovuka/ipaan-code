@@ -6,7 +6,7 @@ import { useState, useEffect } from "react"
 import { ChartContainer, ChartTooltip, ChartTooltipContent, ChartLegend, ChartLegendContent} from "@/components/ui/chart"
 import { chartConfig } from "./chartConfigs"
 import { mockBar } from "@/data/BarData"
-import { mockData2 } from "@/data/BarData"
+// import { bar } from "@/data/BarData"
 
 import {bar} from "@/data/barResponse";
 
@@ -48,7 +48,7 @@ const ispColors = [
 
 
 const getIspColor = (isp: string, isUpload: boolean) => {
-  const ispIndex = Array.from(new Set(mockData2.map(item => item.isp))).indexOf(isp);
+  const ispIndex = Array.from(new Set(bar.map(item => item.isp))).indexOf(isp);
   const colorPair = ispColors[ispIndex % ispColors.length];
   return isUpload ? colorPair.light : colorPair.base;
 };
@@ -73,7 +73,7 @@ function ChartBar({request, shouldFetch, chartType} : requests) {
 
 
   // transforming for x axis:
-  const transformedData: TransformedData[] = mockData2.reduce((acc: TransformedData[], curr) => {
+  const transformedData: TransformedData[] = bar.reduce((acc: TransformedData[], curr) => {
     let city = acc.find(item => item.city === curr.city);
     if (!city) {
       city = { city: curr.city };
@@ -86,22 +86,22 @@ function ChartBar({request, shouldFetch, chartType} : requests) {
 
   const getColorForIsp = (isp: string) => {
     // Create a consistent mapping based on ISP names
-    const ispNames = Array.from(new Set(mockData2.map(item => item.isp)));
+    const ispNames = Array.from(new Set(bar.map(item => item.isp)));
     const index = ispNames.indexOf(isp);
     return colors[index % colors.length];
   };
 
 
-  const uniqueISPs: string[] = [...new Set(mockData2.map(item => item.isp))];
+  const uniqueISPs: string[] = [...new Set(bar.map(item => item.isp))];
   
 
   const colors = ["#8884d8", "#82ca9d", "#ffc658", "#d88484", "#a8d8d8", "#d8a884"];
 
   
 
-  console.log(transformedData);
+  console.log("Transformed Data:", JSON.stringify(transformedData, null, 2));
 
-  console.log(uniqueISPs);
+  console.log("Unique isps", JSON.stringify(uniqueISPs, null, 2));
   
 
   return (
@@ -134,16 +134,17 @@ function ChartBar({request, shouldFetch, chartType} : requests) {
     <ChartLegend content={<ChartLegendContent />} />
     
     {uniqueISPs.map((isp, index) => (
-        ['download', 'upload'].map((key) => (
+        ['download'].map((key) => (
           <Bar
-            key={`${isp}-${key}`}
-            dataKey={`${isp}.${key}`}
+          key={`${isp}-${key}`}
+          dataKey={`${isp}.${key}`}
             name={`${isp} ${key.charAt(0).toUpperCase() + key.slice(1)}`}
             fill={getColorForIsp(isp)}
             // stackId="a"
           />
         ))
       ))}
+
     </BarChart>
 
 

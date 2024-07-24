@@ -3,13 +3,14 @@ import Card, { CardContent } from '@/components/Tools/Card';
 import { cardData } from './data/CardData';
 import ChartBar from './components/Dashboard/BarChart';
 import ChartPie from './components/Dashboard/PieChart';
-import { ChartLine } from './components/Dashboard/LineChart';
 import Header from './components/Header';
 import Filters from './components/Tools/SelectFilters';
 import Map from './components/Dashboard/Map';
 import ChartLine2 from './components/Dashboard/Line';
-import { summaryLine } from './data/summaryLine';
-import { chartConfigLine as chartConfig } from './data/linechartconfig';
+import ChartLineISP from './components/Dashboard/LineISP';
+import { DropdownMenuCheckboxes } from './components/Tools/Dropdown';
+import { heatData } from './data/heatmapData';
+import { map } from './data/mapData';
 
 interface Requests {
     filters: {
@@ -52,12 +53,6 @@ const Home: React.FC = () => {
     return (
         <div className="flex flex-col gap-5 w-full p-10">
 
-                <section>
-
-                <ChartLine2
-                    />
-
-                </section>
 
             <Header />
             <Filters onSave={handleSave} />
@@ -83,7 +78,8 @@ const Home: React.FC = () => {
             {/* Top half of data contaning country summary */}
             <section className="grid grid-cols-1 gap-4 transition-all lg:grid-cols-2">
                 <CardContent className="h-full">
-                    <Map />
+                    <Map 
+                    heatData={map}/>
                 </CardContent>
 
                 <section className="grid grid-cols-1 gap-4 transition-all lg:grid-cols-2">
@@ -118,7 +114,7 @@ const Home: React.FC = () => {
 
                 {/* download overtime */}
                 <CardContent className="h-full">
-                    <ChartLine 
+                    <ChartLine2 
                         request={memoizedRequest}
                         shouldFetch={shouldFetch}
                         chartType="download"
@@ -129,7 +125,7 @@ const Home: React.FC = () => {
 
                 {/* latency over time */}
                 <CardContent className="h-full">
-                    <ChartLine 
+                    <ChartLine2
                         request={memoizedRequest}
                         shouldFetch={shouldFetch}
                         keys={["latency", "lossrate"]}
@@ -151,12 +147,12 @@ const Home: React.FC = () => {
 
                 {/* cities download overtime */}
                 <CardContent className="h-full">
-                    <ChartLine 
+                    <ChartLine2 
                         request={memoizedRequest}
                         shouldFetch={shouldFetch}
-                        keys={["upload", "download"]} 
+                        keys={["upload", "download"]}
                         description='Upload and Download Performance over time'
-                        chartType="download" />
+                        chartType="download"/>
                 </CardContent>
 
                 {/* Intercity ISP performance*/}
@@ -176,12 +172,12 @@ const Home: React.FC = () => {
 
                 {/* latency over time */}
                 <CardContent className="h-full">
-                    <ChartLine 
+                    <ChartLine2 
                         request={memoizedRequest}
                         shouldFetch={shouldFetch}
                         keys={["latency", "lossrate"]}
                         description='Latency and Packet Loss over Time'
-                        chartType="latency" />
+                        chartType="latency"/>
                 </CardContent>
 
 
@@ -201,20 +197,29 @@ const Home: React.FC = () => {
             {/* ISP related information */}
             <section>
                 <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Quality of Service in ISPs</span>
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Quality of Service of ISPs</span>
                 </h2>
             </section>
 
 
             <section className="grid grid-cols-1 gap-4 transition-all lg:grid-cols-2">
-                <CardContent className="h-full">
-                    <Map />
+                <CardContent className="h-full relative">
+
+                <section className="relative z-10">Select ISP</section>
+            
+                    {/* <section className="relative z-20"><DropdownMenuCheckboxes /></section> */}
+                    <section className="relative z-0"> {/* Set z-index to 0 or default */}
+            <Map 
+            heatData={map}
+            
+            />
+        </section>
                 </CardContent>
 
 
                 {/* isp download overtime */}
                 <CardContent className="h-full">
-                    <ChartLine 
+                    <ChartLineISP 
                         request={memoizedRequest}
                         shouldFetch={shouldFetch}
                         keys={["upload", "download"]} 
@@ -229,7 +234,7 @@ const Home: React.FC = () => {
 
                 {/* Latency and Loss rate */}
                 <CardContent className="h-full">
-                    <ChartLine 
+                <ChartLineISP 
                         request={memoizedRequest}
                         shouldFetch={shouldFetch}
                         keys={["latency", "lossrate"]}
