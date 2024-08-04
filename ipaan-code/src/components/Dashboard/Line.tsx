@@ -18,6 +18,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+import Query from "../Tools/requestDemo";
 
 
 interface requests{
@@ -71,6 +72,15 @@ function ChartLine2({request, shouldFetch, chartType, description, keys} : reque
     
       };
 
+  
+      console.log("Request to line chart", request)
+      
+      console.log("Fetched Line chart data: ", data)
+
+      // const adjustedRequest = { ...request }
+      // adjustedRequest.filters.isps = []
+
+
 
 
     // where lineType = city
@@ -83,7 +93,7 @@ function ChartLine2({request, shouldFetch, chartType, description, keys} : reque
     };
 
     // Extract unique cities from mockLine data
-    const cities = [...new Set(mockLatency.map(item => item.city))];
+    const cities = [...new Set(data.map(item => item.city))];
     const cityColors = assignColorsToCities(cities);
 
 
@@ -100,7 +110,7 @@ function ChartLine2({request, shouldFetch, chartType, description, keys} : reque
     const groupDataByDate = () => {
         const groupedData: { [key: string]: { [key: string]: number } } = {};
 
-        mockLatency.forEach(item => {
+        data.forEach(item => {
             const { date, city, ...rest } = item;
             if (!groupedData[date]) {
                 groupedData[date] = {};
@@ -122,6 +132,19 @@ function ChartLine2({request, shouldFetch, chartType, description, keys} : reque
     console.log(groupedData)
 
     return (
+
+      <div>
+      {shouldFetch && (
+          <Query
+              request={request}
+              api="http://196.42.86.234:3000/query/line"
+              onDataFetched={handleDataFetched}
+              shouldFetch={shouldFetch}
+          />
+      )}
+
+
+
         <Card>
           <CardHeader className="flex flex-col items-stretch space-y-0 border-b p-0 sm:flex-row h-[100px]">
             <div className="flex flex-1 flex-col justify-center gap-1 px-6 py-5 sm:py-6 text-center">
@@ -194,6 +217,8 @@ function ChartLine2({request, shouldFetch, chartType, description, keys} : reque
             </ChartContainer>
           </CardContent>
         </Card>
+
+      </div>
     );
 }
 

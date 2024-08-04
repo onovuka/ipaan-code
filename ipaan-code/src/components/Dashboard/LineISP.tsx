@@ -18,6 +18,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+import Query from "../Tools/requestDemo";
 
 
 interface requests{
@@ -71,6 +72,13 @@ function ChartLineISP({request, shouldFetch, chartType, description, keys} : req
     
       };
 
+      console.log("received for ISP: ", data)
+
+      // const adjustedRequest = { ...request }
+      // adjustedRequest.filters.cities = []
+
+      
+
 
 
     // where lineType = city
@@ -122,6 +130,19 @@ function ChartLineISP({request, shouldFetch, chartType, description, keys} : req
     console.log(groupedData)
 
     return (
+      <div>
+
+
+        {shouldFetch && (
+                    <Query
+                        request={request}
+                        api="http://196.42.86.234:3000/query/line"
+                        onDataFetched={handleDataFetched}
+                        shouldFetch={shouldFetch}
+                    />
+        )}
+
+
         <Card>
           <CardHeader className="flex flex-col items-stretch space-y-0 border-b p-0 sm:flex-row h-[100px]">
             <div className="flex flex-1 flex-col justify-center gap-1 px-6 py-5 sm:py-6 text-center">
@@ -194,6 +215,8 @@ function ChartLineISP({request, shouldFetch, chartType, description, keys} : req
             </ChartContainer>
           </CardContent>
         </Card>
+
+        </div>
     );
 }
 

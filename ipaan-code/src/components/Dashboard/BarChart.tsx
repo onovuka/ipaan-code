@@ -66,14 +66,16 @@ function ChartBar({request, shouldFetch, chartType} : requests) {
 
   };
 
-  const adjustedRequest = { ...request };
-  if (chartType === "city") {
-    adjustedRequest.filters.isps = [];
-  }
+  // const adjustedRequest = { ...request };
+  // if (chartType === "city") {
+  //   adjustedRequest.filters.isps = [];
+  // }
+
+  console.log("Received data:", data);
 
 
   // transforming for x axis:
-  const transformedData: TransformedData[] = bar.reduce((acc: TransformedData[], curr) => {
+  const transformedData: TransformedData[] = data.reduce((acc: TransformedData[], curr) => {
     let city = acc.find(item => item.city === curr.city);
     if (!city) {
       city = { city: curr.city };
@@ -86,22 +88,22 @@ function ChartBar({request, shouldFetch, chartType} : requests) {
 
   const getColorForIsp = (isp: string) => {
     // Create a consistent mapping based on ISP names
-    const ispNames = Array.from(new Set(bar.map(item => item.isp)));
+    const ispNames = Array.from(new Set(data.map(item => item.isp)));
     const index = ispNames.indexOf(isp);
     return colors[index % colors.length];
   };
 
 
-  const uniqueISPs: string[] = [...new Set(bar.map(item => item.isp))];
+  const uniqueISPs: string[] = [...new Set(data.map(item => item.isp))];
   
 
   const colors = ["#8884d8", "#82ca9d", "#ffc658", "#d88484", "#a8d8d8", "#d8a884"];
 
   
 
-  console.log("Transformed Data:", JSON.stringify(transformedData, null, 2));
+  // console.log("Transformed Data:", JSON.stringify(transformedData, null, 2));
 
-  console.log("Unique isps", JSON.stringify(uniqueISPs, null, 2));
+  // console.log("Unique isps", JSON.stringify(uniqueISPs, null, 2));
   
 
   return (
@@ -110,7 +112,7 @@ function ChartBar({request, shouldFetch, chartType} : requests) {
             {shouldFetch && (
                 <Query
                     request={request}
-                    api="http://196.210.49.222:3000/query/bar"
+                    api="http://196.42.86.234:3000/query/bar"
                     onDataFetched={handleDataFetched}
                     shouldFetch={shouldFetch}
                 />
@@ -134,7 +136,7 @@ function ChartBar({request, shouldFetch, chartType} : requests) {
     <ChartLegend content={<ChartLegendContent />} />
     
     {uniqueISPs.map((isp, index) => (
-        ['download'].map((key) => (
+        ['download', "upload"].map((key) => (
           <Bar
           key={`${isp}-${key}`}
           dataKey={`${isp}.${key}`}
