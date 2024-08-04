@@ -7,7 +7,7 @@ function Header() {
       <img
         src={logo}
         alt="IPAAN Logo"
-        style={{ width: 100, height: 80
+        style={{ width: 150, height: 100
             , marginRight: 10, marginTop:-10 }}
       />
       <Box display="flex" flexDirection="column"> {/* Added Box for vertical layout */}

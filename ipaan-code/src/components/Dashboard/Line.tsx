@@ -1,9 +1,9 @@
 import * as React from "react";
 import { CartesianGrid, Line, LineChart, XAxis, YAxis, Tooltip } from "recharts";
 import {chartConfigLine as chartConfig } from "@/data/lineConfig"
-import { mockLatency } from "@/data/NoISP"
-import { mockLatency as mockISP } from "@/data/NoCity"
 import { useState } from "react";
+
+import { mockLine } from "@/data/internet_data";
 
 import {
   Card,
@@ -15,8 +15,6 @@ import {
 
 import {
   ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
 } from "@/components/ui/chart";
 import Query from "../Tools/requestDemo";
 
@@ -35,6 +33,7 @@ interface requests{
   shouldFetch:boolean
   chartType: keyof typeof chartConfig; // options: download or latency
   description: string;
+  typeChar: string // for city or country
   keys: Array<keyof typeof chartConfig>; // New property
 }
 
@@ -48,19 +47,14 @@ const colorPalette = [
     "hsl(var(--chart-6))",
 ];
 
-interface LineProps {
-    data: any,
-    dataType: string // for what are we rendering, isp or city or summary
-}
 
 function ChartLine2({request, shouldFetch, chartType, description, keys} : requests) {
+
+      console.log("Request from Line2:", request)
 
       // State to hold fetched data
       const [data, setData] = useState<any[]>([]);
 
-
-      // mockdata for response
-      const [Mockdata, setMockData] = useState<any[]>([]);
 
       const [activeChart, setActiveChart] =
       React.useState<keyof typeof chartConfig>(
@@ -71,16 +65,6 @@ function ChartLine2({request, shouldFetch, chartType, description, keys} : reque
         setData(fetchedData);
     
       };
-
-  
-      console.log("Request to line chart", request)
-      
-      console.log("Fetched Line chart data: ", data)
-
-      // const adjustedRequest = { ...request }
-      // adjustedRequest.filters.isps = []
-
-
 
 
     // where lineType = city
@@ -93,7 +77,7 @@ function ChartLine2({request, shouldFetch, chartType, description, keys} : reque
     };
 
     // Extract unique cities from mockLine data
-    const cities = [...new Set(data.map(item => item.city))];
+    const cities = [...new Set(mockLine.map(item => item.city))];
     const cityColors = assignColorsToCities(cities);
 
 
@@ -110,7 +94,7 @@ function ChartLine2({request, shouldFetch, chartType, description, keys} : reque
     const groupDataByDate = () => {
         const groupedData: { [key: string]: { [key: string]: number } } = {};
 
-        data.forEach(item => {
+        mockLine.forEach(item => {
             const { date, city, ...rest } = item;
             if (!groupedData[date]) {
                 groupedData[date] = {};
@@ -129,7 +113,7 @@ function ChartLine2({request, shouldFetch, chartType, description, keys} : reque
 
     // Process grouped data
     const groupedData = React.useMemo(() => groupDataByDate(), [activeChart]);
-    console.log(groupedData)
+    console.log("grouped mock line", groupedData)
 
     return (
 

@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import ReactDOM from 'react-dom/client'
 // import ChartLine2 from './components/Dashboard/Line'
 import Home from './page'

@@ -2,8 +2,9 @@ import * as React from "react";
 import { CartesianGrid, Line, LineChart, XAxis, YAxis, Tooltip } from "recharts";
 import {chartConfigLine as chartConfig } from "@/data/lineConfig"
 import { mockLatency } from "@/data/NoISP"
-import { mockLatency as mockISP } from "@/data/NoCity"
+// import { mockLatency as mockISP } from "@/data/NoCity"
 import { useState } from "react";
+import { lineISP } from "@/data/NoCities";
 
 import {
   Card,
@@ -72,15 +73,8 @@ function ChartLineISP({request, shouldFetch, chartType, description, keys} : req
     
       };
 
-      console.log("received for ISP: ", data)
-
-      // const adjustedRequest = { ...request }
-      // adjustedRequest.filters.cities = []
 
       
-
-
-
     // where lineType = city
     const assignColorsToisps = (isps: string[]) => {
         const ispColorMap: { [key: string]: string } = {};
@@ -91,7 +85,7 @@ function ChartLineISP({request, shouldFetch, chartType, description, keys} : req
     };
 
     // Extract unique cities from mockLine data
-    const isps = [...new Set(mockISP.map(item => item.isp))];
+    const isps = [...new Set(lineISP.map(item => item.isp))];
     const ispColors = assignColorsToisps(isps);
 
 
@@ -108,7 +102,7 @@ function ChartLineISP({request, shouldFetch, chartType, description, keys} : req
     const groupDataByDate = () => {
         const groupedData: { [key: string]: { [key: string]: number } } = {};
 
-        mockISP.forEach(item => {
+        lineISP.forEach(item => {
             const { date, isp, ...rest } = item;
             if (!groupedData[date]) {
                 groupedData[date] = {};
@@ -127,7 +121,6 @@ function ChartLineISP({request, shouldFetch, chartType, description, keys} : req
 
     // Process grouped data
     const groupedData = React.useMemo(() => groupDataByDate(), [activeChart]);
-    console.log(groupedData)
 
     return (
       <div>

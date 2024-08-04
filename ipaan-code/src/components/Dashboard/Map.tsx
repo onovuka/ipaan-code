@@ -1,7 +1,23 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet.heat'; // Import the Leaflet Heatmap plugin
+
+interface requests{
+  request:{
+      filters: {
+      countries: string[];
+      cities: string[];
+      isps: string[]; 
+  }
+    startDate: string;
+    endDate: string;
+
+  },
+  shouldFetch:boolean
+  chartType:string
+}
+
 
 // Define HeatData as an array of tuples with latitude, longitude, and intensity
 type HeatData = [number, number, number][];
@@ -11,6 +27,9 @@ interface MapProps {
 }
 
 function Map({ heatData }: MapProps) {
+
+
+
   const mapRef = useRef<L.Map | null>(null);
   const mapContainerRef = useRef<HTMLDivElement>(null);
 
@@ -55,7 +74,7 @@ function Map({ heatData }: MapProps) {
     };
   }, [heatData]); // Re-run effect when heatData changes
 
-  return <div ref={mapContainerRef} style={{ height: '500px', width: '100%' }}></div>;
+  return <div ref={mapContainerRef} style={{ height: '600px', width: '100%' }}></div>;
 }
 
 export default Map;

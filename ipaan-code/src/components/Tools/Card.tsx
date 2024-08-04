@@ -14,7 +14,7 @@ export default function Card(props: cardProp) {
         {/* icon */}
         <props.icon className="h-4 w-4 text-gray-400" />
       </section>
-      <section className="flex flex-col gap-1">
+      <section className="flex flex-col gap-1 text-center">
         <h2 className="text-2xl font-semibold">{props.total}</h2>
         <p className="text-xs text-gray-500">{props.discription}</p>
       </section>

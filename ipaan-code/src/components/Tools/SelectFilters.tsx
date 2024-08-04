@@ -164,62 +164,55 @@ function Filters ({onSave}: FiltersProps){
     onSave(newOptions);
   };
 
-    return(
-      <div className="flex justify-end">
+  return (
+    <div className="flex flex-wrap justify-end space-x-4 mt-4">
 
-            <div className="col-span-4">
-              <DatePickerWithRange
-              dateRange={dateRange} 
-              setDateRange={setDateRange}
-               />
-            </div>
+  
+      <div className="flex-grow max-w-[200px]">
+        <FilterList
+          initialOptions={countries}
+          onChange={handleCountryChange}
+          selectionType="Country"
+          max={1}
+        />
+      </div>
+  
+      <div className="flex-grow max-w-[200px]">
+        <FilterList
+          initialOptions={cityOptions}
+          onChange={handleCityChange}
+          selectionType="City"
+          max={6}
+        />
+      </div>
+  
+      <div className="flex-grow max-w-[200px]">
+        <FilterList
+          initialOptions={ispOptions}
+          onChange={handleIspChange}
+          selectionType="ISP"
+          max={6}
+        />
+      </div>
 
-
-            <div className="col-span-4 w-15"> {/* Adjust margin as needed */}
-              <FilterList
-                initialOptions={countries}
-                onChange={handleCountryChange}
-                selectionType="Country"
-                max={1}
-              />
-            </div>
-
-            <div className="col-span-4"> {/* Adjust margin as needed */}
-
-              <FilterList
-                initialOptions={cityOptions}
-                onChange={handleCityChange}
-                selectionType="City"
-                max={6}
-              />
-
-            </div>
-
-            
-            <div className="col-span-4"> {/* Adjust margin as needed */}
-
-              <FilterList
-                initialOptions={ispOptions}
-                onChange={handleIspChange}
-                selectionType="ISP"
-                max={6}
-              />
-
-            </div>
-
-            <div className="col-span-12 flex justify-end mt-4">
-              <Button onClick={handleSave}
-                      className={`px-4 py-2 rounded ${isSaveEnabled ? 'bg-blue-500 text-white' : 'bg-gray-300 text-gray-600'}`}
-                      disabled={!isSaveEnabled}>
-                 Save
-            </Button>
-            </div>
-
-
-        </div>
-
-        
-    );
+      <div className="flex-grow max-w-[200px]"> {/* Adjust max-w as needed */}
+        <DatePickerWithRange
+          dateRange={dateRange}
+          setDateRange={setDateRange}
+        />
+      </div>
+  
+      <div className="flex items-center">
+        <Button
+          onClick={handleSave}
+          className={`w-[100px] flex items-center justify-center font-normal ${isSaveEnabled ? 'bg-blue-500 text-white' : 'bg-gray-300 text-gray-600'}`}
+          disabled={!isSaveEnabled}
+        >
+          Apply Filters
+        </Button>
+      </div>
+    </div>
+  )
 }
 
 export default Filters;

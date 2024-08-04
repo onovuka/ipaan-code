@@ -26,8 +26,8 @@ interface PieData {
 }
 
 export const mockPie: PieData[] = [
-    { chartType: "uploads", country: "Nigeria", value: 275, colour: "hsl(var(--chart-1))" },
-    { chartType: "uploads", country: "South Africa", value: 25, colour: "hsl(var(--chart-2))" },
-    { chartType: "uploads", country: "Uganda", value: 67, colour: "hsl(var(--chart-3))" },
-    { chartType: "uploads", country: "Mozambique", value: 99, colour:"hsl(var(--chart-4))" },
+    // { chartType: "uploads", country: "Nigeria", value: 275, colour: "hsl(var(--chart-1))" },
+    // { chartType: "uploads", country: "South Africa", value: 25, colour: "hsl(var(--chart-2))" },
+    // { chartType: "uploads", country: "Uganda", value: 67, colour: "hsl(var(--chart-3))" },
+    // { chartType: "uploads", country: "Mozambique", value: 99, colour:"hsl(var(--chart-4))" },
   ];
