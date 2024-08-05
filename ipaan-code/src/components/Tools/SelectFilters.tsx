@@ -65,7 +65,7 @@ function Filters ({onSave}: FiltersProps){
 
 
 
-      // State for date range
+    // State for date range
     const [dateRange, setDateRange] = useState<DateRange | undefined>({
       from: new Date(2024, 0, 1),
       to: new Date(2024, 0, 1),
@@ -124,7 +124,7 @@ function Filters ({onSave}: FiltersProps){
       }
 
 
-        // useEffect to update city options when countryCode changes
+      // useEffect to update city options when countryCode changes
       useEffect(() => {
         if (countryCode) {
           changeCityOptions(countryCode);

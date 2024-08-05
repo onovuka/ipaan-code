@@ -4,6 +4,10 @@ import {chartConfigLine as chartConfig } from "@/data/lineConfig"
 import { useState } from "react";
 import { mockLine } from "@/data/internet_data";
 
+import {lineCountry as lineZA} from "../../data/User_Testing/ZAR"
+import "../../data/User_Testing/KE"
+import "../../data/User_Testing/NG"
+
 import {
   Card,
   CardContent,
@@ -34,6 +38,7 @@ interface requests{
   chartType: keyof typeof chartConfig; // options: download or latency
   description: string;
   keys: Array<keyof typeof chartConfig>; // New property
+  section: string;
 }
 
 
@@ -47,7 +52,7 @@ const colorPalette = [
 ];
 
 
-function ChartLine2({request, shouldFetch, chartType, description, keys} : requests) {
+function ChartLine2({request, shouldFetch, chartType, description, keys, section} : requests) {
 
 
       // State to hold fetched data
@@ -65,8 +70,24 @@ function ChartLine2({request, shouldFetch, chartType, description, keys} : reque
       };
   
 
-      const adjustedRequest = { ...request }
-      adjustedRequest.filters.isps = []
+      if (section === "country"){
+        const adjustedRequest = { ...request }
+        adjustedRequest.filters.isps = []
+        adjustedRequest.filters.cities = []
+      }
+
+      if (section === "city"){
+        const adjustedRequest = { ...request }
+        adjustedRequest.filters.countries = []
+        adjustedRequest.filters.isps = []
+      }
+
+      if (section === "isp"){
+        const adjustedRequest = { ...request }
+        adjustedRequest.filters.countries = []
+        adjustedRequest.filters.cities = []
+      }
+
 
 
 

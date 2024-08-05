@@ -2,7 +2,7 @@
 import * as React from "react"
 import { TrendingUp } from "lucide-react"
 import { Label, Pie, PieChart } from "recharts"
-import { chartConfigPie } from "./chartConfigs"
+import { chartConfigPie } from "../../chartConfigs"
 import { mockPie } from "@/data/PieChartData"
 import Query from "../Tools/requestDemo"
 import { useState } from "react"

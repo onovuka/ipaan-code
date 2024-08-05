@@ -1,14 +1,16 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import Card, { CardContent } from '@/components/Tools/Card';
 import { cardData } from './data/CardData';
-import ChartBar from './components/Dashboard/BarChart';
 import Header from './components/Header';
 import Filters from './components/Tools/SelectFilters';
 import Map from './components/Dashboard/Map';
-import ChartLine2 from './components/Dashboard/LineChart';
-import ChartLineISP from './components/Dashboard/LineISP';
 import { heatmap } from './data/heatmap';
+import { heatmap2 } from './data/heatmapfull';
 import { Button } from './components/ui/button';
+import ChartLineCountryDemo from './components/UserTesting/LineChartCountry';
+import LineChartCityDemo from './components/UserTesting/LineChartCity';
+import ChartLineISPDemo from './components/UserTesting/LineISP';
+import ChartBarDemo from './components/UserTesting/BarChart';
 
 interface Requests {
     filters: {
@@ -31,11 +33,24 @@ const Home: React.FC = () => {
         startDate: '',
         endDate: '',
     });
-    const memoizedRequest = useMemo(() => selectedOptions, [selectedOptions]);
+
+    const [selectedFilter, setSelectedFilter] = useState<string>("ZA"); // Default filter
+
+    const memoizedRequest = useMemo(() => ({
+        ...selectedOptions,
+        filters: {
+            ...selectedOptions.filters,
+            countries: [selectedFilter],
+        }
+    }), [selectedOptions, selectedFilter]);
 
     const handleSave = (newOptions: Requests) => {
         setSelectedOptions(newOptions);
         setShouldFetch(true);
+    };
+
+    const handleFilterChange = (filter: string) => {
+        setSelectedFilter(filter);
     };
 
     useEffect(() => {
@@ -46,29 +61,28 @@ const Home: React.FC = () => {
 
     return (
         <div className="flex flex-col gap-5 w-full p-10">
-
             <div>
                 <Header />
             </div>
 
             <div>
                 <CardContent>
-                <section className='text-center'>
-                    <h2 className='text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight mb-6'>User Testing</h2>
-                    
-                    <Button className='mx-10 bg-gray-200 text-gray-800'>
-                        South Africa
-                    </Button>
+                    <section className='text-center'>
+                        <h2 className='text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight mb-6'>User Testing</h2>
 
-                    <Button className='mx-10 bg-gray-200 text-gray-800'>
-                        Kenya
-                    </Button>
+                        <Button className='mx-10 bg-gray-200 text-gray-800' onClick={() => handleFilterChange("ZA")}>
+                            South Africa
+                        </Button>
 
-                    <Button className='mx-10 bg-gray-200 text-gray-800'>
-                        Nigeria
-                    </Button>
+                        <Button className='mx-10 bg-gray-200 text-gray-800' onClick={() => handleFilterChange("KE")}>
+                            Kenya
+                        </Button>
 
-                </section>
+                        <Button className='mx-10 bg-gray-200 text-gray-800' onClick={() => handleFilterChange("NG")}>
+                            Nigeria
+                        </Button>
+
+                    </section>
                 </CardContent>
 
             </div>
@@ -85,31 +99,33 @@ const Home: React.FC = () => {
                 ))}
             </section>
 
-            <div className="relative">
-                {/* Position Filters on top with z-index */}
-                <div className="absolute top-0 left-0 right-0 z-10">
+            <div className="relative mb-8"> {/* Added margin-bottom */}
+                {/* Ensure Filters are absolutely positioned and above other content */}
+                <div style={{ position: 'absolute', top: '0', left: '0', zIndex: 9999, width: '100%', backgroundColor: 'white', padding: '10px' }}>
                     <Filters onSave={handleSave} />
                 </div>
 
-                <section className="pt-16">
+                <section className="pt-24"> {/* Increased padding-top */}
                     <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
                         <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Quality of Service in selected countries</span>
                     </h2>
                 </section>
 
                 <section className="grid grid-cols-1 gap-4 transition-all lg:grid-cols-2 h-3/4">
-                    <CardContent className="h-[450px] p-0 m-0">
-                        <Map heatData={heatmap} />
+                    <CardContent className="h-[500px] p-0 m-0 relative">
+                        <Map heatData={heatmap2} />
                     </CardContent>
 
-                    <section className="grid grid-cols-1  transition-all lg:grid-cols-1">
-                        <CardContent className="h-3/4 p-0 m-0">
-                            <ChartLine2 
+                    <section className="grid grid-cols-1 transition-all lg:grid-cols-1">
+                        <CardContent className="h-full p-0 m-0">
+                            <ChartLineCountryDemo
                                 request={memoizedRequest}
-                                shouldFetch={shouldFetch}
+                                filter={selectedFilter}
+                                chartType={"download"}
+                                description={""}
                                 keys={["upload", "download"]}
-                                description='Upload and Download Performance over time'
-                                chartType="download"/>
+                                section={''}                             
+                            />
                         </CardContent>
                     </section>
                 </section>
@@ -123,18 +139,19 @@ const Home: React.FC = () => {
 
             <section className="grid grid-cols-1 gap-4 transition-all lg:grid-cols-2">
                 <CardContent className="h-full">
-                    <ChartLine2 
+                    <LineChartCityDemo
                         request={memoizedRequest}
-                        shouldFetch={shouldFetch}
+                        filter={selectedFilter}
+                        chartType={"download"}
+                        description='Upload and Download over Time'
                         keys={["upload", "download"]}
-                        description='Upload and Download Performance over time'
-                        chartType="download"/>
+                    />
                 </CardContent>
 
                 <CardContent className="h-full">
-                    <ChartBar
+                    <ChartBarDemo
                         request={memoizedRequest}
-                        shouldFetch={shouldFetch}
+                        filter={selectedFilter}
                         keys={["download", "upload"]}
                         chartType="download"
                     />
@@ -143,20 +160,11 @@ const Home: React.FC = () => {
 
             <section className="grid grid-cols-1 gap-4 transition-all lg:grid-cols-2">
                 <CardContent className="h-full">
-                    <ChartLine2 
+                    <LineChartCityDemo
                         request={memoizedRequest}
-                        shouldFetch={shouldFetch}
+                        filter={selectedFilter}
                         keys={["latency", "lossrate"]}
                         description='Latency and Packet Loss over Time'
-                        chartType="latency"/>
-                </CardContent>
-
-                <CardContent className="h-full">
-                    <ChartLine2 
-                        request={memoizedRequest}
-                        shouldFetch={shouldFetch}
-                        keys={["latency", "lossrate"]}
-                        description='Content Delivery Metrics over Time'
                         chartType="latency"/>
                 </CardContent>
             </section>
@@ -169,21 +177,24 @@ const Home: React.FC = () => {
 
             <section className="grid grid-cols-1 gap-4 transition-all lg:grid-cols-2">
                 <CardContent className="h-full">
-                    <ChartLineISP 
+                    <ChartLineISPDemo 
                         request={memoizedRequest}
-                        shouldFetch={shouldFetch}
-                        keys={["upload", "download"]} 
+                        filter={selectedFilter}
+                        keys={["upload", "download"]}
                         description='Upload and Download Performance over time'
-                        chartType="download" />
+                        chartType="download" 
+                        section={''} />
                 </CardContent>
 
                 <CardContent className="h-full">
-                    <ChartLineISP 
+                    <ChartLineISPDemo
                         request={memoizedRequest}
-                        shouldFetch={shouldFetch}
+                        filter={selectedFilter}
                         keys={["latency", "lossrate"]}
                         description='Latency and Packet Loss over Time' 
-                        chartType="latency" />
+                        chartType="latency"
+                        section={''} 
+                        />
                 </CardContent>
             </section>
         </div>

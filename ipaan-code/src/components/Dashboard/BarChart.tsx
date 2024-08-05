@@ -4,7 +4,7 @@ import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
 import { useState, useEffect } from "react"
 
 import { ChartContainer, ChartTooltip, ChartTooltipContent, ChartLegend, ChartLegendContent} from "@/components/ui/chart"
-import { chartConfig } from "./chartConfigs"
+import { chartConfig } from "../../chartConfigs"
 
 import {
   Card,

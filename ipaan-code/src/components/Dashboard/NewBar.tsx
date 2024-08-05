@@ -4,7 +4,7 @@ import * as React from "react";
 import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
 import { useState } from "react";
 import { ChartContainer, ChartTooltip, ChartTooltipContent, ChartLegend, ChartLegendContent } from "@/components/ui/chart";
-import { chartConfig } from "./chartConfigs";
+import { chartConfig } from "../../chartConfigs";
 import { mockBar } from "@/data/MockBar";
 
 interface Requests {
