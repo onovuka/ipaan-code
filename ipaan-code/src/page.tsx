@@ -4,13 +4,14 @@ import { cardData } from './data/CardData';
 import Header from './components/Header';
 import Filters from './components/Tools/SelectFilters';
 import Map from './components/Dashboard/Map';
-import { heatmap } from './data/heatmap';
 import { heatmap2 } from './data/heatmapfull';
 import { Button } from './components/ui/button';
 import ChartLineCountryDemo from './components/UserTesting/LineChartCountry';
 import LineChartCityDemo from './components/UserTesting/LineChartCity';
 import ChartLineISPDemo from './components/UserTesting/LineISP';
 import ChartBarDemo from './components/UserTesting/BarChart';
+import { Pricelist } from './components/ISPpricinglist';
+
 
 interface Requests {
     filters: {
@@ -65,7 +66,7 @@ const Home: React.FC = () => {
                 <Header />
             </div>
 
-            <div>
+            {/* <div>
                 <CardContent>
                     <section className='text-center'>
                         <h2 className='text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight mb-6'>User Testing</h2>
@@ -85,7 +86,7 @@ const Home: React.FC = () => {
                     </section>
                 </CardContent>
 
-            </div>
+            </div> */}
 
             <section className="grid w-full grid-cols-1 gap-4 gap-x-8 transition-all sm:grid-cols-2 xl:grid-cols-4">
                 {cardData.map((d, i) => (
@@ -112,9 +113,22 @@ const Home: React.FC = () => {
                 </section>
 
                 <section className="grid grid-cols-1 gap-4 transition-all lg:grid-cols-2 h-3/4">
-                    <CardContent className="h-[500px] p-0 m-0 relative">
-                        <Map heatData={heatmap2} />
-                    </CardContent>
+                <div className="bg-white shadow-md rounded-lg h-[500px] flex flex-col">
+    {/* Card Header */}
+    <div className="p-4 border-b flex items-center justify-between">
+      <h3 className="text-xl font-semibold">Download Speeds</h3>
+    </div>
+
+    {/* Card Content */}
+    <CardContent className="h-full p-0 m-0 relative">
+      <Map heatData={heatmap2} />
+    </CardContent>
+  </div>
+
+                <div className="bg-white shadow-md rounded-lg h-[500px] flex flex-col">
+                    <Pricelist />
+                </div>
+
 
                     <section className="grid grid-cols-1 transition-all lg:grid-cols-1">
                         <CardContent className="h-full p-0 m-0">
