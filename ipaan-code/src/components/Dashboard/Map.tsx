@@ -3,21 +3,19 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet.heat'; // Import the Leaflet Heatmap plugin
 
-interface requests{
-  request:{
-      filters: {
+interface requests {
+  request: {
+    filters: {
       countries: string[];
       cities: string[];
-      isps: string[]; 
-  }
+      isps: string[];
+    };
     startDate: string;
     endDate: string;
-
-  },
-  shouldFetch:boolean
-  chartType:string
+  };
+  shouldFetch: boolean;
+  chartType: string;
 }
-
 
 // Define HeatData as an array of tuples with latitude, longitude, and intensity
 type HeatData = [number, number, number][];
@@ -27,9 +25,6 @@ interface MapProps {
 }
 
 function Map({ heatData }: MapProps) {
-
-
-
   const mapRef = useRef<L.Map | null>(null);
   const mapContainerRef = useRef<HTMLDivElement>(null);
 
@@ -48,11 +43,11 @@ function Map({ heatData }: MapProps) {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       }).addTo(mapRef.current);
 
-      // Directly use the heatData in the expected format
-      const heat = L.heatLayer(heatData, {
+      // Add the heatmap layer
+      const heatLayer = L.heatLayer(heatData, {
         minOpacity: 0.6,
         maxZoom: 15,
-        max: 150,
+        max: 200,
         radius: 15,
         blur: 15,
         gradient: {
@@ -63,7 +58,20 @@ function Map({ heatData }: MapProps) {
         }
       }).addTo(mapRef.current);
 
-      // You can also interact with the heatmap layer here if needed
+      // Add a layer of circles with tooltips for each data point
+      heatData.forEach(([lat, lng, intensity]) => {
+        L.circle([lat, lng], {
+          radius: 10, // Small radius, adjust as needed
+          color: 'transparent', // No border
+          fillOpacity: 0, // Transparent fill
+        })
+          .bindTooltip(`
+            <div style="font-size: 0.875rem; padding: 0.5rem; background-color: white; border: 1px solid #ddd; border-radius: 0.25rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);">
+              <b>Average Download Speed:</b> ${intensity.toFixed(2)} Mbps
+            </div>
+          `, { className: 'leaflet-tooltip-custom' })
+          .addTo(mapRef.current);
+      });
     }
 
     // Cleanup on component unmount
@@ -72,9 +80,13 @@ function Map({ heatData }: MapProps) {
         mapRef.current.remove();
       }
     };
-  }, [heatData]); // Re-run effect when heatData changes
+  }, [heatData]);
 
-  return <div ref={mapContainerRef} style={{ height: '600px', width: '100%' }}></div>;
+  return (
+    <div>
+      <div ref={mapContainerRef} style={{ height: '500px', width: '100%' }}></div>
+    </div>
+  );
 }
 
 export default Map;

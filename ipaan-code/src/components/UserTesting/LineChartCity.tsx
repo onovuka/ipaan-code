@@ -1,7 +1,11 @@
 import * as React from "react";
-import { CartesianGrid, Line, LineChart, XAxis, YAxis, Tooltip } from "recharts";
+import { CartesianGrid, Line, LineChart, XAxis, YAxis, Tooltip, Legend } from "recharts";
 import { chartConfigLine as chartConfig } from "@/data/lineConfig";
 import { useEffect, useState } from "react";
+
+import { Infopopup } from "../Tools/Infopopup";
+
+import Query from "../Tools/requestDemo";
 
 import { ZARcity } from "../../data/User_Testing/ZAR";
 import { KEcity } from "../../data/User_Testing/KE";
@@ -31,6 +35,7 @@ interface Requests {
   chartType: keyof typeof chartConfig; // options: download, latency, lossrate
   description: string;
   keys: Array<keyof typeof chartConfig>; // New property
+  shouldFetch: boolean
 }
 
 const colorPalette = [
@@ -42,9 +47,38 @@ const colorPalette = [
   "hsl(var(--chart-6))",
 ];
 
-function LineChartCityDemo({ filter, chartType, description, keys }: Requests) {
+function LineChartCityDemo({ filter, chartType, request, keys, shouldFetch }: Requests) {
   // State to hold fetched data
   const [data, setData] = useState<any[]>([]);
+
+  const [realData, setReal] = useState<any[]>([]);
+
+  const updatedRequest = {
+    filters: {
+        countries: [], 
+        cities: request.filters.cities, 
+        isps: [],   
+    },
+    startDate: request.startDate, 
+    endDate: request.endDate,     
+  };
+
+  const handleDataFetched = (fetchedData: any) => {
+    setReal(fetchedData);
+  };
+
+
+  const [hover, isHover] = useState<Boolean>(false);
+
+  const [term, setTerm] = useState<string>("");
+
+  useEffect(() => {
+    if (chartType === "download") {
+      setTerm("Download Speed");
+    } else if (chartType === "latency") {
+      setTerm("latency");
+    }
+  }, [chartType]);
 
   useEffect(() => {
     if (filter === "ZA") {
@@ -127,12 +161,51 @@ function LineChartCityDemo({ filter, chartType, description, keys }: Requests) {
   }, [activeChart]);
 
   return (
+
+    <div>
+
+      {shouldFetch && (
+                      <Query
+                          request={updatedRequest}
+                          api="http://196.42.86.234:3000/query/line"
+                          onDataFetched={handleDataFetched}
+                          shouldFetch={shouldFetch}
+                      />
+          )}
+
+
     <Card className="h-full">
       <CardHeader className="flex flex-col items-stretch space-y-0 border-b p-0 sm:flex-row h-[100px]">
         <div className="flex flex-1 flex-col justify-center gap-1 px-6 py-5 sm:py-6 text-center">
-          <CardTitle>Internet Performance Over Time</CardTitle>
+          
+          <CardTitle>
+
+            <span
+
+                className="cursor-pointer text-gray-600"
+                onMouseEnter={() => isHover(true)}
+                onMouseLeave={() => isHover(false)}
+            
+            >
+
+
+            <Infopopup
+
+                term = {term}
+
+              />
+
+              </span>
+            
+            
+            
+            Internet Performance Over Time
+            
+            
+            
+            </CardTitle>
           <CardDescription className="text-sm">
-            {description}
+            Per City Statistic
           </CardDescription>
         </div>
         <div className="flex">
@@ -181,6 +254,9 @@ function LineChartCityDemo({ filter, chartType, description, keys }: Requests) {
             />
             <YAxis domain={yAxisDomain} label={{ value: yAxisLabel, angle: -90, position: 'insideLeft' }} />
             <Tooltip />
+
+            <Legend />
+
             {cities.map(city => (
               <Line
                 key={city}
@@ -196,6 +272,7 @@ function LineChartCityDemo({ filter, chartType, description, keys }: Requests) {
         </ChartContainer>
       </CardContent>
     </Card>
+    </div>
   );
 }
 

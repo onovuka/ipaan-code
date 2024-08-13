@@ -8,6 +8,9 @@ import { LineNG } from "@/data/User_Testing/NG";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ChartContainer } from "@/components/ui/chart";
 
+// Fetching data from the API:
+import Query from "../Tools/requestDemo"
+
 interface Requests {
   request: {
     filters: {
@@ -22,7 +25,8 @@ interface Requests {
   chartType: keyof typeof chartConfig; // options: download or latency
   description: string;
   keys: Array<keyof typeof chartConfig>; // New property
-  section: string; // country / city / isp
+  section: string; 
+  shouldFetch: boolean;
 }
 
 const colorPalette = [
@@ -34,9 +38,28 @@ const colorPalette = [
   "hsl(var(--chart-6))",
 ];
 
-function ChartLineCountryDemo({ filter, chartType, description, keys }: Requests) {
+function ChartLineCountryDemo({ filter, chartType, request, keys, shouldFetch }: Requests) {
   const [data, setData] = useState<any[]>([]);
-  
+
+  const [realData, setReal] = useState<any[]>([]);
+
+  const updatedRequest = {
+    filters: {
+        countries: request.filters.countries, // Preserve existing countries or set as needed
+        cities: [], // Set to empty
+        isps: [],   // Set to empty
+    },
+    startDate: request.startDate, // Preserve existing startDate or set as needed
+    endDate: request.endDate,     // Preserve existing endDate or set as needed
+  };
+
+  const handleDataFetched = (fetchedData: any) => {
+    setReal(fetchedData);
+  };
+
+
+
+
   useEffect(() => {
     // Update data based on the filter
     switch (filter) {
@@ -100,13 +123,30 @@ function ChartLineCountryDemo({ filter, chartType, description, keys }: Requests
   const groupedData = React.useMemo(() => groupDataByDate(), [activeChart, data]);
 
   return (
+
     <div>
-      <Card>
+
+      {shouldFetch && (
+                      <Query
+                          request={updatedRequest}
+                          api="http://196.42.86.234:3000/query/line"
+                          onDataFetched={handleDataFetched}
+                          shouldFetch={shouldFetch}
+                      />
+          )}
+
+      <Card className="h-full">
         <CardHeader className="flex flex-col items-stretch space-y-0 border-b p-0 sm:flex-row h-[100px]">
           <div className="flex flex-1 flex-col justify-center gap-1 px-6 py-5 sm:py-6 text-center">
-            <CardTitle>Internet Performance Over Time</CardTitle>
+            
+            <CardTitle>
+
+              Internet Performance Over Time
+              
+              </CardTitle>
+
             <CardDescription className="text-sm">
-              {description}
+              Country Statistic
             </CardDescription>
           </div>
           <div className="flex">
@@ -128,10 +168,10 @@ function ChartLineCountryDemo({ filter, chartType, description, keys }: Requests
           </div>
         </CardHeader>
 
-        <CardContent className="px-2 sm:p-6 w-full">
+        <CardContent className="flex-1 px-2 sm:p-6 w-full flex flex-col">
           <ChartContainer
             config={chartConfig}
-            className="aspect-auto h-[300px] w-full"
+            className="flex-1 w-full"
           >
             <LineChart
               data={groupedData} // Provide grouped data to LineChart
@@ -170,6 +210,7 @@ function ChartLineCountryDemo({ filter, chartType, description, keys }: Requests
           </ChartContainer>
         </CardContent>
       </Card>
+
     </div>
   );
 }

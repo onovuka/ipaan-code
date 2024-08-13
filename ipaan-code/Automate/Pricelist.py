@@ -5,6 +5,8 @@ import json
 input_file = 'broadband_price_comparison_data.xlsx'
 df = pd.read_excel(input_file, header=1)  # Set the second row as header
 
+print(df.columns)
+
 # Define the African regions
 african_regions = ['SUB-SAHARAN AFRICA', 'NORTHERN AFRICA']
 
@@ -12,13 +14,13 @@ african_regions = ['SUB-SAHARAN AFRICA', 'NORTHERN AFRICA']
 df_africa = df[df['Continental region'].isin(african_regions)]
 
 # Extract relevant columns and clean up the data
-df_africa = df_africa[['Rank', 'Name', 'Currency', 'Conversion rate (USD) (Rates Frozen: 02/04/2024)', 
+df_africa = df_africa[['Rank', 'Name', 'Country code', 'Currency', 'Conversion rate (USD) (Rates Frozen: 02/04/2024)', 
                        'Average package cost per month (local currency)', 
                        'Cheapest broadband package measured (local currency)', 
                        'Most expensive broadband package measured (local currency)']]
 
 # Rename columns for clarity
-df_africa.columns = ['Rank', 'Country', 'Currency', 'Conversion Rate USD', 'Average', 'Cheapest', 'Expensive']
+df_africa.columns = ['Rank', 'Country', 'Countrycode', 'Currency', 'Conversion Rate USD', 'Average', 'Cheapest', 'Expensive']
 
 # Convert to dictionary for TypeScript export
 data_dict = df_africa.to_dict(orient='records')

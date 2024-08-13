@@ -1,5 +1,5 @@
 import * as React from "react";
-import { CartesianGrid, Line, LineChart, XAxis, YAxis, Tooltip } from "recharts";
+import { CartesianGrid, Line, LineChart, XAxis, YAxis, Tooltip, Legend } from "recharts";
 import { chartConfigLine as chartConfig } from "@/data/lineConfig";
 import { useEffect, useState } from "react";
 import { ZAisp } from "@/data/User_Testing/ZAR";
@@ -13,6 +13,11 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { ChartContainer } from "@/components/ui/chart";
+
+import { Infopopup } from "../Tools/Infopopup";
+
+// Fetching data from the API:
+import Query from "../Tools/requestDemo"
 
 interface Requests {
   request: {
@@ -28,7 +33,8 @@ interface Requests {
   chartType: keyof typeof chartConfig; // options: download or latency
   description: string;
   keys: Array<keyof typeof chartConfig>; // New property
-  section: string; // country / city / isp
+  section: string; 
+  shouldFetch: boolean
 }
 
 const colorPalette = [
@@ -40,9 +46,39 @@ const colorPalette = [
   "hsl(var(--chart-6))",
 ];
 
-function ChartLineISPDemo({ filter, chartType, description, keys }: Requests) {
+function ChartLineISPDemo({ filter, chartType, description, keys, request, shouldFetch }: Requests) {
   // State to hold fetched data
   const [data, setData] = useState<any[]>([]);
+
+  const [realData, setReal] = useState<any[]>([]);
+
+  
+  const [hover, isHover] = useState<Boolean>(false);
+
+  const updatedRequest = {
+    filters: {
+        countries: [], 
+        cities: [], 
+        isps: request.filters.isps,  
+    },
+    startDate: request.startDate,
+    endDate: request.endDate,   
+  };
+
+  const handleDataFetched = (fetchedData: any) => {
+    setReal(fetchedData);
+  };
+
+  const [term, setTerm] = useState<string>("");
+
+  useEffect(() => {
+    if (chartType === "download") {
+      setTerm("Download Speed");
+    } else if (chartType === "latency") {
+      setTerm("latency");
+    }
+  }, [chartType]);
+
 
   useEffect(() => {
     // Update data based on the filter
@@ -119,10 +155,42 @@ function ChartLineISPDemo({ filter, chartType, description, keys }: Requests) {
 
   return (
     <div>
+
+        {shouldFetch && (
+                        <Query
+                            request={updatedRequest}
+                            api="http://196.42.86.234:3000/query/line"
+                            onDataFetched={handleDataFetched}
+                            shouldFetch={shouldFetch}
+                        />
+          )}
+
       <Card>
         <CardHeader className="flex flex-col items-stretch space-y-0 border-b p-0 sm:flex-row h-[100px]">
           <div className="flex flex-1 flex-col justify-center gap-1 px-6 py-5 sm:py-6 text-center">
-            <CardTitle>Internet Performance Over Time</CardTitle>
+            <CardTitle>
+
+              
+            <span
+
+                className="cursor-pointer text-gray-600"
+                onMouseEnter={() => isHover(true)}
+                onMouseLeave={() => isHover(false)}
+
+                >
+
+                <Infopopup
+
+                term = {term}
+
+                />
+
+            </span>
+              
+              Internet Performance Over Time
+              
+            </CardTitle>
+
             <CardDescription className="text-sm">
               {description}
             </CardDescription>
@@ -175,6 +243,7 @@ function ChartLineISPDemo({ filter, chartType, description, keys }: Requests) {
                 domain={activeChart === "lossrate" ? [0, 20] : [0, 100]}
               />
               <Tooltip />
+              <Legend />
               {isps.map(isp => (
                 <Line
                   key={isp}

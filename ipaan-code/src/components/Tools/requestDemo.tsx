@@ -33,8 +33,6 @@ function Query({ request, api, onDataFetched, shouldFetch }: QueryProps) {
 
                 const data = await response.json();
                 onDataFetched(data);
-                console.log("Saved data");
-                console.log(data);
             } catch (error) {
                 console.error('Error:', error);
             }

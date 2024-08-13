@@ -9,6 +9,11 @@ import { ZABar } from "@/data/User_Testing/ZAR";
 import { NGBar } from "@/data/User_Testing/NG";
 import { KEBar } from "@/data/User_Testing/KE";
 
+// Fetching data from the API:
+import Query from "../Tools/requestDemo"
+
+import { Infopopup } from "../Tools/Infopopup";
+
 interface Requests {
   request: {
     filters: {
@@ -21,7 +26,8 @@ interface Requests {
   };
   filter: string; // name of country selected for mock data
   chartType: keyof typeof chartConfig; // options: download or upload
-  keys: Array<keyof typeof chartConfig>; // New property
+  keys: Array<keyof typeof chartConfig>; // New property 
+  shouldFetch:boolean // call api
 }
 
 type TransformedData = {
@@ -32,10 +38,32 @@ type TransformedData = {
   } | string;
 };
 
-function ChartBarDemo({ filter, chartType, keys }: Requests) {
+function ChartBarDemo({ filter, chartType, request, keys, shouldFetch }: Requests) {
   // State to hold fetched data
   const [data, setData] = useState<any[]>([]);
+
+  const [realData, setReal] = useState<any[]>([]);
+
   const [activeChart, setActiveChart] = useState<keyof typeof chartConfig>(chartType);
+
+  const [hover, isHover] = useState<Boolean>(false);
+
+  const updatedRequest = {
+    filters: {
+        countries: [], 
+        cities: request.filters.cities, 
+        isps: request.filters.isps,   
+    },
+    startDate: request.startDate, 
+    endDate: request.endDate,     
+  };
+
+  const handleDataFetched = (fetchedData: any) => {
+    setReal(fetchedData);
+    console.log("Kanye Api response ", realData);
+  };
+
+  
 
   useEffect(() => {
     // Update data based on the filter
@@ -86,14 +114,47 @@ function ChartBarDemo({ filter, chartType, keys }: Requests) {
 
   return (
     <div>
+
+    {shouldFetch && (
+                <Query
+                    request={updatedRequest}
+                    api="https://api.kanye.rest"
+                    onDataFetched={handleDataFetched}
+                    shouldFetch={shouldFetch}
+                />
+    )}
+
+
+
       <Card>
         <CardHeader className="flex flex-col items-stretch space-y-0 border-b p-0 sm:flex-row h-[100px]">
           <div className="flex flex-1 flex-col justify-center gap-1 px-6 py-5 sm:py-6 text-center">
-            <CardTitle>Performance between cities</CardTitle>
+            <CardTitle>
+
+            <span
+
+                className="cursor-pointer text-gray-600"
+                onMouseEnter={() => isHover(true)}
+                onMouseLeave={() => isHover(false)}
+
+                >
+
+                <Infopopup
+
+                  term = {"Download Speed"}
+
+                />
+
+            </span>
+              
+              Performance between cities
+            </CardTitle>
+
             <CardDescription className="text-sm">
               Upload and Download Speed
             </CardDescription>
           </div>
+          
           <div className="flex">
             {keys.map((key) => {
               const chart = key as keyof typeof chartConfig;

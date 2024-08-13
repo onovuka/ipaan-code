@@ -73,7 +73,6 @@ function ChartBar({request, shouldFetch, chartType, keys} : requests) {
 
   const handleDataFetched = (fetchedData: any) => {
     setData(fetchedData);
-
   };
 
   const DEFAULT_ISP = "Telkom SA Ltd.";
