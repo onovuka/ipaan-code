@@ -80,7 +80,7 @@ export const chartConfigLine = {
     },
 
     latency:{
-      label: "Latency",
+      label: "Min RTT",
       color: "hsl(var(--chart-1))",
     },
 

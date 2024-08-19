@@ -10,7 +10,7 @@ export interface cardProp{
 export const cardData: cardProp[] = [
     {
         label: "Date",
-        total: "12 March 2024",
+        total: "31 July 2024",
         icon: Calendar,
         discription: "Date last updated"
     },

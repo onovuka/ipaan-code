@@ -1,18 +1,15 @@
 "use client";
 
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Label } from "recharts";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { ChartContainer, ChartTooltipContent } from "@/components/ui/chart";
 import { chartConfig } from "../../chartConfigs";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { ZABar } from "@/data/User_Testing/ZAR";
-import { NGBar } from "@/data/User_Testing/NG";
-import { KEBar } from "@/data/User_Testing/KE";
 
 // Fetching data from the API:
 import Query from "../Tools/requestDemo"
 
-import { Infopopup } from "../Tools/Infopopup";
+
 
 interface Requests {
   request: {
@@ -38,15 +35,12 @@ type TransformedData = {
   } | string;
 };
 
-function ChartBarDemo({ filter, chartType, request, keys, shouldFetch }: Requests) {
+function ChartBarDemo({ chartType, request, keys, shouldFetch }: Requests) {
   // State to hold fetched data
   const [data, setData] = useState<any[]>([]);
 
-  const [realData, setReal] = useState<any[]>([]);
-
   const [activeChart, setActiveChart] = useState<keyof typeof chartConfig>(chartType);
 
-  const [hover, isHover] = useState<Boolean>(false);
 
   const updatedRequest = {
     filters: {
@@ -59,29 +53,11 @@ function ChartBarDemo({ filter, chartType, request, keys, shouldFetch }: Request
   };
 
   const handleDataFetched = (fetchedData: any) => {
-    setReal(fetchedData);
-    console.log("Kanye Api response ", realData);
+    setData(fetchedData);
+    console.log("Kanye Api response ", data);
   };
 
   
-
-  useEffect(() => {
-    // Update data based on the filter
-    switch (filter) {
-      case "ZA":
-        setData(ZABar);
-        break;
-      case "NG":
-        setData(NGBar);
-        break;
-      case "KE":
-        setData(KEBar);
-        break;
-      default:
-        setData([]); // or some default data
-        break;
-    }
-  }, [filter]);
 
   const DEFAULT_ISP = "Telkom SA Ltd.";
 
@@ -118,7 +94,7 @@ function ChartBarDemo({ filter, chartType, request, keys, shouldFetch }: Request
     {shouldFetch && (
                 <Query
                     request={updatedRequest}
-                    api="https://api.kanye.rest"
+                    api="http://137.158.60.110:3000/query/bar"
                     onDataFetched={handleDataFetched}
                     shouldFetch={shouldFetch}
                 />
@@ -130,23 +106,7 @@ function ChartBarDemo({ filter, chartType, request, keys, shouldFetch }: Request
         <CardHeader className="flex flex-col items-stretch space-y-0 border-b p-0 sm:flex-row h-[100px]">
           <div className="flex flex-1 flex-col justify-center gap-1 px-6 py-5 sm:py-6 text-center">
             <CardTitle>
-
-            <span
-
-                className="cursor-pointer text-gray-600"
-                onMouseEnter={() => isHover(true)}
-                onMouseLeave={() => isHover(false)}
-
-                >
-
-                <Infopopup
-
-                  term = {"Download Speed"}
-
-                />
-
-            </span>
-              
+             
               Performance between cities
             </CardTitle>
 

@@ -1,0 +1,26 @@
+/* styles.css */
+@media print {
+    /* Adjust the styles for PDF export */
+    .pdf-content {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: auto;
+        overflow: visible;
+    }
+    
+    .pdf-content * {
+        font-size: 12pt; /* Adjust font size for better readability in PDF */
+        line-height: 1.5; /* Increase line height if needed */
+    }
+
+    .pdf-content img {
+        max-width: 100%; /* Ensure images fit within the page */
+        height: auto;
+    }
+
+    /* Hide elements that should not appear in the PDF */
+    .no-print {
+        display: none;
+    }
+}

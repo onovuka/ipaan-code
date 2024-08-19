@@ -2,9 +2,7 @@ import * as React from "react";
 import { CartesianGrid, Line, LineChart, XAxis, YAxis, Tooltip, Legend } from "recharts";
 import { chartConfigLine as chartConfig } from "@/data/lineConfig";
 import { useEffect, useState } from "react";
-import { ZAisp } from "@/data/User_Testing/ZAR";
-import { NGisp } from "@/data/User_Testing/NG";
-import { KEisp } from "@/data/User_Testing/KE";
+
 import {
   Card,
   CardContent,
@@ -14,10 +12,8 @@ import {
 } from "@/components/ui/card";
 import { ChartContainer } from "@/components/ui/chart";
 
-import { Infopopup } from "../Tools/Infopopup";
 
-// Fetching data from the API:
-import Query from "../Tools/requestDemo"
+import Query from "../Tools/requestDemo";
 
 interface Requests {
   request: {
@@ -29,10 +25,10 @@ interface Requests {
     startDate: string;
     endDate: string;
   };
-  filter: string; // name of country selected for mock data
-  chartType: keyof typeof chartConfig; // options: download or latency
+  filter: string;
+  chartType: keyof typeof chartConfig;
   description: string;
-  keys: Array<keyof typeof chartConfig>; // New property
+  keys: Array<keyof typeof chartConfig>;
   section: string; 
   shouldFetch: boolean
 }
@@ -46,61 +42,26 @@ const colorPalette = [
   "hsl(var(--chart-6))",
 ];
 
-function ChartLineISPDemo({ filter, chartType, description, keys, request, shouldFetch }: Requests) {
-  // State to hold fetched data
+function ChartLineISPDemo({chartType, description, keys, request, shouldFetch }: Requests) {
   const [data, setData] = useState<any[]>([]);
 
-  const [realData, setReal] = useState<any[]>([]);
-
-  
-  const [hover, isHover] = useState<Boolean>(false);
+  const [activeChart, setActiveChart] = React.useState<keyof typeof chartConfig>(chartType);
 
   const updatedRequest = {
     filters: {
-        countries: [], 
-        cities: [], 
-        isps: request.filters.isps,  
+      countries: [], 
+      cities: [], 
+      isps: request.filters.isps,  
     },
     startDate: request.startDate,
     endDate: request.endDate,   
   };
 
   const handleDataFetched = (fetchedData: any) => {
-    setReal(fetchedData);
+    setData(fetchedData);
+    console.log(data);
   };
 
-  const [term, setTerm] = useState<string>("");
-
-  useEffect(() => {
-    if (chartType === "download") {
-      setTerm("Download Speed");
-    } else if (chartType === "latency") {
-      setTerm("latency");
-    }
-  }, [chartType]);
-
-
-  useEffect(() => {
-    // Update data based on the filter
-    switch (filter) {
-      case "ZA":
-        setData(ZAisp);
-        break;
-      case "NG":
-        setData(NGisp);
-        break;
-      case "KE":
-        setData(KEisp);
-        break;
-      default:
-        setData([]); // or some default data
-        break;
-    }
-  }, [filter]);
-
-  const [activeChart, setActiveChart] = React.useState<keyof typeof chartConfig>(
-    () => chartType
-  );
 
   const assignColorsToisps = (isps: string[]) => {
     const ispColorMap: { [key: string]: string } = {};
@@ -110,7 +71,6 @@ function ChartLineISPDemo({ filter, chartType, description, keys, request, shoul
     return ispColorMap;
   };
 
-  // Extract unique ISPs from data
   const isps = [...new Set(data.map(item => item.isp))];
   const ispColors = assignColorsToisps(isps);
 
@@ -148,47 +108,41 @@ function ChartLineISPDemo({ filter, chartType, description, keys, request, shoul
         return "MBps";
       case "lossrate":
         return "Percentage (%)";
+      case "latency":
+        return "MinRTT (ms)";
       default:
         return "";
     }
   }, [activeChart]);
 
+  // Define domain based on chartType
+  const yAxisDomain = React.useMemo(() => {
+    switch (activeChart) {
+      case "latency":
+        return [0, 500]; // Set domain for latency
+      case "lossrate":
+        return [0, 100]; // Set domain for lossrate
+      default:
+        return [0, 100]; // Default domain
+    }
+  }, [activeChart]);
+
   return (
     <div>
-
-        {shouldFetch && (
-                        <Query
-                            request={updatedRequest}
-                            api="http://196.42.86.234:3000/query/line"
-                            onDataFetched={handleDataFetched}
-                            shouldFetch={shouldFetch}
-                        />
-          )}
+      {shouldFetch && (
+        <Query
+          request={updatedRequest}
+          api="http://137.158.60.110:3000/query/line"
+          onDataFetched={handleDataFetched}
+          shouldFetch={shouldFetch}
+        />
+      )}
 
       <Card>
         <CardHeader className="flex flex-col items-stretch space-y-0 border-b p-0 sm:flex-row h-[100px]">
           <div className="flex flex-1 flex-col justify-center gap-1 px-6 py-5 sm:py-6 text-center">
             <CardTitle>
-
-              
-            <span
-
-                className="cursor-pointer text-gray-600"
-                onMouseEnter={() => isHover(true)}
-                onMouseLeave={() => isHover(false)}
-
-                >
-
-                <Infopopup
-
-                term = {term}
-
-                />
-
-            </span>
-              
               Internet Performance Over Time
-              
             </CardTitle>
 
             <CardDescription className="text-sm">
@@ -240,7 +194,7 @@ function ChartLineISPDemo({ filter, chartType, description, keys, request, shoul
               />
               <YAxis
                 label={{ value: yAxisLabel, angle: -90, position: 'insideLeft' }}
-                domain={activeChart === "lossrate" ? [0, 20] : [0, 100]}
+                domain={yAxisDomain} // Apply the computed domain
               />
               <Tooltip />
               <Legend />

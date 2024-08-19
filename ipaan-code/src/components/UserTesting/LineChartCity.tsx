@@ -7,16 +7,13 @@ import { Infopopup } from "../Tools/Infopopup";
 
 import Query from "../Tools/requestDemo";
 
-import { ZARcity } from "../../data/User_Testing/ZAR";
-import { KEcity } from "../../data/User_Testing/KE";
-import { NGcity } from "@/data/User_Testing/NG";
 
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle
 } from "@/components/ui/card";
 
 import { ChartContainer } from "@/components/ui/chart";
@@ -47,11 +44,9 @@ const colorPalette = [
   "hsl(var(--chart-6))",
 ];
 
-function LineChartCityDemo({ filter, chartType, request, keys, shouldFetch }: Requests) {
+function LineChartCityDemo({ chartType, request, keys, shouldFetch }: Requests) {
   // State to hold fetched data
   const [data, setData] = useState<any[]>([]);
-
-  const [realData, setReal] = useState<any[]>([]);
 
   const updatedRequest = {
     filters: {
@@ -64,7 +59,8 @@ function LineChartCityDemo({ filter, chartType, request, keys, shouldFetch }: Re
   };
 
   const handleDataFetched = (fetchedData: any) => {
-    setReal(fetchedData);
+    setData(fetchedData);
+    console.log(data);
   };
 
 
@@ -80,17 +76,6 @@ function LineChartCityDemo({ filter, chartType, request, keys, shouldFetch }: Re
     }
   }, [chartType]);
 
-  useEffect(() => {
-    if (filter === "ZA") {
-      setData(ZARcity);
-    } else if (filter === "NG") {
-      setData(NGcity);
-    } else if (filter === "KE") {
-      setData(KEcity);
-    } else {
-      setData([]); // or some default data
-    }
-  }, [filter]);
 
   const [activeChart, setActiveChart] = React.useState<keyof typeof chartConfig>(chartType);
 
@@ -134,17 +119,15 @@ function LineChartCityDemo({ filter, chartType, request, keys, shouldFetch }: Re
   // Determine YAxis domain and label based on chartType
   const yAxisDomain = React.useMemo(() => {
     if (activeChart === "lossrate") {
-      return [0, 20];
+      return [0, 50];
     } else if (activeChart === "download" || activeChart === "upload") {
-      return [0, 100];
+      return [0, 250];
     } else if (activeChart === "latency") {
-      const values = data.map(item => item.latency).filter(value => typeof value === 'number');
-      const max = Math.max(...values, 0);
-      return [0, max];
+
+      return [0, 500];
     } else {
-      const values = data.map(item => item[activeChart]).filter(value => typeof value === 'number');
-      const max = Math.max(...values, 0);
-      return [0, max];
+
+      return [0, 500];
     }
   }, [activeChart, data]);
 
@@ -155,10 +138,12 @@ function LineChartCityDemo({ filter, chartType, request, keys, shouldFetch }: Re
         return "MBps";
       case "lossrate":
         return "Percentage (%)";
+      case "latency":
+        return "MinRTT (ms)"; // Update the label to reflect MinRTT
       default:
         return "";
     }
-  }, [activeChart]);
+  }, [activeChart])
 
   return (
 
@@ -167,7 +152,7 @@ function LineChartCityDemo({ filter, chartType, request, keys, shouldFetch }: Re
       {shouldFetch && (
                       <Query
                           request={updatedRequest}
-                          api="http://196.42.86.234:3000/query/line"
+                          api="http://137.158.60.110:3000/query/line"
                           onDataFetched={handleDataFetched}
                           shouldFetch={shouldFetch}
                       />

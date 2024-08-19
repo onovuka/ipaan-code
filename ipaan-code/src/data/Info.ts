@@ -2,7 +2,7 @@
 export const definitions = [
     {
       term: "latency",
-      definition1: "Latency is the time it takes for data to travel from your device to a server and back. Lower latency means faster response times and a smoother experience.",
+      definition1: "Minimum RTT (Round-Trip Time) is the shortest time it takes for a signal to travel from your device to another and back. It's like how quickly a text message gets sent and then comes back to you. The lower the Min RTT, the faster your internet is.",
       definition2: "Packet loss occurs when some data packets sent over the internet don't reach their destination. This can cause slowdowns, interruptions, or poor-quality connections."
     },
     {

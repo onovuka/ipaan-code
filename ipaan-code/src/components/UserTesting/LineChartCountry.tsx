@@ -2,14 +2,13 @@ import * as React from "react";
 import { CartesianGrid, Line, LineChart, XAxis, YAxis, Tooltip } from "recharts";
 import { chartConfigLine as chartConfig } from "@/data/lineConfig";
 import { useEffect, useState } from "react";
-import { lineCountry as lineZA } from "../../data/User_Testing/ZAR";
-import { lineKE } from "../../data/User_Testing/KE";
-import { LineNG } from "@/data/User_Testing/NG";
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ChartContainer } from "@/components/ui/chart";
 
 // Fetching data from the API:
 import Query from "../Tools/requestDemo"
+import { Description } from "@radix-ui/react-dialog";
 
 interface Requests {
   request: {
@@ -27,6 +26,7 @@ interface Requests {
   keys: Array<keyof typeof chartConfig>; // New property
   section: string; 
   shouldFetch: boolean;
+  africa: boolean; // if aggregate of entire continent
 }
 
 const colorPalette = [
@@ -38,50 +38,54 @@ const colorPalette = [
   "hsl(var(--chart-6))",
 ];
 
-function ChartLineCountryDemo({ filter, chartType, request, keys, shouldFetch }: Requests) {
+function ChartLineCountryDemo({chartType, request, keys, shouldFetch, africa }: Requests) {
+
   const [data, setData] = useState<any[]>([]);
 
-  const [realData, setReal] = useState<any[]>([]);
+  const [description, setDescription] = useState<string>("");
 
-  const updatedRequest = {
+  useEffect(() => {
+    if (africa === true) {
+      setDescription("Continent performance over time");
+    } else {
+      setDescription("Country Statistic");
+    }
+  }, [africa]); // Dependency array ensures the effect runs when 'africa' changes
+
+
+
+  const updatedRequest = africa ? {
     filters: {
-        countries: request.filters.countries, // Preserve existing countries or set as needed
-        cities: [], // Set to empty
-        isps: [],   // Set to empty
+      countries: [],  // Empty array if africa is true
+      cities: [],     // Empty array if africa is true
+      isps: [],       // Empty array if africa is true
     },
-    startDate: request.startDate, // Preserve existing startDate or set as needed
-    endDate: request.endDate,     // Preserve existing endDate or set as needed
+    startDate: request.startDate, // Preserve existing startDate
+    endDate: request.endDate,     // Preserve existing endDate
+  } : {
+    filters: {
+      countries: request.filters.countries, // Preserve existing countries
+      cities: [], // Set to empty
+      isps: [],   // Set to empty
+    },
+    startDate: request.startDate, // Preserve existing startDate
+    endDate: request.endDate,     // Preserve existing endDate
   };
 
   const handleDataFetched = (fetchedData: any) => {
-    setReal(fetchedData);
+    // Conditionally add countrycode to each entry in the fetched data based on the africa prop
+    const modifiedData = africa
+      ? fetchedData.map((entry: any) => ({
+          ...entry,
+          countrycode: "Africa",
+        }))
+      : fetchedData;
+      
+    setData(modifiedData);
+    console.log(modifiedData); // For debugging
   };
 
 
-
-
-  useEffect(() => {
-    // Update data based on the filter
-    switch (filter) {
-      case "ZA":
-        setData(lineZA);
-        break;
-      case "NG":
-        setData(LineNG);
-        break;
-      case "KE":
-        setData(lineKE);
-        break;
-      default:
-        setData([]); // or some default data
-        break;
-    }
-  }, [filter]);
-
-  // Log data to verify it
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
 
   const [activeChart, setActiveChart] = React.useState<keyof typeof chartConfig>(chartType);
 
@@ -129,7 +133,7 @@ function ChartLineCountryDemo({ filter, chartType, request, keys, shouldFetch }:
       {shouldFetch && (
                       <Query
                           request={updatedRequest}
-                          api="http://196.42.86.234:3000/query/line"
+                          api="http://137.158.60.110:3000/query/line"
                           onDataFetched={handleDataFetched}
                           shouldFetch={shouldFetch}
                       />
@@ -146,7 +150,7 @@ function ChartLineCountryDemo({ filter, chartType, request, keys, shouldFetch }:
               </CardTitle>
 
             <CardDescription className="text-sm">
-              Country Statistic
+              {description}
             </CardDescription>
           </div>
           <div className="flex">
