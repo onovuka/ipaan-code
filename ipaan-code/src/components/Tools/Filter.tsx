@@ -44,7 +44,7 @@ const handleTempChange = (selected: Option[]) => {
 };
 
 if (selectionType == "Country"){
-  max=1
+  max=6
 } else{
   max=6
 }

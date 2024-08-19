@@ -12,7 +12,6 @@ import {
 } from "@/components/ui/card";
 import { ChartContainer } from "@/components/ui/chart";
 
-
 import Query from "../Tools/requestDemo";
 
 interface Requests {
@@ -44,7 +43,6 @@ const colorPalette = [
 
 function ChartLineISPDemo({chartType, description, keys, request, shouldFetch }: Requests) {
   const [data, setData] = useState<any[]>([]);
-
   const [activeChart, setActiveChart] = React.useState<keyof typeof chartConfig>(chartType);
 
   const updatedRequest = {
@@ -59,9 +57,8 @@ function ChartLineISPDemo({chartType, description, keys, request, shouldFetch }:
 
   const handleDataFetched = (fetchedData: any) => {
     setData(fetchedData);
-    console.log(data);
+    console.log(fetchedData);
   };
-
 
   const assignColorsToisps = (isps: string[]) => {
     const ispColorMap: { [key: string]: string } = {};
@@ -100,7 +97,7 @@ function ChartLineISPDemo({chartType, description, keys, request, shouldFetch }:
 
   const groupedData = React.useMemo(() => groupDataByDate(), [data, activeChart]);
 
-  // Determine YAxis domain and label based on chartType
+  // Determine YAxis label based on chartType
   const yAxisLabel = React.useMemo(() => {
     switch (activeChart) {
       case "upload":
@@ -117,15 +114,29 @@ function ChartLineISPDemo({chartType, description, keys, request, shouldFetch }:
 
   // Define domain based on chartType
   const yAxisDomain = React.useMemo(() => {
-    switch (activeChart) {
-      case "latency":
-        return [0, 500]; // Set domain for latency
-      case "lossrate":
-        return [0, 100]; // Set domain for lossrate
-      default:
-        return [0, 100]; // Default domain
+    // Calculate max value based on activeChart
+    const maxValue = data.reduce((max, item) => {
+      if (activeChart === "lossrate") {
+        return Math.max(max, item.lossrate || 0);
+      } else if (activeChart === "download") {
+        return Math.max(max, item.download || 0);
+      } else if (activeChart === "upload") {
+        return Math.max(max, item.upload || 0);
+      } else if (activeChart === "latency") {
+        return Math.max(max, item.latency || 0);
+      }
+      return max;
+    }, 0);
+
+    // Adjust domain based on chartType
+    if (activeChart === "lossrate") {
+      return [0, maxValue + 10];
+    } else if (activeChart === "download" || activeChart === "upload" || activeChart === "latency") {
+      return [0, maxValue + 30];
+    } else {
+      return [0, 500]; // Default domain for other cases
     }
-  }, [activeChart]);
+  }, [activeChart, data]);
 
   return (
     <div>
@@ -189,6 +200,7 @@ function ChartLineISPDemo({chartType, description, keys, request, shouldFetch }:
                   return date.toLocaleDateString("en-US", {
                     month: "short",
                     day: "numeric",
+                    year: "numeric"
                   });
                 }}
               />

@@ -117,17 +117,43 @@ function LineChartCityDemo({ chartType, request, keys, shouldFetch }: Requests) 
   const groupedData = React.useMemo(() => groupDataByDate(), [data, activeChart]);
 
   // Determine YAxis domain and label based on chartType
+  // const yAxisDomain = React.useMemo(() => {
+  //   if (activeChart === "lossrate") {
+  //     return [0, 30];
+  //   } else if (activeChart === "download" || activeChart === "upload") {
+  //     return [0, 180];
+  //   } else if (activeChart === "latency") {
+
+  //     return [0, 200];
+  //   } else {
+
+  //     return [0, 500];
+  //   }
+  // }, [activeChart, data]);
+
+  // Define domain based on chartType
   const yAxisDomain = React.useMemo(() => {
+    // Calculate max value based on activeChart
+    const maxValue = data.reduce((max, item) => {
+      if (activeChart === "lossrate") {
+        return Math.max(max, item.lossrate || 0);
+      } else if (activeChart === "download") {
+        return Math.max(max, item.download || 0);
+      } else if (activeChart === "upload") {
+        return Math.max(max, item.upload || 0);
+      } else if (activeChart === "latency") {
+        return Math.max(max, item.latency || 0);
+      }
+      return max;
+    }, 0);
+
+    // Adjust domain based on chartType
     if (activeChart === "lossrate") {
-      return [0, 50];
-    } else if (activeChart === "download" || activeChart === "upload") {
-      return [0, 250];
-    } else if (activeChart === "latency") {
-
-      return [0, 500];
+      return [0, maxValue + 10];
+    } else if (activeChart === "download" || activeChart === "upload" || activeChart === "latency") {
+      return [0, maxValue + 30];
     } else {
-
-      return [0, 500];
+      return [0, 500]; // Default domain for other cases
     }
   }, [activeChart, data]);
 
@@ -139,11 +165,11 @@ function LineChartCityDemo({ chartType, request, keys, shouldFetch }: Requests) 
       case "lossrate":
         return "Percentage (%)";
       case "latency":
-        return "MinRTT (ms)"; // Update the label to reflect MinRTT
+        return "MinRTT (ms)";
       default:
         return "";
     }
-  }, [activeChart])
+  }, [activeChart]);
 
   return (
 
@@ -234,6 +260,7 @@ function LineChartCityDemo({ chartType, request, keys, shouldFetch }: Requests) 
                 return date.toLocaleDateString("en-US", {
                   month: "short",
                   day: "numeric",
+                  year: "numeric"
                 });
               }}
             />

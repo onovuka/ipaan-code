@@ -38,7 +38,7 @@ const colorPalette = [
   "hsl(var(--chart-6))",
 ];
 
-function ChartLineCountryDemo({chartType, request, keys, shouldFetch, africa }: Requests) {
+function LineAfrica({chartType, request, keys, shouldFetch, africa }: Requests) {
 
   const [data, setData] = useState<any[]>([]);
 
@@ -60,8 +60,8 @@ function ChartLineCountryDemo({chartType, request, keys, shouldFetch, africa }: 
       cities: [],     // Empty array if africa is true
       isps: [],       // Empty array if africa is true
     },
-    startDate: request.startDate, // Preserve existing startDate
-    endDate: request.endDate,     // Preserve existing endDate
+    startDate: "2023-01-01", // Preserve existing startDate
+    endDate: "2024-31-03",     // Preserve existing endDate
   } : {
     filters: {
       countries: request.filters.countries, // Preserve existing countries
@@ -194,7 +194,7 @@ function ChartLineCountryDemo({chartType, request, keys, shouldFetch, africa }: 
                   return date.toLocaleDateString("en-US", {
                     month: "short",
                     day: "numeric",
-                    year: "numeric"
+                    year: "numeric",
                   });
                 }}
               />
@@ -220,4 +220,4 @@ function ChartLineCountryDemo({chartType, request, keys, shouldFetch, africa }: 
   );
 }
 
-export default ChartLineCountryDemo;
+export default LineAfrica;

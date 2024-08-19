@@ -10,7 +10,7 @@ import { format } from "date-fns";
 import { countrylist as countries } from "../../data/countrylist";
 import filterData from "@/data/FilterData";
 
-// saved filters
+// Saved filters
 interface SelectedOptions {
   filters: {
     countries: string[];
@@ -25,9 +25,10 @@ interface FiltersProps {
   onSave: (options: SelectedOptions) => void;
 }
 
-// component body
+// Component body
 function Filters({ onSave }: FiltersProps) {
-  const [countryCode, setCountryCode] = useState<string>("");
+
+  const today = new Date();
 
   const [cityOptions, setCities] = useState<FilterOptions[]>([]);
   const [ispOptions, setISP] = useState<FilterOptions[]>([]);
@@ -49,15 +50,16 @@ function Filters({ onSave }: FiltersProps) {
   });
 
   const [dateRange, setDateRange] = useState<DateRange | undefined>({
-    from: new Date(2024, 0, 1),
-    to: new Date(2024, 0, 1),
+    from: today,
+    to: today,
   });
 
   const handleCountryChange = (selectedOptions: FilterOptions[]) => {
     setSelectedCountryOptions(selectedOptions);
-    setCountryCode(selectedOptions[0]?.value || "");
-    changeCityOptions(selectedOptions[0]?.value || "");
-    changeIspOptions(selectedOptions[0]?.value || "");
+
+    const selectedCountryCodes = selectedOptions.map(option => option.value);
+    changeCityOptions(selectedCountryCodes);
+    changeIspOptions(selectedCountryCodes);
   };
 
   const handleCityChange = (selectedOptions: FilterOptions[]) => {
@@ -68,38 +70,41 @@ function Filters({ onSave }: FiltersProps) {
     setSelectedIspOptions(selectedOptions);
   };
 
-  function changeCityOptions(countryCode: string) {
-    if (countryCode in filterData) {
-      const cities = filterData[countryCode].cities;
-      const cityOptions: FilterOptions[] = cities.map(city => ({
-        label: city,
-        value: city
-      }));
-      setCities(cityOptions);
-    } else {
-      setCities([]);
-    }
+  function changeCityOptions(countryCodes: string[]) {
+    let allCities: Set<string> = new Set();
+
+    countryCodes.forEach(code => {
+      if (code in filterData) {
+        const cities = filterData[code].cities;
+        cities.forEach(city => allCities.add(city));
+      }
+    });
+
+    const cityOptions: FilterOptions[] = Array.from(allCities).map(city => ({
+      label: city,
+      value: city
+    }));
+
+    setCities(cityOptions);
   }
 
-  function changeIspOptions(countryCode: string) {
-    if (countryCode in filterData) {
-      const isps = filterData[countryCode].isps;
-      const ispOptions: FilterOptions[] = isps.map(isp => ({
-        label: isp,
-        value: isp
-      }));
-      setISP(ispOptions);
-    } else {
-      setISP([]);
-    }
-  }
+  function changeIspOptions(countryCodes: string[]) {
+    let allISPs: Set<string> = new Set();
 
-  useEffect(() => {
-    if (countryCode) {
-      changeCityOptions(countryCode);
-      changeIspOptions(countryCode);
-    }
-  }, [countryCode]);
+    countryCodes.forEach(code => {
+      if (code in filterData) {
+        const isps = filterData[code].isps;
+        isps.forEach(isp => allISPs.add(isp));
+      }
+    });
+
+    const ispOptions: FilterOptions[] = Array.from(allISPs).map(isp => ({
+      label: isp,
+      value: isp
+    }));
+
+    setISP(ispOptions);
+  }
 
   useEffect(() => {
     const isAnyFilterSelected =
@@ -146,7 +151,7 @@ function Filters({ onSave }: FiltersProps) {
           initialOptions={countries}
           onChange={handleCountryChange}
           selectionType="Country"
-          max={1}
+          max={6} // Allows multiple country selections
         />
       </div>
 

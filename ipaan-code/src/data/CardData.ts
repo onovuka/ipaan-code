@@ -16,7 +16,7 @@ export const cardData: cardProp[] = [
     },
     {
         label: "Tests",
-        total: "17247741",
+        total: "6.2M",
         icon: Pen,
         discription: "Total tests collected"
     },

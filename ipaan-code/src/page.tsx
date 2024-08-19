@@ -9,6 +9,7 @@ import ChartLineCountryDemo from './components/UserTesting/LineChartCountry';
 import LineChartCityDemo from './components/UserTesting/LineChartCity';
 import ChartLineISPDemo from './components/UserTesting/LineISP';
 import ChartBarDemo from './components/UserTesting/BarChart';
+import LineAfrica from './components/UserTesting/AfricaLine';
 
 interface Requests {
     filters: {
@@ -114,7 +115,7 @@ const Home: React.FC = () => {
                         }}
                     >
                         <CardContent className="h-full">
-                            <ChartLineCountryDemo
+                            <LineAfrica
                                 request={selectedOptions}
                                 africa={true}
                                 filter={selectedFilter}
