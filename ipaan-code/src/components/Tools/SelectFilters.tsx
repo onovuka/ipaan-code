@@ -6,9 +6,11 @@ import { Button } from "../ui/button";
 import { DateRange } from "react-day-picker";
 import { format } from "date-fns";
 
+
 // Data
 import { countrylist as countries } from "../../data/countrylist";
 import filterData from "@/data/FilterData";
+import { countrylistValue, countryNameToCode } from "../../data/countryValue";
 
 // Saved filters
 interface SelectedOptions {
@@ -25,9 +27,13 @@ interface FiltersProps {
   onSave: (options: SelectedOptions) => void;
 }
 
+const getCountryCode = (countryName: string): string | undefined => {
+  const country = countries.find(c => c.label === countryName);
+  return country?.value;
+};
+
 // Component body
 function Filters({ onSave }: FiltersProps) {
-
   const today = new Date();
 
   const [cityOptions, setCities] = useState<FilterOptions[]>([]);
@@ -55,9 +61,22 @@ function Filters({ onSave }: FiltersProps) {
   });
 
   const handleCountryChange = (selectedOptions: FilterOptions[]) => {
-    setSelectedCountryOptions(selectedOptions);
+    // Get country names from selected options
+    const selectedCountryNames = selectedOptions.map(option => option.value);
 
-    const selectedCountryCodes = selectedOptions.map(option => option.value);
+    // Convert country names to country codes
+    const selectedCountryCodes = selectedCountryNames.map(name => getCountryCode(name) || name);
+
+    // Convert country codes to FilterOptions
+    const updatedCountryOptions = selectedCountryCodes.map(code => ({
+      label: code, // Assuming the code itself can be used as a label
+      value: code
+    }));
+
+    // Set country codes in state
+    setSelectedCountryOptions(updatedCountryOptions);
+
+    // Update city and ISP options based on country codes
     changeCityOptions(selectedCountryCodes);
     changeIspOptions(selectedCountryCodes);
   };
@@ -119,7 +138,7 @@ function Filters({ onSave }: FiltersProps) {
   }, [selectedCountryOptions, selectedCityOptions, selectedIspOptions, dateRange]);
 
   const handleSave = () => {
-    const countryLabels = selectedCountryOptions.map(option => option.value);
+    const countryLabels = selectedCountryOptions.map(option => countryNameToCode[option.value] || option.value);
     const cityLabels = selectedCityOptions.map(option => option.label);
     const ispLabels = selectedIspOptions.map(option => option.label);
 
@@ -148,7 +167,7 @@ function Filters({ onSave }: FiltersProps) {
 
       <div className="flex-grow max-w-[200px]">
         <FilterList
-          initialOptions={countries}
+          initialOptions={countrylistValue}
           onChange={handleCountryChange}
           selectionType="Country"
           max={6} // Allows multiple country selections

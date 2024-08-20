@@ -411,11 +411,13 @@ const MultipleSelector = React.forwardRef<MultipleSelectorRef, MultipleSelectorP
                         handleUnselect(option);
                       }
                     }}
+                    onClick={() => handleUnselect(option)}
                     onMouseDown={(e) => {
+                    
                       e.preventDefault();
                       e.stopPropagation();
                     }}
-                    onClick={() => handleUnselect(option)}
+                  
                   >
                     <X className="h-3 w-3 text-muted-foreground hover:text-foreground" />
                   </button>

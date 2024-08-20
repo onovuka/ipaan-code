@@ -43,6 +43,7 @@
     "react-native-round-flags": "^1.0.4",
     "react-simple-maps": "^3.0.0",
     "recharts": "^2.12.7",
+    "rsuite": "^5.69.0",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7"
   },

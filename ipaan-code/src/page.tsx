@@ -185,7 +185,7 @@ const Home: React.FC = () => {
 
             <section>
                 <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Quality of Service of ISPs</span>
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Quality of Service of Internet Service Providers</span>
                 </h2>
             </section>
 

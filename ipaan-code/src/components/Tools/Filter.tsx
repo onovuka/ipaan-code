@@ -55,7 +55,7 @@ if (selectionType == "Country"){
       <MultipleSelector
         options={options}
         hidePlaceholderWhenSelected
-        hideClearAllButton
+        hideClearAllButton={false}
         maxSelected={max}
         placeholder={`Select ${selectionType}`}
         emptyIndicator={

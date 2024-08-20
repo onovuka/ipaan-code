@@ -24,6 +24,24 @@ interface MapProps {
   heatData: HeatData;
 }
 
+const speedRanges = [
+  { label: 'Very Slow', min: 0, max: 5 },
+  { label: 'Slow', min: 6, max: 10 },
+  { label: 'Moderate', min: 11, max: 25 },
+  { label: 'Fast', min: 26, max: 50 },
+  { label: 'Very Fast', min: 51, max: 100 },
+  { label: 'Ultra Fast', min: 101, max: Infinity }
+];
+
+const getSpeedRange = (speed: number) => {
+  for (const range of speedRanges) {
+    if (speed >= range.min && speed <= range.max) {
+      return range.label;
+    }
+  }
+  // return 'Unknown'; // In case speed is out of expected range
+};
+
 function Map({ heatData }: MapProps) {
   const mapRef = useRef<L.Map | null>(null);
   const mapContainerRef = useRef<HTMLDivElement>(null);
@@ -60,6 +78,8 @@ function Map({ heatData }: MapProps) {
 
       // Add a layer of circles with tooltips for each data point
       heatData.forEach(([lat, lng, intensity]) => {
+        const speedRange = getSpeedRange(intensity);
+
         L.circle([lat, lng], {
           radius: 10, // Small radius, adjust as needed
           color: 'transparent', // No border
@@ -67,7 +87,8 @@ function Map({ heatData }: MapProps) {
         })
           .bindTooltip(`
             <div style="font-size: 0.875rem; padding: 0.5rem; background-color: white; border: 1px solid #ddd; border-radius: 0.25rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);">
-              <b>Average Download Speed:</b> ${intensity.toFixed(2)} Mbps
+              <b>Speed Range:</b> ${speedRange} <br>
+              <b>Speed:</b> ${intensity.toFixed(2)} Mbps
             </div>
           `, { className: 'leaflet-tooltip-custom' })
           .addTo(mapRef.current);
