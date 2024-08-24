@@ -22,7 +22,7 @@ export const countrylist: FilterOptions[] = [
         "value": "BW"
     },
     {
-        "label": "Congo (Democratic Republic of the)",
+        "label": "Congo (Democratic Republic of the Congo)",
         "value": "CD"
     },
     {

@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import FilterList from "./Filter";
 import { DatePickerWithRange } from "./DateFilter";
 import { FilterOptions } from "../../data/Filterlist";
 import { Button } from "../ui/button";
-import { DateRange } from "react-day-picker";
-import { format } from "date-fns";
+import BasicDatePicker from '../Tools/Dates';
 
 
 // Data
@@ -34,8 +33,6 @@ const getCountryCode = (countryName: string): string | undefined => {
 
 // Component body
 function Filters({ onSave }: FiltersProps) {
-  const today = new Date();
-
   const [cityOptions, setCities] = useState<FilterOptions[]>([]);
   const [ispOptions, setISP] = useState<FilterOptions[]>([]);
 
@@ -55,28 +52,20 @@ function Filters({ onSave }: FiltersProps) {
     endDate: ""
   });
 
-  const [dateRange, setDateRange] = useState<DateRange | undefined>({
-    from: today,
-    to: today,
+  const [formattedDateRange, setFormattedDateRange] = useState({
+    startDate: "",
+    endDate: ""
   });
 
   const handleCountryChange = (selectedOptions: FilterOptions[]) => {
-    // Get country names from selected options
     const selectedCountryNames = selectedOptions.map(option => option.value);
-
-    // Convert country names to country codes
     const selectedCountryCodes = selectedCountryNames.map(name => getCountryCode(name) || name);
-
-    // Convert country codes to FilterOptions
     const updatedCountryOptions = selectedCountryCodes.map(code => ({
-      label: code, // Assuming the code itself can be used as a label
+      label: code,
       value: code
     }));
 
-    // Set country codes in state
     setSelectedCountryOptions(updatedCountryOptions);
-
-    // Update city and ISP options based on country codes
     changeCityOptions(selectedCountryCodes);
     changeIspOptions(selectedCountryCodes);
   };
@@ -87,6 +76,13 @@ function Filters({ onSave }: FiltersProps) {
 
   const handleIspChange = (selectedOptions: FilterOptions[]) => {
     setSelectedIspOptions(selectedOptions);
+  };
+
+  const handleDateChange = (startDate: string | null, endDate: string | null) => {
+    setFormattedDateRange({
+      startDate: startDate || "",
+      endDate: endDate || ""
+    });
   };
 
   function changeCityOptions(countryCodes: string[]) {
@@ -132,10 +128,10 @@ function Filters({ onSave }: FiltersProps) {
       selectedIspOptions.length > 0;
 
     const isDateSelected =
-      dateRange?.from !== undefined && dateRange?.to !== undefined;
+      formattedDateRange.startDate !== "" && formattedDateRange.endDate !== "";
 
     setIsSaveEnabled(isAnyFilterSelected && isDateSelected);
-  }, [selectedCountryOptions, selectedCityOptions, selectedIspOptions, dateRange]);
+  }, [selectedCountryOptions, selectedCityOptions, selectedIspOptions, formattedDateRange]);
 
   const handleSave = () => {
     const countryLabels = selectedCountryOptions.map(option => countryNameToCode[option.value] || option.value);
@@ -148,20 +144,21 @@ function Filters({ onSave }: FiltersProps) {
         cities: cityLabels,
         isps: ispLabels
       },
-      startDate: dateRange?.from ? format(dateRange.from, "yyyy-MM-dd") : "",
-      endDate: dateRange?.to ? format(dateRange.to, "yyyy-MM-dd") : ""
+      startDate: formattedDateRange.startDate,
+      endDate: formattedDateRange.endDate
     };
 
     setSelectedOptions(newOptions);
     onSave(newOptions);
+
+    console.log(newOptions)
   };
 
   return (
-    <div className="flex flex-wrap justify-between gap-4 mt-5"> {/* Adjust gap as needed */}
+    <div className="flex flex-wrap justify-between gap-4 mt-5">
       <div className="flex-grow max-w-[200px]">
-        <DatePickerWithRange
-          dateRange={dateRange}
-          setDateRange={setDateRange}
+        <BasicDatePicker 
+          onDateChange={handleDateChange} 
         />
       </div>
 
@@ -170,7 +167,7 @@ function Filters({ onSave }: FiltersProps) {
           initialOptions={countrylistValue}
           onChange={handleCountryChange}
           selectionType="Country"
-          max={6} // Allows multiple country selections
+          max={6}
         />
       </div>
 
@@ -192,7 +189,7 @@ function Filters({ onSave }: FiltersProps) {
         />
       </div>
 
-      <div className="flex-shrink-0 min-w-[120px] mt-4">
+      <div className="flex-shrink-0 min-w-[120px] mt-0 ">
         <Button
           onClick={handleSave}
           className={`w-[100px] flex items-center justify-center font-normal ${isSaveEnabled ? 'bg-blue-500 text-white' : 'bg-gray-300 text-gray-600'}`}

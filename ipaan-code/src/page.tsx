@@ -3,13 +3,12 @@ import Card, { CardContent } from '@/components/Tools/Card';
 import { cardData } from './data/CardData';
 import Header from './components/Header';
 import Filters from './components/Tools/SelectFilters';
-import Map from './components/Dashboard/Map';
-import { heatmap2 } from './data/heatmapfull';
 import ChartLineCountryDemo from './components/UserTesting/LineChartCountry';
 import LineChartCityDemo from './components/UserTesting/LineChartCity';
 import ChartLineISPDemo from './components/UserTesting/LineISP';
 import ChartBarDemo from './components/UserTesting/BarChart';
 import LineAfrica from './components/UserTesting/AfricaLine';
+import MapComponent from './components/Tools/Map.tsx/Map2';
 
 interface Requests {
     filters: {
@@ -101,8 +100,8 @@ const Home: React.FC = () => {
                 </section>
 
                 <section className="grid grid-cols-1 gap-4 transition-all lg:grid-cols-2 h-3/4">
-                    <div className="relative z-10"> {/* Lower z-index */}
-                        <Map heatData={heatmap2} />
+                    <div className="relative z-10 h-full"> {/* Lower z-index */}
+                        <MapComponent/>
                     </div>
 
                     <div

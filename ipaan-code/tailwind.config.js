@@ -6,6 +6,8 @@ module.exports = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
+    "./node_modules/react-tailwindcss-datepicker/dist/index.esm.js",
+    "./node_modules/primereact/**/*.{js,ts,jsx,tsx}",
   ],
   prefix: "",
   theme: {
