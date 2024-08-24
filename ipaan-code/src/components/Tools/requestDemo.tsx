@@ -18,6 +18,8 @@ interface QueryProps {
 }
 
 function Query({ request, api, onDataFetched, shouldFetch }: QueryProps) {
+
+
     useEffect(() => {
         if (!shouldFetch) return;
 
@@ -34,6 +36,7 @@ function Query({ request, api, onDataFetched, shouldFetch }: QueryProps) {
                 const data = await response.json();
                 onDataFetched(data);
             } catch (error) {
+                console.log("Error for request/; ", request )
                 console.error('Error:', error);
             }
         };

@@ -52,6 +52,8 @@ function LineAfrica({chartType, request, keys, shouldFetch, africa }: Requests) 
     }
   }, [africa]); // Dependency array ensures the effect runs when 'africa' changes
 
+  console.log("Request for africa: ", request)
+
 
 
   const updatedRequest = africa ? {
@@ -61,7 +63,7 @@ function LineAfrica({chartType, request, keys, shouldFetch, africa }: Requests) 
       isps: [],       // Empty array if africa is true
     },
     startDate: "2023-01-01", // Preserve existing startDate
-    endDate: "2024-31-03",     // Preserve existing endDate
+    endDate: "2024-03-31",     // Preserve existing endDate
   } : {
     filters: {
       countries: request.filters.countries, // Preserve existing countries
@@ -71,6 +73,8 @@ function LineAfrica({chartType, request, keys, shouldFetch, africa }: Requests) 
     startDate: request.startDate, // Preserve existing startDate
     endDate: request.endDate,     // Preserve existing endDate
   };
+
+  console.log("Updated Request ", updatedRequest)
 
   const handleDataFetched = (fetchedData: any) => {
     // Conditionally add countrycode to each entry in the fetched data based on the africa prop
@@ -82,8 +86,11 @@ function LineAfrica({chartType, request, keys, shouldFetch, africa }: Requests) 
       : fetchedData;
       
     setData(modifiedData);
-    console.log(modifiedData); // For debugging
+    console.log("Data for Africa", modifiedData); 
   };
+
+  console.log("Data for Africa", data); 
+
 
 
 

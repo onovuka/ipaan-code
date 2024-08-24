@@ -54,7 +54,6 @@ function ChartBarDemo({ chartType, request, keys, shouldFetch }: Requests) {
 
   const handleDataFetched = (fetchedData: any) => {
     setData(fetchedData);
-    console.log("Kanye Api response ", data);
   };
 
   

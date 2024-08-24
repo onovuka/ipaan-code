@@ -57,7 +57,6 @@ function ChartLineISPDemo({chartType, description, keys, request, shouldFetch }:
 
   const handleDataFetched = (fetchedData: any) => {
     setData(fetchedData);
-    console.log(fetchedData);
   };
 
   const assignColorsToisps = (isps: string[]) => {

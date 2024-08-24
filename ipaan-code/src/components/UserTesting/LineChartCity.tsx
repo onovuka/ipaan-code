@@ -48,7 +48,7 @@ function LineChartCityDemo({ chartType, request, keys, shouldFetch }: Requests) 
   // State to hold fetched data
   const [data, setData] = useState<any[]>([]);
 
-  console.log("city chart ", request)
+
 
   const updatedRequest = {
     filters: {
@@ -62,7 +62,7 @@ function LineChartCityDemo({ chartType, request, keys, shouldFetch }: Requests) 
 
   const handleDataFetched = (fetchedData: any) => {
     setData(fetchedData);
-    console.log(data);
+
   };
 
 

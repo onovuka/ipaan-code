@@ -21,13 +21,17 @@ const BasicDatePicker = ({ onDateChange }: BasicDatePickerProps) => {
 
     const handleChange = (newValue: DateValueType | null) => {
         if (newValue) {
+            console.log('Raw Start Date:', newValue.startDate);
+            console.log('Raw End Date:', newValue.endDate);
             setValue(newValue);
             const formattedStartDate = formatDate(newValue.startDate);
             const formattedEndDate = formatDate(newValue.endDate);
+            console.log('Formatted Start Date:', formattedStartDate);
+            console.log('Formatted End Date:', formattedEndDate);
             onDateChange(formattedStartDate, formattedEndDate);
         }
     };
-
+    
     return (
         <Datepicker 
             value={value} 

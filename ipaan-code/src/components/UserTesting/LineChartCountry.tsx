@@ -40,7 +40,7 @@ const colorPalette = [
 
 function ChartLineCountryDemo({chartType, request, keys, shouldFetch, africa }: Requests) {
 
-  console.log(request);
+
 
   const [data, setData] = useState<any[]>([]);
 
@@ -84,7 +84,6 @@ function ChartLineCountryDemo({chartType, request, keys, shouldFetch, africa }: 
       : fetchedData;
       
     setData(modifiedData);
-    console.log(modifiedData); // For debugging
   };
 
 
