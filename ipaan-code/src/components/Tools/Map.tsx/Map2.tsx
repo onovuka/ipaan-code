@@ -12,14 +12,14 @@ const MapComponent: React.FC = () => {
   // Function to determine color based on speed
   const getColor = (speed: number): string => {
 
-    return speed > 250 ? '#800026' :
-           speed > 200 ? '#BD0026' :
-           speed > 150 ? '#E31A1C' :
-           speed > 100 ? '#FC4E2A' :
-           speed > 50  ? '#FD8D3C' :
-           speed > 20  ? '#FEB24C' :
-           speed > 10  ? '#FED976' :
-                         '#FFEDA0';
+    return speed > 50  ? '#800026' :
+            speed > 40  ? '#BD0026' :
+            speed > 30  ? '#E31A1C' :
+            speed > 20  ? '#FC4E2A' :
+            speed > 15  ? '#FD8D3C' :
+            speed > 10  ? '#FEB24C' :
+            speed > 5   ? '#FED976' :
+                  '#FFEDA0';
   };
 
   // Function to style each feature
@@ -88,7 +88,7 @@ const createLegend = (map: L.Map) => {
 
     legend.onAdd = function () {
         const div = L.DomUtil.create('div', 'info legend');
-        const grades = [0, 10, 20, 50, 100, 150, 200, 250];
+        const grades = [0, 5, 10, 15, 20, 30, 40, 50];
 
         // Add CSS for the legend container
         div.style.backgroundColor = 'white';

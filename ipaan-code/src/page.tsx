@@ -25,6 +25,9 @@ const Home: React.FC = () => {
 
     const [hover, setHover] = useState<boolean>(true);
 
+    const [overview, setOverview] = useState<boolean>(true);
+
+
 
 
     const [selectedOptions, setSelectedOptions] = useState<Requests>({
@@ -50,6 +53,13 @@ const Home: React.FC = () => {
             setShouldFetch(false);
         }
     }, [shouldFetch]);
+
+    useEffect(() => {
+        if (overview) {
+            setOverview(false);
+        }
+    }, [shouldFetch]);
+
 
     // Function to download the HTML content
     const downloadHTML = () => {
@@ -122,7 +132,7 @@ const Home: React.FC = () => {
                                 description={""}
                                 keys={["upload", "download"]}
                                 section={''}
-                                shouldFetch={shouldFetch}
+                                shouldFetch={overview}
                             />
                         </CardContent>
                     </div>

@@ -416,7 +416,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "ETH.geojson",
-        "speed": 22
+        "speed": 4.4
       }
     },
     {
@@ -850,7 +850,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "SSD.geojson",
-        "speed": 225
+        "speed": 8.6
       }
     },
     {
@@ -1180,7 +1180,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "SOM.geojson",
-        "speed": 136
+        "speed": 6.9
       }
     },
     {
@@ -1510,7 +1510,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "KEN.geojson",
-        "speed": 43
+        "speed": 13.9
       }
     },
     {
@@ -1804,7 +1804,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "MWI.geojson",
-        "speed": 93
+        "speed": 13.2
       }
     },
     {
@@ -2194,7 +2194,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "TZA.geojson",
-        "speed": 90
+        "speed": 13.5
       }
     },
     {
@@ -2480,7 +2480,7 @@
         "fclass_bd": "Unrecognized",
         "fclass_ua": "Unrecognized",
         "filename": "SOL.geojson",
-        "speed": 217
+        "speed": 6.9
       }
     },
     {
@@ -2914,7 +2914,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "MAR.geojson",
-        "speed": 278
+        "speed": 19.7
       }
     },
     {
@@ -3208,7 +3208,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "ESH.geojson",
-        "speed": 98
+        "speed": 13.3
       }
     },
     {
@@ -3586,7 +3586,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "COG.geojson",
-        "speed": 192
+        "speed": 16.4
       }
     },
     {
@@ -4264,7 +4264,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "COD.geojson",
-        "speed": 297
+        "speed": 13.3
       }
     },
     {
@@ -4622,7 +4622,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "NAM.geojson",
-        "speed": 178
+        "speed": 11.3
       }
     },
     {
@@ -5182,7 +5182,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "ZAF.geojson",
-        "speed": 218
+        "speed": 42.2
       }
     },
     {
@@ -5588,7 +5588,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "LBY.geojson",
-        "speed": 79
+        "speed": 8.5
       }
     },
     {
@@ -5894,7 +5894,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "TUN.geojson",
-        "speed": 232
+        "speed": 11.3
       }
     },
     {
@@ -6320,7 +6320,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "ZMB.geojson",
-        "speed": 220
+        "speed": 9.4
       }
     },
     {
@@ -6590,7 +6590,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "SLE.geojson",
-        "speed": 46
+        "speed": 7.2
       }
     },
     {
@@ -7052,7 +7052,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "GIN.geojson",
-        "speed": 11
+        "speed": 8.7
       }
     },
     {
@@ -7342,7 +7342,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "LBR.geojson",
-        "speed": 202
+        "speed": 13.0
       }
     },
     {
@@ -7772,7 +7772,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "CAF.geojson",
-        "speed": 30
+        "speed": 4
       }
     },
     {
@@ -8278,7 +8278,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "SDN.geojson",
-        "speed": 114
+        "speed": 4.1
       }
     },
     {
@@ -8520,7 +8520,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "DJI.geojson",
-        "speed": 144
+        "speed": 7.7
       }
     },
     {
@@ -8814,7 +8814,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "ERI.geojson",
-        "speed": 55
+        "speed": 4.5
       }
     },
     {
@@ -9180,7 +9180,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "CIV.geojson",
-        "speed": 59
+        "speed": 18
       }
     },
     {
@@ -9666,7 +9666,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "MLI.geojson",
-        "speed": 256
+        "speed": 8
       }
     },
     {
@@ -10024,7 +10024,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "SEN.geojson",
-        "speed": 234
+        "speed": 12.3
       }
     },
     {
@@ -10438,7 +10438,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "NGA.geojson",
-        "speed": 161
+        "speed": 27.7
       }
     },
     {
@@ -10720,7 +10720,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "BEN.geojson",
-        "speed": 224
+        "speed": 16.6
       }
     },
     {
@@ -11208,7 +11208,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "AGO.geojson",
-        "speed": 216
+        "speed": 12.7
       }
     },
     {
@@ -11550,7 +11550,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "BWA.geojson",
-        "speed": 109
+        "speed": 28.9
       }
     },
     {
@@ -11880,7 +11880,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "ZWE.geojson",
-        "speed": 17
+        "speed": 17.6
       }
     },
     {
@@ -12294,7 +12294,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "TCD.geojson",
-        "speed": 22
+        "speed": 10.2
       }
     },
     {
@@ -12724,7 +12724,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "DZA.geojson",
-        "speed": 115
+        "speed": 13
       }
     },
     {
@@ -13222,7 +13222,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "MOZ.geojson",
-        "speed": 47
+        "speed": 14.3
       }
     },
     {
@@ -13448,7 +13448,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "SWZ.geojson",
-        "speed": 20
+        "speed": 38.7
       }
     },
     {
@@ -13682,7 +13682,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "BDI.geojson",
-        "speed": 290
+        "speed": 6.2
       }
     },
     {
@@ -13920,7 +13920,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "RWA.geojson",
-        "speed": 46
+        "speed": 31.7
       }
     },
     {
@@ -14214,7 +14214,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "UGA.geojson",
-        "speed": 288
+        "speed": 13.9
       }
     },
     {
@@ -14444,7 +14444,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "LSO.geojson",
-        "speed": 26
+        "speed": 20.9
       }
     },
     {
@@ -14870,7 +14870,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "CMR.geojson",
-        "speed": 117
+        "speed": 8.6
       }
     },
     {
@@ -15176,7 +15176,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "GAB.geojson",
-        "speed": 32
+        "speed": 14.9
       }
     },
     {
@@ -15590,7 +15590,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "NER.geojson",
-        "speed": 219
+        "speed": 5.4
       }
     },
     {
@@ -15928,7 +15928,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "BFA.geojson",
-        "speed": 111
+        "speed": 16.2
       }
     },
     {
@@ -16186,7 +16186,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "TGO.geojson",
-        "speed": 222
+        "speed": 10.7
       }
     },
     {
@@ -16468,7 +16468,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "GHA.geojson",
-        "speed": 176
+        "speed": 16.7
       }
     },
     {
@@ -16726,7 +16726,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "GNB.geojson",
-        "speed": 243
+        "speed": 6.2
       }
     },
     {
@@ -17084,7 +17084,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "EGY.geojson",
-        "speed": 25
+        "speed": 12.7
       }
     },
     {
@@ -17422,7 +17422,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "MRT.geojson",
-        "speed": 183
+        "speed": 10.5
       }
     },
     {
@@ -17632,7 +17632,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "GNQ.geojson",
-        "speed": 144
+        "speed": 5.3
       }
     },
     {
@@ -17878,7 +17878,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "GMB.geojson",
-        "speed": 114
+        "speed": 5.5
       }
     },
     {
@@ -18256,7 +18256,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "MDG.geojson",
-        "speed": 68
+        "speed": 22.4
       }
     }
   ]
