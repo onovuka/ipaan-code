@@ -1,17 +1,15 @@
 import React, { useRef, useEffect } from 'react';
 import { MapContainer, TileLayer, GeoJSON } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import geojsonData from '../../../data/updated_data.json'; // Adjust the path based on your file location
-import L from 'leaflet'; // Import Leaflet to use its features
+import geojsonData from '../../data/MapGeojson.json'; 
+import L from 'leaflet'; 
 
 const MapComponent: React.FC = () => {
-  // Create refs to store the map and GeoJSON layer
   const mapRef = useRef<L.Map | null>(null);
   const geojsonRef = useRef<L.GeoJSON | null>(null);
 
-  // Function to determine color based on speed
+  // setting the colour of speed ranges
   const getColor = (speed: number): string => {
-
     return speed > 50  ? '#800026' :
             speed > 40  ? '#BD0026' :
             speed > 30  ? '#E31A1C' :
@@ -22,10 +20,8 @@ const MapComponent: React.FC = () => {
                   '#FFEDA0';
   };
 
-  // Function to style each feature
   const style = (feature: { properties: { speed: number; }; }): L.PathOptions => {
     const color = getColor(feature.properties.speed);
-
     return {
       fillColor: color,
       weight: 1,
@@ -36,7 +32,6 @@ const MapComponent: React.FC = () => {
     };
   };
 
-  // Function to handle mouseover event
   const highlightFeature = (e: L.LeafletEvent) => {
     const layer = e.target as L.GeoJSON;
     layer.setStyle({
@@ -50,30 +45,22 @@ const MapComponent: React.FC = () => {
     }
   };
 
-  // Function to handle mouseout event
+
   const resetHighlight = (e: L.LeafletEvent) => {
     if (geojsonRef.current) {
       geojsonRef.current.resetStyle(e.target as L.GeoJSON);
     }
   };
 
-  // Function to handle click event
-  const zoomToFeature = (e: L.LeafletEvent) => {
-    const map = e.target._map; // Access the map object
-    map.fitBounds(e.target.getBounds());
-  };
 
-  // Function to apply event listeners to each feature
   const onEachFeature = (feature: any, layer: L.Layer) => {
-    
-    // Create the popup content
     const popupContent = `
       <div>
         <h3>${feature.properties.name || 'Feature'}</h3>
         <p>Average Download speed: ${feature.properties.speed} MBps</p>
       </div>
     `;
-    // Bind popup and event listeners to each feature
+
     (layer as L.GeoJSON).bindPopup(popupContent);
     (layer as L.GeoJSON).on({
       mouseover: highlightFeature,
@@ -81,9 +68,9 @@ const MapComponent: React.FC = () => {
     });
   };
 
+
   // Function to create and add the legend
-// Function to create and add the legend
-const createLegend = (map: L.Map) => {
+  const createLegend = (map: L.Map) => {
     const legend = new L.Control({ position: 'bottomright' });
 
     legend.onAdd = function () {
@@ -109,9 +96,8 @@ const createLegend = (map: L.Map) => {
     };
 
     legend.addTo(map);
-};
+  };
   
-  // Use effect to add the legend after the map is mounted
   useEffect(() => {
     if (mapRef.current) {
       createLegend(mapRef.current);
@@ -123,7 +109,7 @@ const createLegend = (map: L.Map) => {
       center={[0, 20]}
       zoom={3}
       style={{ height: '100%', width: '100%' }}
-      whenReady={(map: { target: L.Map }) => { mapRef.current = map.target; }} // Set the map reference
+      whenReady={(map: { target: L.Map }) => { mapRef.current = map.target; }} 
     >
       <TileLayer
         url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"

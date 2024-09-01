@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Card, { CardContent } from '@/components/Tools/Card';
 import { cardData } from './data/CardData';
-import Header from './components/Header';
+import Header from './components/Tools/Header';
 import Filters from './components/Tools/SelectFilters';
-import ChartLineCountryDemo from './components/UserTesting/LineChartCountry';
-import LineChartCityDemo from './components/UserTesting/LineChartCity';
-import ChartLineISPDemo from './components/UserTesting/LineISP';
-import ChartBarDemo from './components/UserTesting/BarChart';
-import LineAfrica from './components/UserTesting/AfricaLine';
-import MapComponent from './components/Tools/Map.tsx/Map2';
+import ChartLineCountryDemo from './components/Charts/LineChartCountry';
+import LineChartCityDemo from './components/Charts/LineChartCity';
+import ChartLineISPDemo from './components/Charts/LineISP';
+import ChartBarDemo from './components/Charts/BarChart';
+import LineAfrica from './components/Charts/AfricaLine';
+import MapComponent from './components/Charts/Map2';
 
 interface Requests {
     filters: {

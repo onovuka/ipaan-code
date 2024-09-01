@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 import { Infopopup } from "../Tools/Infopopup";
 
-import Query from "../Tools/requestDemo";
+import Query from "../Tools/Request";
 
 
 import {

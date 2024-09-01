@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import FilterList from "./Filter";
-import { DatePickerWithRange } from "./DateFilter";
 import { FilterOptions } from "../../data/Filterlist";
 import { Button } from "../ui/button";
 import BasicDatePicker from '../Tools/Dates';
@@ -11,7 +10,7 @@ import { countrylist as countries } from "../../data/countrylist";
 import filterData from "@/data/FilterData";
 import { countrylistValue, countryNameToCode } from "../../data/countryValue";
 
-// Saved filters
+
 interface SelectedOptions {
   filters: {
     countries: string[];

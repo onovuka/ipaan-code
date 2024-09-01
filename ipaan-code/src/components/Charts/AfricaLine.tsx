@@ -6,9 +6,7 @@ import { useEffect, useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ChartContainer } from "@/components/ui/chart";
 
-// Fetching data from the API:
-import Query from "../Tools/requestDemo"
-import { Description } from "@radix-ui/react-dialog";
+import Query from "../Tools/Request"
 
 interface Requests {
   request: {
@@ -20,13 +18,13 @@ interface Requests {
     startDate: string;
     endDate: string;
   };
-  filter: string; // name of country selected for mock data
-  chartType: keyof typeof chartConfig; // options: download or latency
+  filter: string; 
+  chartType: keyof typeof chartConfig;
   description: string;
-  keys: Array<keyof typeof chartConfig>; // New property
+  keys: Array<keyof typeof chartConfig>;
   section: string; 
   shouldFetch: boolean;
-  africa: boolean; // if aggregate of entire continent
+  africa: boolean; 
 }
 
 const colorPalette = [
@@ -38,9 +36,7 @@ const colorPalette = [
   "hsl(var(--chart-6))",
 ];
 
-function ChartLineCountryDemo({chartType, request, keys, shouldFetch, africa }: Requests) {
-
-
+function LineAfrica({chartType, request, keys, shouldFetch, africa }: Requests) {
 
   const [data, setData] = useState<any[]>([]);
 
@@ -52,30 +48,33 @@ function ChartLineCountryDemo({chartType, request, keys, shouldFetch, africa }: 
     } else {
       setDescription("Country Statistic");
     }
-  }, [africa]); // Dependency array ensures the effect runs when 'africa' changes
+  }, [africa]); 
+
+  console.log("Request for africa: ", request)
 
 
 
   const updatedRequest = africa ? {
     filters: {
-      countries: [],  // Empty array if africa is true
-      cities: [],     // Empty array if africa is true
-      isps: [],       // Empty array if africa is true
+      countries: [],  
+      cities: [],     
+      isps: [],       
     },
-    startDate: request.startDate, // Preserve existing startDate
-    endDate: request.endDate,     // Preserve existing endDate
+    startDate: "2023-01-01", 
+    endDate: "2024-03-31",     
   } : {
     filters: {
-      countries: request.filters.countries, // Preserve existing countries
-      cities: [], // Set to empty
-      isps: [],   // Set to empty
+      countries: request.filters.countries, 
+      cities: [], 
+      isps: [],   
     },
-    startDate: request.startDate, // Preserve existing startDate
-    endDate: request.endDate,     // Preserve existing endDate
+    startDate: request.startDate,
+    endDate: request.endDate,    
   };
 
+  console.log("Updated Request ", updatedRequest)
+
   const handleDataFetched = (fetchedData: any) => {
-    // Conditionally add countrycode to each entry in the fetched data based on the africa prop
     const modifiedData = africa
       ? fetchedData.map((entry: any) => ({
           ...entry,
@@ -84,7 +83,11 @@ function ChartLineCountryDemo({chartType, request, keys, shouldFetch, africa }: 
       : fetchedData;
       
     setData(modifiedData);
+    console.log("Data for Africa", modifiedData); 
   };
+
+  console.log("Data for Africa", data); 
+
 
 
 
@@ -146,7 +149,7 @@ function ChartLineCountryDemo({chartType, request, keys, shouldFetch, africa }: 
             
             <CardTitle>
 
-              Internet Performance Over Time
+            African Internet Performance Over Time
               
               </CardTitle>
 
@@ -195,7 +198,7 @@ function ChartLineCountryDemo({chartType, request, keys, shouldFetch, africa }: 
                   return date.toLocaleDateString("en-US", {
                     month: "short",
                     day: "numeric",
-                    year: "numeric"
+                    year: "numeric",
                   });
                 }}
               />
@@ -221,4 +224,4 @@ function ChartLineCountryDemo({chartType, request, keys, shouldFetch, africa }: 
   );
 }
 
-export default ChartLineCountryDemo;
+export default LineAfrica;

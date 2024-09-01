@@ -8,10 +8,6 @@ interface FilterListProps {
   max: number;
 }
 
-
-
-
-
 function FilterList({ initialOptions, onChange, selectionType, max }: FilterListProps) {
 
     const [tempSelectedOptions, setTempSelectedOptions] = useState<Option[]>([]);

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { CartesianGrid, Line, LineChart, XAxis, YAxis, Tooltip, Legend } from "recharts";
 import { chartConfigLine as chartConfig } from "@/data/lineConfig";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import {
   Card,
@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/card";
 import { ChartContainer } from "@/components/ui/chart";
 
-import Query from "../Tools/requestDemo";
+import Query from "../Tools/Request";
 
 interface Requests {
   request: {
@@ -111,9 +111,8 @@ function ChartLineISPDemo({chartType, description, keys, request, shouldFetch }:
     }
   }, [activeChart]);
 
-  // Define domain based on chartType
+  // Defining the domain of the y-axis based on the type of chart and maximum metrics received.
   const yAxisDomain = React.useMemo(() => {
-    // Calculate max value based on activeChart
     const maxValue = data.reduce((max, item) => {
       if (activeChart === "lossrate") {
         return Math.max(max, item.lossrate || 0);
@@ -127,13 +126,12 @@ function ChartLineISPDemo({chartType, description, keys, request, shouldFetch }:
       return max;
     }, 0);
 
-    // Adjust domain based on chartType
     if (activeChart === "lossrate") {
       return [0, maxValue + 10];
     } else if (activeChart === "download" || activeChart === "upload" || activeChart === "latency") {
       return [0, maxValue + 30];
     } else {
-      return [0, 500]; // Default domain for other cases
+      return [0, 500];
     }
   }, [activeChart, data]);
 
@@ -152,7 +150,7 @@ function ChartLineISPDemo({chartType, description, keys, request, shouldFetch }:
         <CardHeader className="flex flex-col items-stretch space-y-0 border-b p-0 sm:flex-row h-[100px]">
           <div className="flex flex-1 flex-col justify-center gap-1 px-6 py-5 sm:py-6 text-center">
             <CardTitle>
-              Internet Performance Over Time
+              Internet Service Provider Performance Over Time
             </CardTitle>
 
             <CardDescription className="text-sm">

@@ -1,3 +1,5 @@
+// Component for making requests to the backend.
+
 import { useEffect } from 'react';
 
 interface Requests {
@@ -18,7 +20,6 @@ interface QueryProps {
 }
 
 function Query({ request, api, onDataFetched, shouldFetch }: QueryProps) {
-
 
     useEffect(() => {
         if (!shouldFetch) return;

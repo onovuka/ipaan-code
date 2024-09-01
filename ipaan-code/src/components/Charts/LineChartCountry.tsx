@@ -1,3 +1,4 @@
+// Component for l
 import * as React from "react";
 import { CartesianGrid, Line, LineChart, XAxis, YAxis, Tooltip } from "recharts";
 import { chartConfigLine as chartConfig } from "@/data/lineConfig";
@@ -7,8 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { ChartContainer } from "@/components/ui/chart";
 
 // Fetching data from the API:
-import Query from "../Tools/requestDemo"
-import { Description } from "@radix-ui/react-dialog";
+import Query from "../Tools/Request"
 
 interface Requests {
   request: {
@@ -38,7 +38,9 @@ const colorPalette = [
   "hsl(var(--chart-6))",
 ];
 
-function LineAfrica({chartType, request, keys, shouldFetch, africa }: Requests) {
+function ChartLineCountryDemo({chartType, request, keys, shouldFetch, africa }: Requests) {
+
+
 
   const [data, setData] = useState<any[]>([]);
 
@@ -52,8 +54,6 @@ function LineAfrica({chartType, request, keys, shouldFetch, africa }: Requests) 
     }
   }, [africa]); // Dependency array ensures the effect runs when 'africa' changes
 
-  console.log("Request for africa: ", request)
-
 
 
   const updatedRequest = africa ? {
@@ -62,8 +62,8 @@ function LineAfrica({chartType, request, keys, shouldFetch, africa }: Requests) 
       cities: [],     // Empty array if africa is true
       isps: [],       // Empty array if africa is true
     },
-    startDate: "2023-01-01", // Preserve existing startDate
-    endDate: "2024-03-31",     // Preserve existing endDate
+    startDate: request.startDate, // Preserve existing startDate
+    endDate: request.endDate,     // Preserve existing endDate
   } : {
     filters: {
       countries: request.filters.countries, // Preserve existing countries
@@ -73,8 +73,6 @@ function LineAfrica({chartType, request, keys, shouldFetch, africa }: Requests) 
     startDate: request.startDate, // Preserve existing startDate
     endDate: request.endDate,     // Preserve existing endDate
   };
-
-  console.log("Updated Request ", updatedRequest)
 
   const handleDataFetched = (fetchedData: any) => {
     // Conditionally add countrycode to each entry in the fetched data based on the africa prop
@@ -86,11 +84,7 @@ function LineAfrica({chartType, request, keys, shouldFetch, africa }: Requests) 
       : fetchedData;
       
     setData(modifiedData);
-    console.log("Data for Africa", modifiedData); 
   };
-
-  console.log("Data for Africa", data); 
-
 
 
 
@@ -152,7 +146,7 @@ function LineAfrica({chartType, request, keys, shouldFetch, africa }: Requests) 
             
             <CardTitle>
 
-              Internet Performance Over Time
+              Performance of internet per City Over Time
               
               </CardTitle>
 
@@ -201,7 +195,7 @@ function LineAfrica({chartType, request, keys, shouldFetch, africa }: Requests) 
                   return date.toLocaleDateString("en-US", {
                     month: "short",
                     day: "numeric",
-                    year: "numeric",
+                    year: "numeric"
                   });
                 }}
               />
@@ -227,4 +221,4 @@ function LineAfrica({chartType, request, keys, shouldFetch, africa }: Requests) 
   );
 }
 
-export default LineAfrica;
+export default ChartLineCountryDemo;

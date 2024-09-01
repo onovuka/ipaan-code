@@ -1,15 +1,12 @@
 "use client";
 
+
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Label } from "recharts";
 import { useState } from "react";
 import { ChartContainer, ChartTooltipContent } from "@/components/ui/chart";
 import { chartConfig } from "../../chartConfigs";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-
-// Fetching data from the API:
-import Query from "../Tools/requestDemo"
-
-
+import Query from "../Tools/Request"
 
 interface Requests {
   request: {
@@ -21,10 +18,10 @@ interface Requests {
     startDate: string;
     endDate: string;
   };
-  filter: string; // name of country selected for mock data
-  chartType: keyof typeof chartConfig; // options: download or upload
-  keys: Array<keyof typeof chartConfig>; // New property 
-  shouldFetch:boolean // call api
+  filter: string; 
+  chartType: keyof typeof chartConfig; 
+  keys: Array<keyof typeof chartConfig>; 
+  shouldFetch: boolean 
 }
 
 type TransformedData = {
@@ -76,8 +73,8 @@ function ChartBarDemo({ chartType, request, keys, shouldFetch }: Requests) {
 
   const uniqueISPs: string[] = [...new Set(
     data
-      .map(item => item.isp ?? DEFAULT_ISP) // Use "Telkom SA Ltd." if item.isp is undefined
-      .filter(isp => isp !== undefined) // Ensure we remove any potential undefined values
+      .map(item => item.isp ?? DEFAULT_ISP) 
+      .filter(isp => isp !== undefined) 
   )];
 
   const colors = ["#8884d8", "#82ca9d", "#ffc658", "#d88484", "#a8d8d8", "#d8a884"];
@@ -105,8 +102,7 @@ function ChartBarDemo({ chartType, request, keys, shouldFetch }: Requests) {
         <CardHeader className="flex flex-col items-stretch space-y-0 border-b p-0 sm:flex-row h-[100px]">
           <div className="flex flex-1 flex-col justify-center gap-1 px-6 py-5 sm:py-6 text-center">
             <CardTitle>
-             
-              Performance between cities
+              Internet Performance of ISPs Across Selected Cities
             </CardTitle>
 
             <CardDescription className="text-sm">
@@ -176,8 +172,8 @@ function ChartBarDemo({ chartType, request, keys, shouldFetch }: Requests) {
                   offset={0}
                   value={entry.city}
                   textAnchor="middle"
-                  x={(index + 0.5) * 20} // Adjust x to position the label in the middle of the bars
-                  y={0} // Adjust y for vertical positioning
+                  x={(index + 0.5) * 20}
+                  y={0} 
                 />
               ))}
             </BarChart>
