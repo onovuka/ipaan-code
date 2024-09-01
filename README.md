@@ -23,3 +23,13 @@ The application fetches data from an API and allows users to filter data based o
 - Interactive Charts: Line charts, bar charts, and an interactive choropleth map to visualize broadband metrics.
 - Custom Filters: Filter data by date range, country, city, and ISP.
 - Dynamic Data Fetching: Fetch and display real-time data using the QUERY component.
+
+## Technologies Used
+### Front end
+- React
+- Typescript
+- Vite
+- Recharts
+- Shadcn/ui components
+### Back end 
+- Api
