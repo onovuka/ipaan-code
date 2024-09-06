@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { MapContainer, TileLayer, GeoJSON } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import geojsonData from '../../../data/updated_data.json'; // Adjust the path based on your file location
+import geojsonData from '../../data/MapGeojson.json'; // Adjust the path based on your file location
 import L from 'leaflet'; // Import Leaflet to use its features
 
 const MapComponent: React.FC = () => {

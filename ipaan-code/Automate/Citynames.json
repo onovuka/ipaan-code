@@ -1,0 +1,7263 @@
+{
+	"Cities": [
+	{
+		"city" : "Şurmān"
+	},
+	{
+		"city" : "oThongathi"
+	},
+	{
+		"city" : "iMbali"
+	},
+	{
+		"city" : "el hed"
+	},
+	{
+		"city" : "eVelabusha"
+	},
+	{
+		"city" : "eSikhaleni"
+	},
+	{
+		"city" : "eNtshangwe"
+	},
+	{
+		"city" : "eMuziwezinto"
+	},
+	{
+		"city" : "eMthenteni"
+	},
+	{
+		"city" : "eMpumalanga"
+	},
+	{
+		"city" : "eMkhomazi"
+	},
+	{
+		"city" : "eMdloti"
+	},
+	{
+		"city" : "eMbalenhle"
+	},
+	{
+		"city" : "eManzimtoti"
+	},
+	{
+		"city" : "ash-Shalif"
+	},
+	{
+		"city" : "`Ezbet el-Auqat"
+	},
+	{
+		"city" : "Zwedru"
+	},
+	{
+		"city" : "Zuwarah"
+	},
+	{
+		"city" : "Zoui"
+	},
+	{
+		"city" : "Zomba"
+	},
+	{
+		"city" : "Zliten"
+	},
+	{
+		"city" : "Ziniaré"
+	},
+	{
+		"city" : "Zinder"
+	},
+	{
+		"city" : "Ziguinchor"
+	},
+	{
+		"city" : "Zeribet el Oued"
+	},
+	{
+		"city" : "Zeralda"
+	},
+	{
+		"city" : "Zefta"
+	},
+	{
+		"city" : "Zeerust"
+	},
+	{
+		"city" : "Zaïo"
+	},
+	{
+		"city" : "Zayda"
+	},
+	{
+		"city" : "Zayd"
+	},
+	{
+		"city" : "Zawyat an Nwacer"
+	},
+	{
+		"city" : "Zawiya"
+	},
+	{
+		"city" : "Zastron"
+	},
+	{
+		"city" : "Zarzis"
+	},
+	{
+		"city" : "Zarzaïtine"
+	},
+	{
+		"city" : "Zaria"
+	},
+	{
+		"city" : "Zarat"
+	},
+	{
+		"city" : "Zaouiet Sousse"
+	},
+	{
+		"city" : "Zanzibar"
+	},
+	{
+		"city" : "Zamdela"
+	},
+	{
+		"city" : "Zambakro"
+	},
+	{
+		"city" : "Zahrouni"
+	},
+	{
+		"city" : "Zahana"
+	},
+	{
+		"city" : "Zagora"
+	},
+	{
+		"city" : "Zaghouan"
+	},
+	{
+		"city" : "Zagazig"
+	},
+	{
+		"city" : "Yzerfontein"
+	},
+	{
+		"city" : "Youssoufia"
+	},
+	{
+		"city" : "Yopougon"
+	},
+	{
+		"city" : "Yombo Bac"
+	},
+	{
+		"city" : "Yola"
+	},
+	{
+		"city" : "Yoff"
+	},
+	{
+		"city" : "Yaoundé"
+	},
+	{
+		"city" : "Yangambi"
+	},
+	{
+		"city" : "Yamoussoukro"
+	},
+	{
+		"city" : "Yakouren"
+	},
+	{
+		"city" : "Yaba"
+	},
+	{
+		"city" : "Xai-Xai"
+	},
+	{
+		"city" : "Wynberg"
+	},
+	{
+		"city" : "Worcester"
+	},
+	{
+		"city" : "Woodstock"
+	},
+	{
+		"city" : "Woodmead"
+	},
+	{
+		"city" : "Wonderboom"
+	},
+	{
+		"city" : "Wolseley"
+	},
+	{
+		"city" : "Wolmaransstad"
+	},
+	{
+		"city" : "Witsand"
+	},
+	{
+		"city" : "Witfield"
+	},
+	{
+		"city" : "Winterton"
+	},
+	{
+		"city" : "Windsorton"
+	},
+	{
+		"city" : "Windhoek"
+	},
+	{
+		"city" : "Winburg"
+	},
+	{
+		"city" : "Wilderness"
+	},
+	{
+		"city" : "Wierdapark"
+	},
+	{
+		"city" : "Whittlesea"
+	},
+	{
+		"city" : "White River"
+	},
+	{
+		"city" : "Westville"
+	},
+	{
+		"city" : "Westonaria"
+	},
+	{
+		"city" : "Westmead"
+	},
+	{
+		"city" : "Westlands"
+	},
+	{
+		"city" : "Westlake"
+	},
+	{
+		"city" : "Western Cape"
+	},
+	{
+		"city" : "Westdene"
+	},
+	{
+		"city" : "Westbrook"
+	},
+	{
+		"city" : "Wesselsbron"
+	},
+	{
+		"city" : "Weltevreedenpark"
+	},
+	{
+		"city" : "Wellington"
+	},
+	{
+		"city" : "Welkom"
+	},
+	{
+		"city" : "Welgemoed"
+	},
+	{
+		"city" : "Webuye"
+	},
+	{
+		"city" : "Waterfall"
+	},
+	{
+		"city" : "Wasbank"
+	},
+	{
+		"city" : "Wartburg"
+	},
+	{
+		"city" : "Warri"
+	},
+	{
+		"city" : "Warrenton"
+	},
+	{
+		"city" : "Warner Beach"
+	},
+	{
+		"city" : "Warder"
+	},
+	{
+		"city" : "Warden"
+	},
+	{
+		"city" : "Walvis Bay"
+	},
+	{
+		"city" : "Walmer Heights"
+	},
+	{
+		"city" : "Wakiso"
+	},
+	{
+		"city" : "Wadi Maliz"
+	},
+	{
+		"city" : "Wadeville"
+	},
+	{
+		"city" : "Waddān"
+	},
+	{
+		"city" : "Wad Rawah"
+	},
+	{
+		"city" : "Vryheid"
+	},
+	{
+		"city" : "Vryburg"
+	},
+	{
+		"city" : "Vredendal"
+	},
+	{
+		"city" : "Vredenburg"
+	},
+	{
+		"city" : "Vrede"
+	},
+	{
+		"city" : "Vosloorus"
+	},
+	{
+		"city" : "Vorna Valley"
+	},
+	{
+		"city" : "Volksrust"
+	},
+	{
+		"city" : "Voinjama"
+	},
+	{
+		"city" : "Virginia"
+	},
+	{
+		"city" : "Villiersdorp"
+	},
+	{
+		"city" : "Villiers"
+	},
+	{
+		"city" : "Village Negre"
+	},
+	{
+		"city" : "Viljoenskroon"
+	},
+	{
+		"city" : "Vilankulo"
+	},
+	{
+		"city" : "Vila do Maio"
+	},
+	{
+		"city" : "Victory Park"
+	},
+	{
+		"city" : "Victoria West"
+	},
+	{
+		"city" : "Victoria Falls"
+	},
+	{
+		"city" : "Victoria"
+	},
+	{
+		"city" : "Viana"
+	},
+	{
+		"city" : "Verulam"
+	},
+	{
+		"city" : "Vermont"
+	},
+	{
+		"city" : "Vereeniging"
+	},
+	{
+		"city" : "Verdun"
+	},
+	{
+		"city" : "Ventersdorp"
+	},
+	{
+		"city" : "Veldenvlei"
+	},
+	{
+		"city" : "Velddrif"
+	},
+	{
+		"city" : "Vanrhynsdorp"
+	},
+	{
+		"city" : "Vanderkloof"
+	},
+	{
+		"city" : "Vanderbijlpark"
+	},
+	{
+		"city" : "Valhalla"
+	},
+	{
+		"city" : "Vacoas"
+	},
+	{
+		"city" : "Vaalwater"
+	},
+	{
+		"city" : "Vaalpark"
+	},
+	{
+		"city" : "Vaal Marina"
+	},
+	{
+		"city" : "Vaal"
+	},
+	{
+		"city" : "Uíge"
+	},
+	{
+		"city" : "Uyo"
+	},
+	{
+		"city" : "Uvongo Beach"
+	},
+	{
+		"city" : "Ushirombo"
+	},
+	{
+		"city" : "Upington"
+	},
+	{
+		"city" : "Underberg"
+	},
+	{
+		"city" : "Umzumbe"
+	},
+	{
+		"city" : "Umuahia"
+	},
+	{
+		"city" : "Umlazi"
+	},
+	{
+		"city" : "Umhlanga"
+	},
+	{
+		"city" : "Umhlali"
+	},
+	{
+		"city" : "Ulundi"
+	},
+	{
+		"city" : "Uitsig"
+	},
+	{
+		"city" : "Uitenhage"
+	},
+	{
+		"city" : "Uhuru Gardens"
+	},
+	{
+		"city" : "Ubari"
+	},
+	{
+		"city" : "Tétouan"
+	},
+	{
+		"city" : "Ténès"
+	},
+	{
+		"city" : "Tébessa"
+	},
+	{
+		"city" : "Tzaneen"
+	},
+	{
+		"city" : "Tweeling"
+	},
+	{
+		"city" : "Turi"
+	},
+	{
+		"city" : "Tunis"
+	},
+	{
+		"city" : "Tunga Monumi"
+	},
+	{
+		"city" : "Tunaydah"
+	},
+	{
+		"city" : "Tulbagh"
+	},
+	{
+		"city" : "Tukh"
+	},
+	{
+		"city" : "Tubmanburg"
+	},
+	{
+		"city" : "Tsévié"
+	},
+	{
+		"city" : "Tsumeb"
+	},
+	{
+		"city" : "Tsomo"
+	},
+	{
+		"city" : "Tshipise"
+	},
+	{
+		"city" : "Tsakane"
+	},
+	{
+		"city" : "Trou aux Biches"
+	},
+	{
+		"city" : "Trompsburg"
+	},
+	{
+		"city" : "Tripoli"
+	},
+	{
+		"city" : "Triolet"
+	},
+	{
+		"city" : "Trindade"
+	},
+	{
+		"city" : "Trichardt"
+	},
+	{
+		"city" : "Trianon"
+	},
+	{
+		"city" : "Tozeur"
+	},
+	{
+		"city" : "Touwsrivier"
+	},
+	{
+		"city" : "Tounfit"
+	},
+	{
+		"city" : "Toukra"
+	},
+	{
+		"city" : "Touggourt"
+	},
+	{
+		"city" : "Toril"
+	},
+	{
+		"city" : "Tombua"
+	},
+	{
+		"city" : "Toliara"
+	},
+	{
+		"city" : "Tolga"
+	},
+	{
+		"city" : "Tokoza"
+	},
+	{
+		"city" : "Toekomsrus"
+	},
+	{
+		"city" : "Toamasina"
+	},
+	{
+		"city" : "Tleta"
+	},
+	{
+		"city" : "Tlemcen"
+	},
+	{
+		"city" : "Tiznit"
+	},
+	{
+		"city" : "Tizi Rached"
+	},
+	{
+		"city" : "Tizi Ouzou"
+	},
+	{
+		"city" : "Tizi Nisly"
+	},
+	{
+		"city" : "Tizi Gheniff"
+	},
+	{
+		"city" : "Tixter"
+	},
+	{
+		"city" : "Tivaouane"
+	},
+	{
+		"city" : "Tit Mellil"
+	},
+	{
+		"city" : "Tissemsilt"
+	},
+	{
+		"city" : "Tissa"
+	},
+	{
+		"city" : "Tirmitine"
+	},
+	{
+		"city" : "Tipasa"
+	},
+	{
+		"city" : "Tinley Manor"
+	},
+	{
+		"city" : "Tinja"
+	},
+	{
+		"city" : "Tinghir"
+	},
+	{
+		"city" : "Tindouf"
+	},
+	{
+		"city" : "Tinajdad"
+	},
+	{
+		"city" : "Timizart"
+	},
+	{
+		"city" : "Timimoun"
+	},
+	{
+		"city" : "Timbuktu"
+	},
+	{
+		"city" : "Timbo"
+	},
+	{
+		"city" : "Tighenif"
+	},
+	{
+		"city" : "Tiflet"
+	},
+	{
+		"city" : "Tifert"
+	},
+	{
+		"city" : "Tidjelabine"
+	},
+	{
+		"city" : "Tiaret"
+	},
+	{
+		"city" : "Three Rivers"
+	},
+	{
+		"city" : "Thohoyandou"
+	},
+	{
+		"city" : "Thiès"
+	},
+	{
+		"city" : "Thika"
+	},
+	{
+		"city" : "Thibar"
+	},
+	{
+		"city" : "Theunissen"
+	},
+	{
+		"city" : "Thenia"
+	},
+	{
+		"city" : "The Vale"
+	},
+	{
+		"city" : "Thamaga"
+	},
+	{
+		"city" : "Thala"
+	},
+	{
+		"city" : "Thabazimbi"
+	},
+	{
+		"city" : "Thaba Nchu"
+	},
+	{
+		"city" : "Tevragh Zeina"
+	},
+	{
+		"city" : "Tete"
+	},
+	{
+		"city" : "Terme Sud"
+	},
+	{
+		"city" : "Tembisa"
+	},
+	{
+		"city" : "Temba"
+	},
+	{
+		"city" : "Temara"
+	},
+	{
+		"city" : "Tema"
+	},
+	{
+		"city" : "Teboulba"
+	},
+	{
+		"city" : "Tebesbest"
+	},
+	{
+		"city" : "Tchamba"
+	},
+	{
+		"city" : "Taïbet"
+	},
+	{
+		"city" : "Tazoult-Lambese"
+	},
+	{
+		"city" : "Tazmalt"
+	},
+	{
+		"city" : "Taza"
+	},
+	{
+		"city" : "Tawalata"
+	},
+	{
+		"city" : "Tawa"
+	},
+	{
+		"city" : "Tataouine"
+	},
+	{
+		"city" : "Tata"
+	},
+	{
+		"city" : "Tassouma't"
+	},
+	{
+		"city" : "Tarrafal de Sao Nicolau"
+	},
+	{
+		"city" : "Tarrafal"
+	},
+	{
+		"city" : "Taroudant"
+	},
+	{
+		"city" : "Tarlton"
+	},
+	{
+		"city" : "Tarkastad"
+	},
+	{
+		"city" : "Targuist"
+	},
+	{
+		"city" : "Taourirt"
+	},
+	{
+		"city" : "Taourir n'Tirst"
+	},
+	{
+		"city" : "Taounate"
+	},
+	{
+		"city" : "Tanta"
+	},
+	{
+		"city" : "Tangier"
+	},
+	{
+		"city" : "Tanamakoa"
+	},
+	{
+		"city" : "Tan-Tan"
+	},
+	{
+		"city" : "Tan Rouge"
+	},
+	{
+		"city" : "Tamesna"
+	},
+	{
+		"city" : "Tamarin"
+	},
+	{
+		"city" : "Tamanghasset"
+	},
+	{
+		"city" : "Tamalous"
+	},
+	{
+		"city" : "Tamadjert"
+	},
+	{
+		"city" : "Talkha"
+	},
+	{
+		"city" : "Taliouîne"
+	},
+	{
+		"city" : "Talatona"
+	},
+	{
+		"city" : "Tala"
+	},
+	{
+		"city" : "Takwa"
+	},
+	{
+		"city" : "Takoradze"
+	},
+	{
+		"city" : "Tajerouine"
+	},
+	{
+		"city" : "Tahta"
+	},
+	{
+		"city" : "Tahoua"
+	},
+	{
+		"city" : "Tahla"
+	},
+	{
+		"city" : "Taher"
+	},
+	{
+		"city" : "Tadjenanet"
+	},
+	{
+		"city" : "Tabursuq"
+	},
+	{
+		"city" : "Tabora"
+	},
+	{
+		"city" : "Table View"
+	},
+	{
+		"city" : "Tablat"
+	},
+	{
+		"city" : "Tabarka"
+	},
+	{
+		"city" : "Tabankulu"
+	},
+	{
+		"city" : "Sīwah"
+	},
+	{
+		"city" : "Sétif"
+	},
+	{
+		"city" : "Sémé"
+	},
+	{
+		"city" : "São Tomé"
+	},
+	{
+		"city" : "São João dos Angolares"
+	},
+	{
+		"city" : "São Filipe"
+	},
+	{
+		"city" : "Syria"
+	},
+	{
+		"city" : "Swellendam"
+	},
+	{
+		"city" : "Swartberg"
+	},
+	{
+		"city" : "Swakopmund"
+	},
+	{
+		"city" : "Sutherland"
+	},
+	{
+		"city" : "Surulere"
+	},
+	{
+		"city" : "Surrey Estates"
+	},
+	{
+		"city" : "Surinam"
+	},
+	{
+		"city" : "Sunyani"
+	},
+	{
+		"city" : "Sunnyside"
+	},
+	{
+		"city" : "Sunninghill"
+	},
+	{
+		"city" : "Sundowner"
+	},
+	{
+		"city" : "Sumusta al Waqf"
+	},
+	{
+		"city" : "Sukuta"
+	},
+	{
+		"city" : "Sukrah"
+	},
+	{
+		"city" : "Suideroord"
+	},
+	{
+		"city" : "Suider-Paarl"
+	},
+	{
+		"city" : "Suez"
+	},
+	{
+		"city" : "Stutterheim"
+	},
+	{
+		"city" : "Struisbaai"
+	},
+	{
+		"city" : "Strand"
+	},
+	{
+		"city" : "Stormsrivier"
+	},
+	{
+		"city" : "Stone Town"
+	},
+	{
+		"city" : "Stilfontein"
+	},
+	{
+		"city" : "Stilbaai-Wes"
+	},
+	{
+		"city" : "Sterkspruit"
+	},
+	{
+		"city" : "Stellenbosch"
+	},
+	{
+		"city" : "Stellenberg"
+	},
+	{
+		"city" : "Stella"
+	},
+	{
+		"city" : "Steenberg"
+	},
+	{
+		"city" : "Steelpoort"
+	},
+	{
+		"city" : "Station Meteo"
+	},
+	{
+		"city" : "Staoueli"
+	},
+	{
+		"city" : "Stanford"
+	},
+	{
+		"city" : "Standerton"
+	},
+	{
+		"city" : "Stamboul"
+	},
+	{
+		"city" : "St Francis Bay"
+	},
+	{
+		"city" : "Springs"
+	},
+	{
+		"city" : "Springbok"
+	},
+	{
+		"city" : "Soy"
+	},
+	{
+		"city" : "Soweto"
+	},
+	{
+		"city" : "Sowa"
+	},
+	{
+		"city" : "Southdale"
+	},
+	{
+		"city" : "South Hills"
+	},
+	{
+		"city" : "South End"
+	},
+	{
+		"city" : "South Africa"
+	},
+	{
+		"city" : "Sousse"
+	},
+	{
+		"city" : "Souma"
+	},
+	{
+		"city" : "Souk Ahras"
+	},
+	{
+		"city" : "Souillac"
+	},
+	{
+		"city" : "Souidania"
+	},
+	{
+		"city" : "Sougueur"
+	},
+	{
+		"city" : "Souagui"
+	},
+	{
+		"city" : "Soshanguve"
+	},
+	{
+		"city" : "Somolu"
+	},
+	{
+		"city" : "Somerset West"
+	},
+	{
+		"city" : "Somerset East"
+	},
+	{
+		"city" : "Soliman"
+	},
+	{
+		"city" : "Sokoto"
+	},
+	{
+		"city" : "Sohag"
+	},
+	{
+		"city" : "Sofala"
+	},
+	{
+		"city" : "Snake Park"
+	},
+	{
+		"city" : "Smouha"
+	},
+	{
+		"city" : "Smara"
+	},
+	{
+		"city" : "Skikda"
+	},
+	{
+		"city" : "Skhour Rehamna"
+	},
+	{
+		"city" : "Skhirate"
+	},
+	{
+		"city" : "Skanes"
+	},
+	{
+		"city" : "Siyabuswa"
+	},
+	{
+		"city" : "Siteki"
+	},
+	{
+		"city" : "Sitebe"
+	},
+	{
+		"city" : "Sirte"
+	},
+	{
+		"city" : "Singa"
+	},
+	{
+		"city" : "Silverton"
+	},
+	{
+		"city" : "Silverlakes"
+	},
+	{
+		"city" : "Siliana"
+	},
+	{
+		"city" : "Sig"
+	},
+	{
+		"city" : "Sidvokodvo"
+	},
+	{
+		"city" : "Sidi Yahia El Gharb"
+	},
+	{
+		"city" : "Sidi Taibi"
+	},
+	{
+		"city" : "Sidi Slimane"
+	},
+	{
+		"city" : "Sidi Okba"
+	},
+	{
+		"city" : "Sidi Mansour"
+	},
+	{
+		"city" : "Sidi M'Hamed Ben Ali"
+	},
+	{
+		"city" : "Sidi Kacem"
+	},
+	{
+		"city" : "Sidi Ifni"
+	},
+	{
+		"city" : "Sidi Daoud"
+	},
+	{
+		"city" : "Sidi Bouzid"
+	},
+	{
+		"city" : "Sidi Bou Saïd"
+	},
+	{
+		"city" : "Sidi Bou Ali"
+	},
+	{
+		"city" : "Sidi Bennour"
+	},
+	{
+		"city" : "Sidi Ben Adda"
+	},
+	{
+		"city" : "Sidi Bel Atar"
+	},
+	{
+		"city" : "Sidi Bel Abbès"
+	},
+	{
+		"city" : "Sidi Bel Abbes"
+	},
+	{
+		"city" : "Sidi Aoun"
+	},
+	{
+		"city" : "Sidi Amar"
+	},
+	{
+		"city" : "Sidi Allal El Bahraoui"
+	},
+	{
+		"city" : "Sidi Akkacha"
+	},
+	{
+		"city" : "Sidi Aissa"
+	},
+	{
+		"city" : "Sibut"
+	},
+	{
+		"city" : "Sibayeni"
+	},
+	{
+		"city" : "Sibasa"
+	},
+	{
+		"city" : "Siakago"
+	},
+	{
+		"city" : "Shubrakhit"
+	},
+	{
+		"city" : "Shubra al Khaymah"
+	},
+	{
+		"city" : "Shubra"
+	},
+	{
+		"city" : "Shogunle"
+	},
+	{
+		"city" : "Shirbin"
+	},
+	{
+		"city" : "Shinyanga"
+	},
+	{
+		"city" : "Shibīn al Qanāţir"
+	},
+	{
+		"city" : "Shibin al Kawm"
+	},
+	{
+		"city" : "Shelly Beach"
+	},
+	{
+		"city" : "Sheffield Beach"
+	},
+	{
+		"city" : "Shayandima"
+	},
+	{
+		"city" : "Sharqia"
+	},
+	{
+		"city" : "Sharm el Sheikh"
+	},
+	{
+		"city" : "Shakaskraal"
+	},
+	{
+		"city" : "Sfax"
+	},
+	{
+		"city" : "Seïada"
+	},
+	{
+		"city" : "Sezela"
+	},
+	{
+		"city" : "Settlers"
+	},
+	{
+		"city" : "Settat"
+	},
+	{
+		"city" : "Seshego"
+	},
+	{
+		"city" : "Serrekunda"
+	},
+	{
+		"city" : "Seriana"
+	},
+	{
+		"city" : "Senekal"
+	},
+	{
+		"city" : "Sendjas"
+	},
+	{
+		"city" : "Selmane"
+	},
+	{
+		"city" : "Selcourt"
+	},
+	{
+		"city" : "Sefrou"
+	},
+	{
+		"city" : "Sedrata"
+	},
+	{
+		"city" : "Sedgefield"
+	},
+	{
+		"city" : "Seddouk"
+	},
+	{
+		"city" : "Secunda"
+	},
+	{
+		"city" : "Sebokeng"
+	},
+	{
+		"city" : "Sebdou"
+	},
+	{
+		"city" : "Sebastopol"
+	},
+	{
+		"city" : "Sea View"
+	},
+	{
+		"city" : "Sea Point"
+	},
+	{
+		"city" : "Scottburgh"
+	},
+	{
+		"city" : "Schweizer-Reneke"
+	},
+	{
+		"city" : "Saïda"
+	},
+	{
+		"city" : "Satellite Town"
+	},
+	{
+		"city" : "Sasolburg"
+	},
+	{
+		"city" : "Saqr Quraysh"
+	},
+	{
+		"city" : "Saoula"
+	},
+	{
+		"city" : "Sao Domingos"
+	},
+	{
+		"city" : "Santa Maria"
+	},
+	{
+		"city" : "Santa Catarina"
+	},
+	{
+		"city" : "Sanniquellie"
+	},
+	{
+		"city" : "Sangotedo"
+	},
+	{
+		"city" : "Sandton"
+	},
+	{
+		"city" : "Sandringham"
+	},
+	{
+		"city" : "Sandown"
+	},
+	{
+		"city" : "Sandhurst"
+	},
+	{
+		"city" : "Sandbaai"
+	},
+	{
+		"city" : "Sanchaba"
+	},
+	{
+		"city" : "San-Pedro"
+	},
+	{
+		"city" : "Sammuhah"
+	},
+	{
+		"city" : "Sambava"
+	},
+	{
+		"city" : "Samannud"
+	},
+	{
+		"city" : "Salé"
+	},
+	{
+		"city" : "Salt Rock"
+	},
+	{
+		"city" : "Sali"
+	},
+	{
+		"city" : "Saldanha"
+	},
+	{
+		"city" : "Salazie"
+	},
+	{
+		"city" : "Salasi"
+	},
+	{
+		"city" : "Sal Rei"
+	},
+	{
+		"city" : "Sakiet Sidi Youssef"
+	},
+	{
+		"city" : "Sainte-Suzanne"
+	},
+	{
+		"city" : "Sainte-Rose"
+	},
+	{
+		"city" : "Sainte-Marie"
+	},
+	{
+		"city" : "Sainte-Clotilde"
+	},
+	{
+		"city" : "Sainte-Anne"
+	},
+	{
+		"city" : "Saint-Pierre"
+	},
+	{
+		"city" : "Saint-Philippe"
+	},
+	{
+		"city" : "Saint-Paul"
+	},
+	{
+		"city" : "Saint-Louis"
+	},
+	{
+		"city" : "Saint-Leu"
+	},
+	{
+		"city" : "Saint-Joseph"
+	},
+	{
+		"city" : "Saint-Francois"
+	},
+	{
+		"city" : "Saint-Denis"
+	},
+	{
+		"city" : "Saint-Benoit"
+	},
+	{
+		"city" : "Saint-Andre"
+	},
+	{
+		"city" : "Saint Pierre"
+	},
+	{
+		"city" : "Saidia"
+	},
+	{
+		"city" : "Sahline"
+	},
+	{
+		"city" : "Sagamu"
+	},
+	{
+		"city" : "Safi"
+	},
+	{
+		"city" : "Safaga"
+	},
+	{
+		"city" : "Sada"
+	},
+	{
+		"city" : "Sabra"
+	},
+	{
+		"city" : "Sabon Wuse"
+	},
+	{
+		"city" : "Sabie"
+	},
+	{
+		"city" : "Réunion"
+	},
+	{
+		"city" : "Réduit"
+	},
+	{
+		"city" : "Ruyigi"
+	},
+	{
+		"city" : "Rustenburg"
+	},
+	{
+		"city" : "Runyenjes"
+	},
+	{
+		"city" : "Rundu"
+	},
+	{
+		"city" : "Rumudara"
+	},
+	{
+		"city" : "Rumaylah"
+	},
+	{
+		"city" : "Ruiru"
+	},
+	{
+		"city" : "Ruimsig"
+	},
+	{
+		"city" : "Ruhwa"
+	},
+	{
+		"city" : "Ruhengeri"
+	},
+	{
+		"city" : "Rugby"
+	},
+	{
+		"city" : "Rufisque"
+	},
+	{
+		"city" : "Rubavu"
+	},
+	{
+		"city" : "Rouxville"
+	},
+	{
+		"city" : "Rouissat"
+	},
+	{
+		"city" : "Rouiba"
+	},
+	{
+		"city" : "Rouge Terre"
+	},
+	{
+		"city" : "Rosslyn"
+	},
+	{
+		"city" : "Rosetta"
+	},
+	{
+		"city" : "Rosendal"
+	},
+	{
+		"city" : "Rosebank"
+	},
+	{
+		"city" : "Rose Belle"
+	},
+	{
+		"city" : "Roosevelt Park"
+	},
+	{
+		"city" : "Rooihuiskraal"
+	},
+	{
+		"city" : "Roodepoort"
+	},
+	{
+		"city" : "Roodeplaat"
+	},
+	{
+		"city" : "Roodekrans"
+	},
+	{
+		"city" : "Rongo"
+	},
+	{
+		"city" : "Rondebosch"
+	},
+	{
+		"city" : "Rodrigues"
+	},
+	{
+		"city" : "Robindale"
+	},
+	{
+		"city" : "Robertson"
+	},
+	{
+		"city" : "Robertsham"
+	},
+	{
+		"city" : "Rivonia"
+	},
+	{
+		"city" : "Riviersonderend"
+	},
+	{
+		"city" : "Riviere du Rempart"
+	},
+	{
+		"city" : "Riversdale"
+	},
+	{
+		"city" : "Riverlea"
+	},
+	{
+		"city" : "Rietvalleirand"
+	},
+	{
+		"city" : "Riebeek West"
+	},
+	{
+		"city" : "Riebeeckstad"
+	},
+	{
+		"city" : "Richmond"
+	},
+	{
+		"city" : "Richards Bay"
+	},
+	{
+		"city" : "Ribeira Grande"
+	},
+	{
+		"city" : "Ribeira Brava"
+	},
+	{
+		"city" : "Ribat Al Khayr"
+	},
+	{
+		"city" : "Rhodes"
+	},
+	{
+		"city" : "Reçani"
+	},
+	{
+		"city" : "Reyno Ridge"
+	},
+	{
+		"city" : "Remchi"
+	},
+	{
+		"city" : "Relizane"
+	},
+	{
+		"city" : "Reitz"
+	},
+	{
+		"city" : "Reguiba"
+	},
+	{
+		"city" : "Reghaïa"
+	},
+	{
+		"city" : "Reggane"
+	},
+	{
+		"city" : "Reebok"
+	},
+	{
+		"city" : "Redeyef"
+	},
+	{
+		"city" : "Redelinghuys"
+	},
+	{
+		"city" : "Red Sea"
+	},
+	{
+		"city" : "Rayton"
+	},
+	{
+		"city" : "Rawsonville"
+	},
+	{
+		"city" : "Ravenswood"
+	},
+	{
+		"city" : "Ratoma"
+	},
+	{
+		"city" : "Ras el Oued"
+	},
+	{
+		"city" : "Ras el Aioun"
+	},
+	{
+		"city" : "Ras Ettabia"
+	},
+	{
+		"city" : "Randhart"
+	},
+	{
+		"city" : "Randfontein"
+	},
+	{
+		"city" : "Randburg"
+	},
+	{
+		"city" : "Ramsgate"
+	},
+	{
+		"city" : "Ramotswa"
+	},
+	{
+		"city" : "Rambara"
+	},
+	{
+		"city" : "Rahouia"
+	},
+	{
+		"city" : "Rafah"
+	},
+	{
+		"city" : "Radès"
+	},
+	{
+		"city" : "Radiokop"
+	},
+	{
+		"city" : "Rabondo"
+	},
+	{
+		"city" : "Rabie Ridge"
+	},
+	{
+		"city" : "Rabat"
+	},
+	{
+		"city" : "Rabak"
+	},
+	{
+		"city" : "Quwaysina"
+	},
+	{
+		"city" : "Quthing"
+	},
+	{
+		"city" : "Quelimane"
+	},
+	{
+		"city" : "Queimadas"
+	},
+	{
+		"city" : "Queenstown"
+	},
+	{
+		"city" : "Queensburgh"
+	},
+	{
+		"city" : "Quatre Bornes"
+	},
+	{
+		"city" : "Quartier Militaire"
+	},
+	{
+		"city" : "Qina"
+	},
+	{
+		"city" : "Qillin"
+	},
+	{
+		"city" : "Qena"
+	},
+	{
+		"city" : "Qalyubia"
+	},
+	{
+		"city" : "Qalyub"
+	},
+	{
+		"city" : "Péreybère"
+	},
+	{
+		"city" : "Protea"
+	},
+	{
+		"city" : "Pringle Bay"
+	},
+	{
+		"city" : "Prince Alfred Hamlet"
+	},
+	{
+		"city" : "Primrose"
+	},
+	{
+		"city" : "Prieska"
+	},
+	{
+		"city" : "Pretoria"
+	},
+	{
+		"city" : "Prestondale"
+	},
+	{
+		"city" : "Praia"
+	},
+	{
+		"city" : "Potchefstroom"
+	},
+	{
+		"city" : "Postmasburg"
+	},
+	{
+		"city" : "Porto-Novo"
+	},
+	{
+		"city" : "Porto Novo"
+	},
+	{
+		"city" : "Porterville"
+	},
+	{
+		"city" : "Port-Gentil"
+	},
+	{
+		"city" : "Port el Ghalib"
+	},
+	{
+		"city" : "Port Shepstone"
+	},
+	{
+		"city" : "Port Said"
+	},
+	{
+		"city" : "Port Nolloth"
+	},
+	{
+		"city" : "Port Mathurin"
+	},
+	{
+		"city" : "Port Louis"
+	},
+	{
+		"city" : "Port Loko"
+	},
+	{
+		"city" : "Port Harcourt"
+	},
+	{
+		"city" : "Port Elizabeth"
+	},
+	{
+		"city" : "Port Edward"
+	},
+	{
+		"city" : "Port Alfred"
+	},
+	{
+		"city" : "Pongola"
+	},
+	{
+		"city" : "Pong-Tamale"
+	},
+	{
+		"city" : "Polokwane"
+	},
+	{
+		"city" : "Pointe-Noire"
+	},
+	{
+		"city" : "Pointe aux Canonniers"
+	},
+	{
+		"city" : "Pointe Noire"
+	},
+	{
+		"city" : "Plumstead"
+	},
+	{
+		"city" : "Plettenberg Bay"
+	},
+	{
+		"city" : "Plaine des Papayes"
+	},
+	{
+		"city" : "Plaine Magnien"
+	},
+	{
+		"city" : "Piton"
+	},
+	{
+		"city" : "Pissy"
+	},
+	{
+		"city" : "Pinetown"
+	},
+	{
+		"city" : "Pinelands"
+	},
+	{
+		"city" : "Pindiga"
+	},
+	{
+		"city" : "Pimville"
+	},
+	{
+		"city" : "Pikine"
+	},
+	{
+		"city" : "Piketberg"
+	},
+	{
+		"city" : "Pietermaritzburg"
+	},
+	{
+		"city" : "Piet Retief"
+	},
+	{
+		"city" : "Picos"
+	},
+	{
+		"city" : "Phuthaditjhaba"
+	},
+	{
+		"city" : "Phoenix"
+	},
+	{
+		"city" : "Philippi"
+	},
+	{
+		"city" : "Philadelphia"
+	},
+	{
+		"city" : "Phalaborwa"
+	},
+	{
+		"city" : "Petrusburg"
+	},
+	{
+		"city" : "Petrus Steyn"
+	},
+	{
+		"city" : "Petite-Ile"
+	},
+	{
+		"city" : "Petite Riviere Noire"
+	},
+	{
+		"city" : "Petite Riviere"
+	},
+	{
+		"city" : "Petite Ile"
+	},
+	{
+		"city" : "Pemba"
+	},
+	{
+		"city" : "Peddie"
+	},
+	{
+		"city" : "Pearly Beach"
+	},
+	{
+		"city" : "Paynesville"
+	},
+	{
+		"city" : "Paulshof"
+	},
+	{
+		"city" : "Paternoster"
+	},
+	{
+		"city" : "Patensie"
+	},
+	{
+		"city" : "Parys"
+	},
+	{
+		"city" : "Parow"
+	},
+	{
+		"city" : "Parktown North"
+	},
+	{
+		"city" : "Parkrand"
+	},
+	{
+		"city" : "Parkmore"
+	},
+	{
+		"city" : "Park Rynie"
+	},
+	{
+		"city" : "Paris"
+	},
+	{
+		"city" : "Parcelles Assainies"
+	},
+	{
+		"city" : "Pamplemousses"
+	},
+	{
+		"city" : "Pamandzi"
+	},
+	{
+		"city" : "Palm Beach"
+	},
+	{
+		"city" : "Palimé"
+	},
+	{
+		"city" : "Palapye"
+	},
+	{
+		"city" : "Pala"
+	},
+	{
+		"city" : "Pailles"
+	},
+	{
+		"city" : "Pacaltsdorp"
+	},
+	{
+		"city" : "Paarl"
+	},
+	{
+		"city" : "Oyugis"
+	},
+	{
+		"city" : "Oyo"
+	},
+	{
+		"city" : "Oyem"
+	},
+	{
+		"city" : "Owerri"
+	},
+	{
+		"city" : "Outjo"
+	},
+	{
+		"city" : "Outat Oulad Al Haj"
+	},
+	{
+		"city" : "Outapi"
+	},
+	{
+		"city" : "Oumé"
+	},
+	{
+		"city" : "Oumm Toub"
+	},
+	{
+		"city" : "Oum el Bouaghi"
+	},
+	{
+		"city" : "Oum Drou"
+	},
+	{
+		"city" : "Oulmes"
+	},
+	{
+		"city" : "Oulfa"
+	},
+	{
+		"city" : "Ouled Moussa"
+	},
+	{
+		"city" : "Ouled Mimoun"
+	},
+	{
+		"city" : "Ouled Fayet"
+	},
+	{
+		"city" : "Ouled Beni Messous"
+	},
+	{
+		"city" : "Oulad Teima"
+	},
+	{
+		"city" : "Oulad Frej"
+	},
+	{
+		"city" : "Oujda"
+	},
+	{
+		"city" : "Ouidah"
+	},
+	{
+		"city" : "Ouezzane"
+	},
+	{
+		"city" : "Oued el Alleug"
+	},
+	{
+		"city" : "Oued el Abtal"
+	},
+	{
+		"city" : "Oued Zerga"
+	},
+	{
+		"city" : "Oued Zem"
+	},
+	{
+		"city" : "Oued Smar"
+	},
+	{
+		"city" : "Oued Rhiou"
+	},
+	{
+		"city" : "Oued Lill"
+	},
+	{
+		"city" : "Oued Ghir"
+	},
+	{
+		"city" : "Oued Athmenia"
+	},
+	{
+		"city" : "Oudtshoorn"
+	},
+	{
+		"city" : "Ouarzazate"
+	},
+	{
+		"city" : "Ouargla"
+	},
+	{
+		"city" : "Ouardenine"
+	},
+	{
+		"city" : "Ouani"
+	},
+	{
+		"city" : "Ouakam"
+	},
+	{
+		"city" : "Ouahigouya"
+	},
+	{
+		"city" : "Ouagadougou"
+	},
+	{
+		"city" : "Ottosdal"
+	},
+	{
+		"city" : "Ottery"
+	},
+	{
+		"city" : "Othaya"
+	},
+	{
+		"city" : "Otavi"
+	},
+	{
+		"city" : "Ota"
+	},
+	{
+		"city" : "Osun State"
+	},
+	{
+		"city" : "Osogbo"
+	},
+	{
+		"city" : "Oshodi"
+	},
+	{
+		"city" : "Oshakati"
+	},
+	{
+		"city" : "Orlando East"
+	},
+	{
+		"city" : "Orkney"
+	},
+	{
+		"city" : "Oregun"
+	},
+	{
+		"city" : "Oranjemund"
+	},
+	{
+		"city" : "Orania"
+	},
+	{
+		"city" : "Orange Grove"
+	},
+	{
+		"city" : "Orange Free State"
+	},
+	{
+		"city" : "Orange Farm"
+	},
+	{
+		"city" : "Oran"
+	},
+	{
+		"city" : "Ophirton"
+	},
+	{
+		"city" : "Onrus"
+	},
+	{
+		"city" : "Onitsha"
+	},
+	{
+		"city" : "Ongwediva"
+	},
+	{
+		"city" : "Ondo"
+	},
+	{
+		"city" : "Ondjiva"
+	},
+	{
+		"city" : "Ondangwa"
+	},
+	{
+		"city" : "Onaanda"
+	},
+	{
+		"city" : "Omaruru"
+	},
+	{
+		"city" : "Olifantsfontein"
+	},
+	{
+		"city" : "Okiep"
+	},
+	{
+		"city" : "Okahandja"
+	},
+	{
+		"city" : "Ojodu"
+	},
+	{
+		"city" : "Ojo"
+	},
+	{
+		"city" : "Ogies"
+	},
+	{
+		"city" : "Odienné"
+	},
+	{
+		"city" : "Odendaalsrus"
+	},
+	{
+		"city" : "Oddur"
+	},
+	{
+		"city" : "Obubra"
+	},
+	{
+		"city" : "Observatory"
+	},
+	{
+		"city" : "Obosi"
+	},
+	{
+		"city" : "Obo"
+	},
+	{
+		"city" : "Oba"
+	},
+	{
+		"city" : "Oakdale"
+	},
+	{
+		"city" : "Nyeri"
+	},
+	{
+		"city" : "Nyati"
+	},
+	{
+		"city" : "Nyarugunga"
+	},
+	{
+		"city" : "Nyanga"
+	},
+	{
+		"city" : "Nyandarua"
+	},
+	{
+		"city" : "Nyamira"
+	},
+	{
+		"city" : "Nyagatare"
+	},
+	{
+		"city" : "Nyabira"
+	},
+	{
+		"city" : "Nungua"
+	},
+	{
+		"city" : "Ntuzuma"
+	},
+	{
+		"city" : "Nsukka"
+	},
+	{
+		"city" : "Nova Sintra"
+	},
+	{
+		"city" : "Nouakchott"
+	},
+	{
+		"city" : "Nottingham Road"
+	},
+	{
+		"city" : "Northcliff"
+	},
+	{
+		"city" : "Northam"
+	},
+	{
+		"city" : "North West"
+	},
+	{
+		"city" : "North Riding"
+	},
+	{
+		"city" : "Norkem Park"
+	},
+	{
+		"city" : "Noordwyk"
+	},
+	{
+		"city" : "Noordheuwel"
+	},
+	{
+		"city" : "Nongoma"
+	},
+	{
+		"city" : "Nkurenkuru"
+	},
+	{
+		"city" : "Nisf Atrib"
+	},
+	{
+		"city" : "Nigel"
+	},
+	{
+		"city" : "Niamey"
+	},
+	{
+		"city" : "Nhlangano"
+	},
+	{
+		"city" : "Nhamatanda"
+	},
+	{
+		"city" : "Nguékhokh"
+	},
+	{
+		"city" : "Ngozi"
+	},
+	{
+		"city" : "Ngor"
+	},
+	{
+		"city" : "Ngong"
+	},
+	{
+		"city" : "Ngola"
+	},
+	{
+		"city" : "Ngewa"
+	},
+	{
+		"city" : "Ngara"
+	},
+	{
+		"city" : "Ngaparou"
+	},
+	{
+		"city" : "Ngaoundéré"
+	},
+	{
+		"city" : "Ngaoundé"
+	},
+	{
+		"city" : "Newtown"
+	},
+	{
+		"city" : "Newlands West"
+	},
+	{
+		"city" : "Newlands East"
+	},
+	{
+		"city" : "Newlands"
+	},
+	{
+		"city" : "Newcastle"
+	},
+	{
+		"city" : "New Grove"
+	},
+	{
+		"city" : "New Germany"
+	},
+	{
+		"city" : "New Edubiase"
+	},
+	{
+		"city" : "New Cairo"
+	},
+	{
+		"city" : "New Brighton"
+	},
+	{
+		"city" : "Nelspruit"
+	},
+	{
+		"city" : "Nellmapius"
+	},
+	{
+		"city" : "Nefta"
+	},
+	{
+		"city" : "Nedroma"
+	},
+	{
+		"city" : "Ndwedwe"
+	},
+	{
+		"city" : "Ndola"
+	},
+	{
+		"city" : "Nazret"
+	},
+	{
+		"city" : "Nazlat Tall al Hisn"
+	},
+	{
+		"city" : "Nazareth"
+	},
+	{
+		"city" : "Natitingou"
+	},
+	{
+		"city" : "Nasr"
+	},
+	{
+		"city" : "Narraville"
+	},
+	{
+		"city" : "Narok"
+	},
+	{
+		"city" : "Napier"
+	},
+	{
+		"city" : "Nanyuki"
+	},
+	{
+		"city" : "Nampula"
+	},
+	{
+		"city" : "Namirembe"
+	},
+	{
+		"city" : "Namakgale"
+	},
+	{
+		"city" : "Naledi"
+	},
+	{
+		"city" : "Nakuru"
+	},
+	{
+		"city" : "Nakhla"
+	},
+	{
+		"city" : "Nakasongola"
+	},
+	{
+		"city" : "Naivasha"
+	},
+	{
+		"city" : "Nairobi"
+	},
+	{
+		"city" : "Nag Hammâdi"
+	},
+	{
+		"city" : "Nador"
+	},
+	{
+		"city" : "Naciria"
+	},
+	{
+		"city" : "Nacala"
+	},
+	{
+		"city" : "Nabeul"
+	},
+	{
+		"city" : "Nabaruh"
+	},
+	{
+		"city" : "Nababeep"
+	},
+	{
+		"city" : "Naama"
+	},
+	{
+		"city" : "N'Gaous"
+	},
+	{
+		"city" : "N'Djamena"
+	},
+	{
+		"city" : "Mégrine"
+	},
+	{
+		"city" : "Médéa"
+	},
+	{
+		"city" : "Mwene-Ditu"
+	},
+	{
+		"city" : "Mwaro"
+	},
+	{
+		"city" : "Mwanza"
+	},
+	{
+		"city" : "Mwala"
+	},
+	{
+		"city" : "Muxaluando"
+	},
+	{
+		"city" : "Mutuelleville"
+	},
+	{
+		"city" : "Musina"
+	},
+	{
+		"city" : "Mushin"
+	},
+	{
+		"city" : "Musgrave"
+	},
+	{
+		"city" : "Murzuq"
+	},
+	{
+		"city" : "Murzuk"
+	},
+	{
+		"city" : "Murraysburg"
+	},
+	{
+		"city" : "Muroni"
+	},
+	{
+		"city" : "Murang'a"
+	},
+	{
+		"city" : "Muramvya"
+	},
+	{
+		"city" : "Munuf"
+	},
+	{
+		"city" : "Muldersdrift"
+	},
+	{
+		"city" : "Mukono"
+	},
+	{
+		"city" : "Muizenberg"
+	},
+	{
+		"city" : "Mufulira"
+	},
+	{
+		"city" : "Mtwapa"
+	},
+	{
+		"city" : "Mtwalume"
+	},
+	{
+		"city" : "Mtunzini"
+	},
+	{
+		"city" : "Mtubatuba"
+	},
+	{
+		"city" : "Mtoni"
+	},
+	{
+		"city" : "Mto Panga"
+	},
+	{
+		"city" : "Mthatha"
+	},
+	{
+		"city" : "Mrirt"
+	},
+	{
+		"city" : "Mpumalanga"
+	},
+	{
+		"city" : "Mpaka"
+	},
+	{
+		"city" : "Mozambique"
+	},
+	{
+		"city" : "Moyale"
+	},
+	{
+		"city" : "Mowe"
+	},
+	{
+		"city" : "Mowbray"
+	},
+	{
+		"city" : "Mouzaïa"
+	},
+	{
+		"city" : "Mountview"
+	},
+	{
+		"city" : "Mount Frere"
+	},
+	{
+		"city" : "Mount Fletcher"
+	},
+	{
+		"city" : "Mount Edgecombe"
+	},
+	{
+		"city" : "Moulay Bousselham"
+	},
+	{
+		"city" : "Moularès"
+	},
+	{
+		"city" : "Mouille Point"
+	},
+	{
+		"city" : "Moufia"
+	},
+	{
+		"city" : "Motherwell"
+	},
+	{
+		"city" : "Mostaganem"
+	},
+	{
+		"city" : "Mossel Bay"
+	},
+	{
+		"city" : "Mossamedes"
+	},
+	{
+		"city" : "Moshi"
+	},
+	{
+		"city" : "Moroni"
+	},
+	{
+		"city" : "Moroka"
+	},
+	{
+		"city" : "Morogoro"
+	},
+	{
+		"city" : "Morningside"
+	},
+	{
+		"city" : "Morija"
+	},
+	{
+		"city" : "Moreleta Park"
+	},
+	{
+		"city" : "Morcellement Saint Andre"
+	},
+	{
+		"city" : "Mopti"
+	},
+	{
+		"city" : "Moorreesburg"
+	},
+	{
+		"city" : "Mookgophong"
+	},
+	{
+		"city" : "Mooinooi"
+	},
+	{
+		"city" : "Mooi River"
+	},
+	{
+		"city" : "Monument Park"
+	},
+	{
+		"city" : "Monufia"
+	},
+	{
+		"city" : "Monteseel"
+	},
+	{
+		"city" : "Monte Vista"
+	},
+	{
+		"city" : "Montclair"
+	},
+	{
+		"city" : "Montanha"
+	},
+	{
+		"city" : "Montana"
+	},
+	{
+		"city" : "Montague Gardens"
+	},
+	{
+		"city" : "Montagu"
+	},
+	{
+		"city" : "Mont Ida"
+	},
+	{
+		"city" : "Mont Buxton"
+	},
+	{
+		"city" : "Monrovia"
+	},
+	{
+		"city" : "Mongo"
+	},
+	{
+		"city" : "Mondlo"
+	},
+	{
+		"city" : "Mondeor"
+	},
+	{
+		"city" : "Monavoni"
+	},
+	{
+		"city" : "Monastir"
+	},
+	{
+		"city" : "Mon Gout"
+	},
+	{
+		"city" : "Mombasa"
+	},
+	{
+		"city" : "Molteno"
+	},
+	{
+		"city" : "Mokopane"
+	},
+	{
+		"city" : "Moknine"
+	},
+	{
+		"city" : "Mokhotlong"
+	},
+	{
+		"city" : "Moka"
+	},
+	{
+		"city" : "Mohandessin"
+	},
+	{
+		"city" : "Mohammedia"
+	},
+	{
+		"city" : "Mohammadia"
+	},
+	{
+		"city" : "Mogale City"
+	},
+	{
+		"city" : "Mogalakwena"
+	},
+	{
+		"city" : "Mogadishu"
+	},
+	{
+		"city" : "Modimolle"
+	},
+	{
+		"city" : "Modderfontein"
+	},
+	{
+		"city" : "Mocuba"
+	},
+	{
+		"city" : "Mobeni"
+	},
+	{
+		"city" : "Mobaye"
+	},
+	{
+		"city" : "Mmabatho"
+	},
+	{
+		"city" : "Miti ya Hunter"
+	},
+	{
+		"city" : "Mitchells Plain"
+	},
+	{
+		"city" : "Mit Ghamr"
+	},
+	{
+		"city" : "Missour"
+	},
+	{
+		"city" : "Misratah"
+	},
+	{
+		"city" : "Miréréni"
+	},
+	{
+		"city" : "Minya al Qamh"
+	},
+	{
+		"city" : "Minya"
+	},
+	{
+		"city" : "Minna"
+	},
+	{
+		"city" : "Mindelo"
+	},
+	{
+		"city" : "Milnerton"
+	},
+	{
+		"city" : "Miliana"
+	},
+	{
+		"city" : "Mila"
+	},
+	{
+		"city" : "Mikomeseng"
+	},
+	{
+		"city" : "Midvaal"
+	},
+	{
+		"city" : "Midstream"
+	},
+	{
+		"city" : "Midrand"
+	},
+	{
+		"city" : "Midoun"
+	},
+	{
+		"city" : "Midelt"
+	},
+	{
+		"city" : "Middelburg"
+	},
+	{
+		"city" : "Mid-Ennerdale"
+	},
+	{
+		"city" : "Michamvi"
+	},
+	{
+		"city" : "Miami"
+	},
+	{
+		"city" : "Mfuleni"
+	},
+	{
+		"city" : "Mezaourou"
+	},
+	{
+		"city" : "Meyerton"
+	},
+	{
+		"city" : "Metlili Chaamba"
+	},
+	{
+		"city" : "Metlaoui"
+	},
+	{
+		"city" : "Messaad"
+	},
+	{
+		"city" : "Merweville"
+	},
+	{
+		"city" : "Meru"
+	},
+	{
+		"city" : "Merouana"
+	},
+	{
+		"city" : "Merca"
+	},
+	{
+		"city" : "Merad"
+	},
+	{
+		"city" : "Menzel Temime"
+	},
+	{
+		"city" : "Menzel Jemil"
+	},
+	{
+		"city" : "Menongue"
+	},
+	{
+		"city" : "Menlyn Park"
+	},
+	{
+		"city" : "Menlo Park"
+	},
+	{
+		"city" : "Memel"
+	},
+	{
+		"city" : "Melville"
+	},
+	{
+		"city" : "Melouza"
+	},
+	{
+		"city" : "Melmoth"
+	},
+	{
+		"city" : "Melkbosstrand"
+	},
+	{
+		"city" : "Melfi"
+	},
+	{
+		"city" : "Melaab"
+	},
+	{
+		"city" : "Meknes"
+	},
+	{
+		"city" : "Mekla"
+	},
+	{
+		"city" : "Mek'ele"
+	},
+	{
+		"city" : "Mehediyah"
+	},
+	{
+		"city" : "Mehdia daira de meghila"
+	},
+	{
+		"city" : "Meftah"
+	},
+	{
+		"city" : "Meer en See"
+	},
+	{
+		"city" : "Medjez el Bab"
+	},
+	{
+		"city" : "Medjedel"
+	},
+	{
+		"city" : "Medjana"
+	},
+	{
+		"city" : "Mediouna"
+	},
+	{
+		"city" : "Medenine"
+	},
+	{
+		"city" : "Mechroha"
+	},
+	{
+		"city" : "Mechraa Bel Ksiri"
+	},
+	{
+		"city" : "Mecheria"
+	},
+	{
+		"city" : "Meadowlands"
+	},
+	{
+		"city" : "Meadowdale"
+	},
+	{
+		"city" : "Mdiq"
+	},
+	{
+		"city" : "McGregor"
+	},
+	{
+		"city" : "Mbulungu"
+	},
+	{
+		"city" : "Mbuji-Mayi"
+	},
+	{
+		"city" : "Mbour"
+	},
+	{
+		"city" : "Mboro"
+	},
+	{
+		"city" : "Mbeya"
+	},
+	{
+		"city" : "Mbazwana"
+	},
+	{
+		"city" : "Mbare"
+	},
+	{
+		"city" : "Mbarara"
+	},
+	{
+		"city" : "Mbale"
+	},
+	{
+		"city" : "Mbaké"
+	},
+	{
+		"city" : "Mbabane"
+	},
+	{
+		"city" : "Mazowe"
+	},
+	{
+		"city" : "Mayville"
+	},
+	{
+		"city" : "Mayfair West"
+	},
+	{
+		"city" : "Maungani"
+	},
+	{
+		"city" : "Maun"
+	},
+	{
+		"city" : "Maua"
+	},
+	{
+		"city" : "Matsapha"
+	},
+	{
+		"city" : "Matroosfontein"
+	},
+	{
+		"city" : "Matola"
+	},
+	{
+		"city" : "Mateur"
+	},
+	{
+		"city" : "Matero"
+	},
+	{
+		"city" : "Matay"
+	},
+	{
+		"city" : "Matatiele"
+	},
+	{
+		"city" : "Massawa"
+	},
+	{
+		"city" : "Massakory"
+	},
+	{
+		"city" : "Mashtul as Suq"
+	},
+	{
+		"city" : "Maseru"
+	},
+	{
+		"city" : "Mascara"
+	},
+	{
+		"city" : "Masakin al Akhshab wa ash Shay"
+	},
+	{
+		"city" : "Masakin"
+	},
+	{
+		"city" : "Maryland"
+	},
+	{
+		"city" : "Martil"
+	},
+	{
+		"city" : "Marsabit"
+	},
+	{
+		"city" : "Marrakesh"
+	},
+	{
+		"city" : "Maroua"
+	},
+	{
+		"city" : "Marondera"
+	},
+	{
+		"city" : "Marloth Park"
+	},
+	{
+		"city" : "Mariental"
+	},
+	{
+		"city" : "Marhouma"
+	},
+	{
+		"city" : "Margate"
+	},
+	{
+		"city" : "Marcory"
+	},
+	{
+		"city" : "Marble Hall"
+	},
+	{
+		"city" : "Maputsoe"
+	},
+	{
+		"city" : "Maputo Province"
+	},
+	{
+		"city" : "Maputo"
+	},
+	{
+		"city" : "Mapumulo"
+	},
+	{
+		"city" : "Mapou"
+	},
+	{
+		"city" : "Manzini"
+	},
+	{
+		"city" : "Mansoûra"
+	},
+	{
+		"city" : "Mansourah"
+	},
+	{
+		"city" : "Mansa Konko"
+	},
+	{
+		"city" : "Manouba"
+	},
+	{
+		"city" : "Manor Gardens"
+	},
+	{
+		"city" : "Mankono"
+	},
+	{
+		"city" : "Mango"
+	},
+	{
+		"city" : "Manfalut"
+	},
+	{
+		"city" : "Manenberg"
+	},
+	{
+		"city" : "Mandeni"
+	},
+	{
+		"city" : "Mamoudzou"
+	},
+	{
+		"city" : "Mamelodi"
+	},
+	{
+		"city" : "Maluti"
+	},
+	{
+		"city" : "Malmesbury"
+	},
+	{
+		"city" : "Mallawi"
+	},
+	{
+		"city" : "Malelane"
+	},
+	{
+		"city" : "Malanville"
+	},
+	{
+		"city" : "Malanshof"
+	},
+	{
+		"city" : "Malamulele"
+	},
+	{
+		"city" : "Malabo"
+	},
+	{
+		"city" : "Malabar"
+	},
+	{
+		"city" : "Makwassie"
+	},
+	{
+		"city" : "Makumbako"
+	},
+	{
+		"city" : "Makouda"
+	},
+	{
+		"city" : "Makhado"
+	},
+	{
+		"city" : "Maison Rouge"
+	},
+	{
+		"city" : "Maiduguri"
+	},
+	{
+		"city" : "Maianga"
+	},
+	{
+		"city" : "Mahébourg"
+	},
+	{
+		"city" : "Mahube Valley"
+	},
+	{
+		"city" : "Mahires"
+	},
+	{
+		"city" : "Mahelma"
+	},
+	{
+		"city" : "Mahdia"
+	},
+	{
+		"city" : "Mahajanga"
+	},
+	{
+		"city" : "Magra"
+	},
+	{
+		"city" : "Magodo II"
+	},
+	{
+		"city" : "Maghnia"
+	},
+	{
+		"city" : "Magboro"
+	},
+	{
+		"city" : "Magaliesburg"
+	},
+	{
+		"city" : "Magabeni"
+	},
+	{
+		"city" : "Mafikeng"
+	},
+	{
+		"city" : "Mafeteng"
+	},
+	{
+		"city" : "Madyouna"
+	},
+	{
+		"city" : "Madinaty"
+	},
+	{
+		"city" : "Madinat as Sadat"
+	},
+	{
+		"city" : "Madinat an Nasr"
+	},
+	{
+		"city" : "Madibeng"
+	},
+	{
+		"city" : "Maclear"
+	},
+	{
+		"city" : "Machakos"
+	},
+	{
+		"city" : "Machabee"
+	},
+	{
+		"city" : "Mabopane"
+	},
+	{
+		"city" : "Mabibe"
+	},
+	{
+		"city" : "Mabanda"
+	},
+	{
+		"city" : "Maanhaarrand"
+	},
+	{
+		"city" : "M'Sila"
+	},
+	{
+		"city" : "M'Sapere"
+	},
+	{
+		"city" : "Lüderitz"
+	},
+	{
+		"city" : "Lynnwood Glen"
+	},
+	{
+		"city" : "Lydenburg"
+	},
+	{
+		"city" : "Luxor"
+	},
+	{
+		"city" : "Lutzville"
+	},
+	{
+		"city" : "Lusikisiki"
+	},
+	{
+		"city" : "Lusaka"
+	},
+	{
+		"city" : "Lunsar"
+	},
+	{
+		"city" : "Luebo"
+	},
+	{
+		"city" : "Lubumbashi"
+	},
+	{
+		"city" : "Lubango"
+	},
+	{
+		"city" : "Luanshya"
+	},
+	{
+		"city" : "Luanda"
+	},
+	{
+		"city" : "Louis Trichardt"
+	},
+	{
+		"city" : "Lotus Gardens"
+	},
+	{
+		"city" : "Long Mountain"
+	},
+	{
+		"city" : "Lone Hill"
+	},
+	{
+		"city" : "Lomé"
+	},
+	{
+		"city" : "Lolodorf"
+	},
+	{
+		"city" : "Lokossa"
+	},
+	{
+		"city" : "Lokoja"
+	},
+	{
+		"city" : "Lodwar"
+	},
+	{
+		"city" : "Lodja"
+	},
+	{
+		"city" : "Lobito"
+	},
+	{
+		"city" : "Llandudno"
+	},
+	{
+		"city" : "Litein"
+	},
+	{
+		"city" : "Lira"
+	},
+	{
+		"city" : "Lindley"
+	},
+	{
+		"city" : "Lindi"
+	},
+	{
+		"city" : "Linden"
+	},
+	{
+		"city" : "Linbro Park"
+	},
+	{
+		"city" : "Limuru"
+	},
+	{
+		"city" : "Limpopo"
+	},
+	{
+		"city" : "Lilongwe"
+	},
+	{
+		"city" : "Lichtenburg"
+	},
+	{
+		"city" : "Lichinga"
+	},
+	{
+		"city" : "Libreville"
+	},
+	{
+		"city" : "Libradene"
+	},
+	{
+		"city" : "Levubu"
+	},
+	{
+		"city" : "Levacher"
+	},
+	{
+		"city" : "Letsitele"
+	},
+	{
+		"city" : "Letaba"
+	},
+	{
+		"city" : "Leslie"
+	},
+	{
+		"city" : "Les deux-Plateaux"
+	},
+	{
+		"city" : "Les Trois-Bassins"
+	},
+	{
+		"city" : "Les Berges du Lac"
+	},
+	{
+		"city" : "Les Avirons"
+	},
+	{
+		"city" : "Lephalale"
+	},
+	{
+		"city" : "Lenyenye"
+	},
+	{
+		"city" : "Lenasia"
+	},
+	{
+		"city" : "Lekki"
+	},
+	{
+		"city" : "Leeudoringstad"
+	},
+	{
+		"city" : "Leandra"
+	},
+	{
+		"city" : "Le Tampon"
+	},
+	{
+		"city" : "Le Port"
+	},
+	{
+		"city" : "Le Polo"
+	},
+	{
+		"city" : "Le Kram"
+	},
+	{
+		"city" : "Le Hochet"
+	},
+	{
+		"city" : "Le Guillaume Jardin"
+	},
+	{
+		"city" : "Le Bois de Nefles Piton"
+	},
+	{
+		"city" : "Le Bardo"
+	},
+	{
+		"city" : "Lawley"
+	},
+	{
+		"city" : "Lavington"
+	},
+	{
+		"city" : "Laudium"
+	},
+	{
+		"city" : "Las Anod"
+	},
+	{
+		"city" : "Larbaâ"
+	},
+	{
+		"city" : "Larache"
+	},
+	{
+		"city" : "Laoudi"
+	},
+	{
+		"city" : "Laouata"
+	},
+	{
+		"city" : "Lanseria"
+	},
+	{
+		"city" : "Lansdowne"
+	},
+	{
+		"city" : "Langebaan"
+	},
+	{
+		"city" : "Lamu"
+	},
+	{
+		"city" : "Lamontville"
+	},
+	{
+		"city" : "Lamberts Bay"
+	},
+	{
+		"city" : "Lalla Mimouna"
+	},
+	{
+		"city" : "Lakhdaria"
+	},
+	{
+		"city" : "Lakeside"
+	},
+	{
+		"city" : "Lakefield"
+	},
+	{
+		"city" : "Lake View Estate"
+	},
+	{
+		"city" : "Laingsburg"
+	},
+	{
+		"city" : "Lagos"
+	},
+	{
+		"city" : "Laghouat"
+	},
+	{
+		"city" : "Ladysmith"
+	},
+	{
+		"city" : "Ladybrand"
+	},
+	{
+		"city" : "Lady Grey"
+	},
+	{
+		"city" : "Lady Frere"
+	},
+	{
+		"city" : "Ladismith"
+	},
+	{
+		"city" : "Labattoir"
+	},
+	{
+		"city" : "Laayoune Plage"
+	},
+	{
+		"city" : "Laayoune"
+	},
+	{
+		"city" : "La Sebala du Mornag"
+	},
+	{
+		"city" : "La Saline les Bains"
+	},
+	{
+		"city" : "La Saline"
+	},
+	{
+		"city" : "La Riviere"
+	},
+	{
+		"city" : "La Ravine des Cabris"
+	},
+	{
+		"city" : "La Possession"
+	},
+	{
+		"city" : "La Plaine-des-Palmistes"
+	},
+	{
+		"city" : "La Plaine des Cafres"
+	},
+	{
+		"city" : "La Plaine"
+	},
+	{
+		"city" : "La Mornaghia"
+	},
+	{
+		"city" : "La Montagne"
+	},
+	{
+		"city" : "La Mohammedia"
+	},
+	{
+		"city" : "La Mercy"
+	},
+	{
+		"city" : "La Marsa"
+	},
+	{
+		"city" : "La Lucia"
+	},
+	{
+		"city" : "La Goulette"
+	},
+	{
+		"city" : "L'Etang-Sale"
+	},
+	{
+		"city" : "L'Escalier"
+	},
+	{
+		"city" : "L'Entre-Deux"
+	},
+	{
+		"city" : "L'Agha"
+	},
+	{
+		"city" : "Kédougou"
+	},
+	{
+		"city" : "Kyalami Park"
+	},
+	{
+		"city" : "Kwara State"
+	},
+	{
+		"city" : "Kwamhlanga"
+	},
+	{
+		"city" : "Kwaggafontein"
+	},
+	{
+		"city" : "Kwabeng"
+	},
+	{
+		"city" : "KwaZulu-Natal"
+	},
+	{
+		"city" : "KwaMashu"
+	},
+	{
+		"city" : "KwaLugedlane"
+	},
+	{
+		"city" : "KwaDukuza"
+	},
+	{
+		"city" : "Kuruman"
+	},
+	{
+		"city" : "Kumasi"
+	},
+	{
+		"city" : "Kuils River"
+	},
+	{
+		"city" : "Kudenda"
+	},
+	{
+		"city" : "Ksar el Kebir"
+	},
+	{
+		"city" : "Ksar el Boukhari"
+	},
+	{
+		"city" : "Ksar Oulad Said"
+	},
+	{
+		"city" : "Ksar Hellal"
+	},
+	{
+		"city" : "Ksar El Kebir"
+	},
+	{
+		"city" : "Krugersdorp North"
+	},
+	{
+		"city" : "Krugersdorp"
+	},
+	{
+		"city" : "Kroonstad"
+	},
+	{
+		"city" : "Kriel"
+	},
+	{
+		"city" : "Krakeelrivier"
+	},
+	{
+		"city" : "Kraaifontein"
+	},
+	{
+		"city" : "Koussanar"
+	},
+	{
+		"city" : "Koungou"
+	},
+	{
+		"city" : "Koumassi"
+	},
+	{
+		"city" : "Kouinine"
+	},
+	{
+		"city" : "Kouba"
+	},
+	{
+		"city" : "Koster"
+	},
+	{
+		"city" : "Kosofe"
+	},
+	{
+		"city" : "Korra"
+	},
+	{
+		"city" : "Korogwe"
+	},
+	{
+		"city" : "Korhogo"
+	},
+	{
+		"city" : "Korba"
+	},
+	{
+		"city" : "Koppies"
+	},
+	{
+		"city" : "Kongoussi"
+	},
+	{
+		"city" : "Komga"
+	},
+	{
+		"city" : "Komatipoort"
+	},
+	{
+		"city" : "Kolondiéba"
+	},
+	{
+		"city" : "Kololi"
+	},
+	{
+		"city" : "Kolea"
+	},
+	{
+		"city" : "Kokstad"
+	},
+	{
+		"city" : "Koidu"
+	},
+	{
+		"city" : "Koforidua"
+	},
+	{
+		"city" : "Knysna"
+	},
+	{
+		"city" : "Kloof"
+	},
+	{
+		"city" : "Klerksdorp"
+	},
+	{
+		"city" : "Kleinmond"
+	},
+	{
+		"city" : "Kleinbos"
+	},
+	{
+		"city" : "Klawer"
+	},
+	{
+		"city" : "Klapmuts"
+	},
+	{
+		"city" : "Kitwe"
+	},
+	{
+		"city" : "Kitengela"
+	},
+	{
+		"city" : "Kitale"
+	},
+	{
+		"city" : "Kisumu"
+	},
+	{
+		"city" : "Kisii"
+	},
+	{
+		"city" : "Kiserian"
+	},
+	{
+		"city" : "Kisarawe"
+	},
+	{
+		"city" : "Kira"
+	},
+	{
+		"city" : "Kinshasa"
+	},
+	{
+		"city" : "Kinross"
+	},
+	{
+		"city" : "Kingsborough"
+	},
+	{
+		"city" : "Kingongo"
+	},
+	{
+		"city" : "King William's Town"
+	},
+	{
+		"city" : "Kindia"
+	},
+	{
+		"city" : "Kimberley"
+	},
+	{
+		"city" : "Killarney Gardens"
+	},
+	{
+		"city" : "Kilifi"
+	},
+	{
+		"city" : "Kilamba Kiaxi"
+	},
+	{
+		"city" : "Kikuyu"
+	},
+	{
+		"city" : "Kigali"
+	},
+	{
+		"city" : "Kiffa"
+	},
+	{
+		"city" : "Kidal"
+	},
+	{
+		"city" : "Kiambu"
+	},
+	{
+		"city" : "Khouribga"
+	},
+	{
+		"city" : "Khenifra"
+	},
+	{
+		"city" : "Khenchela"
+	},
+	{
+		"city" : "Khemisset"
+	},
+	{
+		"city" : "Khemis Miliana"
+	},
+	{
+		"city" : "Khayelitsha"
+	},
+	{
+		"city" : "Khartoum North"
+	},
+	{
+		"city" : "Khartoum"
+	},
+	{
+		"city" : "Keur Massar"
+	},
+	{
+		"city" : "Ketu"
+	},
+	{
+		"city" : "Kestell"
+	},
+	{
+		"city" : "Kerugoya"
+	},
+	{
+		"city" : "Keroka"
+	},
+	{
+		"city" : "Kerkennah"
+	},
+	{
+		"city" : "Kericho"
+	},
+	{
+		"city" : "Keren"
+	},
+	{
+		"city" : "Kenton on Sea"
+	},
+	{
+		"city" : "Kensington"
+	},
+	{
+		"city" : "Kenitra"
+	},
+	{
+		"city" : "Kenenda"
+	},
+	{
+		"city" : "Kenadsa"
+	},
+	{
+		"city" : "Kempton Park"
+	},
+	{
+		"city" : "Kelibia"
+	},
+	{
+		"city" : "Kelaa Kebira"
+	},
+	{
+		"city" : "Keiskammahoek"
+	},
+	{
+		"city" : "Keimoes"
+	},
+	{
+		"city" : "Kebili"
+	},
+	{
+		"city" : "Kaïs"
+	},
+	{
+		"city" : "Kayes"
+	},
+	{
+		"city" : "Kayanza"
+	},
+	{
+		"city" : "Kawm Hamadah"
+	},
+	{
+		"city" : "Katsina"
+	},
+	{
+		"city" : "Katlehong"
+	},
+	{
+		"city" : "Katima Mulilo"
+	},
+	{
+		"city" : "Kathwana"
+	},
+	{
+		"city" : "Kathu"
+	},
+	{
+		"city" : "Kasserine"
+	},
+	{
+		"city" : "Kassala"
+	},
+	{
+		"city" : "Kasoa"
+	},
+	{
+		"city" : "Kasba Tadla"
+	},
+	{
+		"city" : "Karongi"
+	},
+	{
+		"city" : "Kareedouw"
+	},
+	{
+		"city" : "Karatina"
+	},
+	{
+		"city" : "Kara"
+	},
+	{
+		"city" : "Kapsabet"
+	},
+	{
+		"city" : "Kaous"
+	},
+	{
+		"city" : "Kaoma"
+	},
+	{
+		"city" : "Kaolack"
+	},
+	{
+		"city" : "Kanye"
+	},
+	{
+		"city" : "Kano"
+	},
+	{
+		"city" : "Kankan"
+	},
+	{
+		"city" : "Kanifing"
+	},
+	{
+		"city" : "Kani Kele"
+	},
+	{
+		"city" : "Kangema"
+	},
+	{
+		"city" : "Kangani"
+	},
+	{
+		"city" : "Kampala"
+	},
+	{
+		"city" : "Kalulushi"
+	},
+	{
+		"city" : "Kaloleni"
+	},
+	{
+		"city" : "Kalbaskraal"
+	},
+	{
+		"city" : "Kakata"
+	},
+	{
+		"city" : "Kakamega"
+	},
+	{
+		"city" : "Kakamas"
+	},
+	{
+		"city" : "Kajiado"
+	},
+	{
+		"city" : "Kairouan"
+	},
+	{
+		"city" : "Kahama"
+	},
+	{
+		"city" : "Kagiso"
+	},
+	{
+		"city" : "Kafr az Zayyat"
+	},
+	{
+		"city" : "Kafr ash Shaykh Hilal"
+	},
+	{
+		"city" : "Kafr ash Shaykh"
+	},
+	{
+		"city" : "Kafr ad Dawwar"
+	},
+	{
+		"city" : "Kafr Shukr"
+	},
+	{
+		"city" : "Kafr Saqr"
+	},
+	{
+		"city" : "Kafr Dawud"
+	},
+	{
+		"city" : "Kaduna"
+	},
+	{
+		"city" : "Kadiria"
+	},
+	{
+		"city" : "Kabwe"
+	},
+	{
+		"city" : "Kabiyet"
+	},
+	{
+		"city" : "Kabianga"
+	},
+	{
+		"city" : "Kabega"
+	},
+	{
+		"city" : "Kabarnet"
+	},
+	{
+		"city" : "Jwaneng"
+	},
+	{
+		"city" : "Jukskei Park"
+	},
+	{
+		"city" : "Juja"
+	},
+	{
+		"city" : "Juba"
+	},
+	{
+		"city" : "Jos"
+	},
+	{
+		"city" : "Johannesburg"
+	},
+	{
+		"city" : "Joao Teves"
+	},
+	{
+		"city" : "Jinja"
+	},
+	{
+		"city" : "Jimma"
+	},
+	{
+		"city" : "Jimeta"
+	},
+	{
+		"city" : "Jijiga"
+	},
+	{
+		"city" : "Jijelli"
+	},
+	{
+		"city" : "Jerada"
+	},
+	{
+		"city" : "Jendouba"
+	},
+	{
+		"city" : "Jeffreys Bay"
+	},
+	{
+		"city" : "Janjanbureh"
+	},
+	{
+		"city" : "Jane Furse"
+	},
+	{
+		"city" : "Jan Kempdorp"
+	},
+	{
+		"city" : "Jamestown"
+	},
+	{
+		"city" : "Jacobsdal"
+	},
+	{
+		"city" : "Ixopo"
+	},
+	{
+		"city" : "Ivory Park"
+	},
+	{
+		"city" : "Iten"
+	},
+	{
+		"city" : "Isolo"
+	},
+	{
+		"city" : "Ismailia"
+	},
+	{
+		"city" : "Isipingo Beach"
+	},
+	{
+		"city" : "Isiolo"
+	},
+	{
+		"city" : "Ishiara"
+	},
+	{
+		"city" : "Isando"
+	},
+	{
+		"city" : "Isale"
+	},
+	{
+		"city" : "Ironside"
+	},
+	{
+		"city" : "Irene"
+	},
+	{
+		"city" : "Ipaja"
+	},
+	{
+		"city" : "Inongo"
+	},
+	{
+		"city" : "Inhassoro"
+	},
+	{
+		"city" : "Inezgane"
+	},
+	{
+		"city" : "Indwe"
+	},
+	{
+		"city" : "Inanda"
+	},
+	{
+		"city" : "Imzouren"
+	},
+	{
+		"city" : "Impendle"
+	},
+	{
+		"city" : "Imlili"
+	},
+	{
+		"city" : "Imintanout"
+	},
+	{
+		"city" : "Imbabah"
+	},
+	{
+		"city" : "Ilorin"
+	},
+	{
+		"city" : "Illovo"
+	},
+	{
+		"city" : "Illizi"
+	},
+	{
+		"city" : "Ilesa"
+	},
+	{
+		"city" : "Ile-Ife"
+	},
+	{
+		"city" : "Ile au Cerf"
+	},
+	{
+		"city" : "Ikoyi"
+	},
+	{
+		"city" : "Ikorodu"
+	},
+	{
+		"city" : "Ikole-Ekiti"
+	},
+	{
+		"city" : "Ikeja"
+	},
+	{
+		"city" : "Ijoko"
+	},
+	{
+		"city" : "Ijebu Ode"
+	},
+	{
+		"city" : "Iherir"
+	},
+	{
+		"city" : "Igreja"
+	},
+	{
+		"city" : "Igostene"
+	},
+	{
+		"city" : "Igieduma"
+	},
+	{
+		"city" : "Ighram"
+	},
+	{
+		"city" : "Iganga"
+	},
+	{
+		"city" : "Igando"
+	},
+	{
+		"city" : "Ifrane de l'Anti-Atlas"
+	},
+	{
+		"city" : "Ifrane"
+	},
+	{
+		"city" : "Ifo"
+	},
+	{
+		"city" : "Iferhounene"
+	},
+	{
+		"city" : "Ifafa"
+	},
+	{
+		"city" : "Idutywa"
+	},
+	{
+		"city" : "Idku"
+	},
+	{
+		"city" : "Idiomo"
+	},
+	{
+		"city" : "Idimu"
+	},
+	{
+		"city" : "Idi Araba"
+	},
+	{
+		"city" : "Ibafo"
+	},
+	{
+		"city" : "Ibadan"
+	},
+	{
+		"city" : "Héliopolis"
+	},
+	{
+		"city" : "Hwange"
+	},
+	{
+		"city" : "Hussein Dey"
+	},
+	{
+		"city" : "Hurghada"
+	},
+	{
+		"city" : "Humewood"
+	},
+	{
+		"city" : "Humansdorp"
+	},
+	{
+		"city" : "Huambo"
+	},
+	{
+		"city" : "Howick"
+	},
+	{
+		"city" : "Hout Bay"
+	},
+	{
+		"city" : "Houmt Souk"
+	},
+	{
+		"city" : "Hotazel"
+	},
+	{
+		"city" : "Hopetown"
+	},
+	{
+		"city" : "Hopefield"
+	},
+	{
+		"city" : "Hoopstad"
+	},
+	{
+		"city" : "Honeydew"
+	},
+	{
+		"city" : "Homa Bay"
+	},
+	{
+		"city" : "Hoekwil"
+	},
+	{
+		"city" : "Hoedspruit"
+	},
+	{
+		"city" : "Ho"
+	},
+	{
+		"city" : "Hluhluwe"
+	},
+	{
+		"city" : "Hlabisa"
+	},
+	{
+		"city" : "Hinda"
+	},
+	{
+		"city" : "Himeville"
+	},
+	{
+		"city" : "Hilton"
+	},
+	{
+		"city" : "Hillcrest"
+	},
+	{
+		"city" : "Hihya"
+	},
+	{
+		"city" : "Highveld"
+	},
+	{
+		"city" : "Highflats"
+	},
+	{
+		"city" : "Hibberdene"
+	},
+	{
+		"city" : "Hexrivier"
+	},
+	{
+		"city" : "Hertzogville"
+	},
+	{
+		"city" : "Herolds Bay"
+	},
+	{
+		"city" : "Hermanus"
+	},
+	{
+		"city" : "Heriotdale"
+	},
+	{
+		"city" : "Hergla"
+	},
+	{
+		"city" : "Herbertsdale"
+	},
+	{
+		"city" : "Hennopspark"
+	},
+	{
+		"city" : "Hennenman"
+	},
+	{
+		"city" : "Hennaya"
+	},
+	{
+		"city" : "Henley on Klip"
+	},
+	{
+		"city" : "Hendrina"
+	},
+	{
+		"city" : "Helwan"
+	},
+	{
+		"city" : "Heliopolis"
+	},
+	{
+		"city" : "Helderkruin"
+	},
+	{
+		"city" : "Hekpoort"
+	},
+	{
+		"city" : "Heilbron"
+	},
+	{
+		"city" : "Heidelberg"
+	},
+	{
+		"city" : "Heathfield"
+	},
+	{
+		"city" : "Hazyview"
+	},
+	{
+		"city" : "Hayy as Sifarat"
+	},
+	{
+		"city" : "Hayy al Manakh"
+	},
+	{
+		"city" : "Hawston"
+	},
+	{
+		"city" : "Havenside"
+	},
+	{
+		"city" : "Hatfield"
+	},
+	{
+		"city" : "Hassi Messaoud"
+	},
+	{
+		"city" : "Hassi Khelifa"
+	},
+	{
+		"city" : "Hassi Bel Guebbour"
+	},
+	{
+		"city" : "Hassi Bahbah"
+	},
+	{
+		"city" : "Hartswater"
+	},
+	{
+		"city" : "Hartenbos"
+	},
+	{
+		"city" : "Hartebeespoort"
+	},
+	{
+		"city" : "Hartbeespoort"
+	},
+	{
+		"city" : "Harrismith"
+	},
+	{
+		"city" : "Harhoura"
+	},
+	{
+		"city" : "Hargeisa"
+	},
+	{
+		"city" : "Harare"
+	},
+	{
+		"city" : "Harar"
+	},
+	{
+		"city" : "Hammarsdale"
+	},
+	{
+		"city" : "Hammanskraal"
+	},
+	{
+		"city" : "Hammamet"
+	},
+	{
+		"city" : "Hammam-Lif"
+	},
+	{
+		"city" : "Hammam Sousse"
+	},
+	{
+		"city" : "Hammam Melouane"
+	},
+	{
+		"city" : "Hammam Dalaa"
+	},
+	{
+		"city" : "Hammam Bou Hadjar"
+	},
+	{
+		"city" : "Halfway House"
+	},
+	{
+		"city" : "Haenertsburg"
+	},
+	{
+		"city" : "Hadjout"
+	},
+	{
+		"city" : "Gweru"
+	},
+	{
+		"city" : "Gwarinpa"
+	},
+	{
+		"city" : "Guédiawaye"
+	},
+	{
+		"city" : "Guercif"
+	},
+	{
+		"city" : "Guemar"
+	},
+	{
+		"city" : "Guelmim"
+	},
+	{
+		"city" : "Guelma"
+	},
+	{
+		"city" : "Grootfontein"
+	},
+	{
+		"city" : "Groot-Brakrivier"
+	},
+	{
+		"city" : "Grombalia"
+	},
+	{
+		"city" : "Groblershoop"
+	},
+	{
+		"city" : "Groblersdal"
+	},
+	{
+		"city" : "Greytown"
+	},
+	{
+		"city" : "Greyton"
+	},
+	{
+		"city" : "Greenville"
+	},
+	{
+		"city" : "Greenstone Hill"
+	},
+	{
+		"city" : "Greenhills"
+	},
+	{
+		"city" : "Green Point"
+	},
+	{
+		"city" : "Grassy Park"
+	},
+	{
+		"city" : "Grasmere"
+	},
+	{
+		"city" : "Graskop"
+	},
+	{
+		"city" : "Grande Riviere Noire"
+	},
+	{
+		"city" : "Grande Montagne"
+	},
+	{
+		"city" : "Grand-Bassam"
+	},
+	{
+		"city" : "Grand Port District"
+	},
+	{
+		"city" : "Grand Gaube"
+	},
+	{
+		"city" : "Grand Bois"
+	},
+	{
+		"city" : "Grand Berebi"
+	},
+	{
+		"city" : "Grand Bel Air"
+	},
+	{
+		"city" : "Grand Baie"
+	},
+	{
+		"city" : "Grahamstown"
+	},
+	{
+		"city" : "Grabouw"
+	},
+	{
+		"city" : "Graafwater"
+	},
+	{
+		"city" : "Graaff Reinet"
+	},
+	{
+		"city" : "Goulmima"
+	},
+	{
+		"city" : "Gouda"
+	},
+	{
+		"city" : "Gordons Bay"
+	},
+	{
+		"city" : "Gordon's Bay"
+	},
+	{
+		"city" : "Goodwood"
+	},
+	{
+		"city" : "Goodlands"
+	},
+	{
+		"city" : "Gonubie"
+	},
+	{
+		"city" : "Gonder"
+	},
+	{
+		"city" : "Gombi"
+	},
+	{
+		"city" : "Gombe"
+	},
+	{
+		"city" : "Goma"
+	},
+	{
+		"city" : "Glenwood"
+	},
+	{
+		"city" : "Glenmarais"
+	},
+	{
+		"city" : "Glenhazel"
+	},
+	{
+		"city" : "Glencoe"
+	},
+	{
+		"city" : "Glen Austin"
+	},
+	{
+		"city" : "Giza"
+	},
+	{
+		"city" : "Giyani"
+	},
+	{
+		"city" : "Githurai"
+	},
+	{
+		"city" : "Gitega"
+	},
+	{
+		"city" : "Girga"
+	},
+	{
+		"city" : "Gillitts"
+	},
+	{
+		"city" : "Gilgil"
+	},
+	{
+		"city" : "Ghriss"
+	},
+	{
+		"city" : "Ghazaouet"
+	},
+	{
+		"city" : "Ghat"
+	},
+	{
+		"city" : "Gharyan"
+	},
+	{
+		"city" : "Ghardimaou"
+	},
+	{
+		"city" : "Ghardaïa"
+	},
+	{
+		"city" : "Gharbia"
+	},
+	{
+		"city" : "Ghafsaï"
+	},
+	{
+		"city" : "Germiston"
+	},
+	{
+		"city" : "George"
+	},
+	{
+		"city" : "Genadendal"
+	},
+	{
+		"city" : "Gbarnga"
+	},
+	{
+		"city" : "Gbagada"
+	},
+	{
+		"city" : "Gbadolite"
+	},
+	{
+		"city" : "Gauteng"
+	},
+	{
+		"city" : "Garsfontein"
+	},
+	{
+		"city" : "Garoowe"
+	},
+	{
+		"city" : "Garissa"
+	},
+	{
+		"city" : "Gansbaai"
+	},
+	{
+		"city" : "Gandajika"
+	},
+	{
+		"city" : "Gamart"
+	},
+	{
+		"city" : "Gakli"
+	},
+	{
+		"city" : "Gafsa"
+	},
+	{
+		"city" : "Gabú"
+	},
+	{
+		"city" : "Gabès"
+	},
+	{
+		"city" : "Gaborone"
+	},
+	{
+		"city" : "Gaalkacyo"
+	},
+	{
+		"city" : "Ga-Rankuwa"
+	},
+	{
+		"city" : "Ga-Kgapane"
+	},
+	{
+		"city" : "Fuwwah"
+	},
+	{
+		"city" : "Funtua"
+	},
+	{
+		"city" : "Frenda"
+	},
+	{
+		"city" : "Freha"
+	},
+	{
+		"city" : "Freetown"
+	},
+	{
+		"city" : "Franschhoek"
+	},
+	{
+		"city" : "Frankfort"
+	},
+	{
+		"city" : "Francistown"
+	},
+	{
+		"city" : "Franceville"
+	},
+	{
+		"city" : "Fourways"
+	},
+	{
+		"city" : "Fouka"
+	},
+	{
+		"city" : "Fouchana"
+	},
+	{
+		"city" : "Fostat"
+	},
+	{
+		"city" : "Fort Nottingham"
+	},
+	{
+		"city" : "Fort Beaufort"
+	},
+	{
+		"city" : "Fontainebleau"
+	},
+	{
+		"city" : "Fochville"
+	},
+	{
+		"city" : "Fnidek"
+	},
+	{
+		"city" : "Floréal"
+	},
+	{
+		"city" : "Florida Glen"
+	},
+	{
+		"city" : "Flic en Flac"
+	},
+	{
+		"city" : "Flagstaff"
+	},
+	{
+		"city" : "Fisherhaven"
+	},
+	{
+		"city" : "Fish Hoek"
+	},
+	{
+		"city" : "Fimela"
+	},
+	{
+		"city" : "Ficksburg"
+	},
+	{
+		"city" : "Fianarantsoa"
+	},
+	{
+		"city" : "Festac Town"
+	},
+	{
+		"city" : "Fes"
+	},
+	{
+		"city" : "Ferryville"
+	},
+	{
+		"city" : "Ferndale"
+	},
+	{
+		"city" : "Feriana"
+	},
+	{
+		"city" : "Feraoun"
+	},
+	{
+		"city" : "Fderîck"
+	},
+	{
+		"city" : "Fatick"
+	},
+	{
+		"city" : "Faraskur"
+	},
+	{
+		"city" : "Faqus"
+	},
+	{
+		"city" : "Faiyum"
+	},
+	{
+		"city" : "Fairview"
+	},
+	{
+		"city" : "Fairland"
+	},
+	{
+		"city" : "Fada"
+	},
+	{
+		"city" : "FCT"
+	},
+	{
+		"city" : "Ezzouhour"
+	},
+	{
+		"city" : "Ezibeleni"
+	},
+	{
+		"city" : "Ezbet el-Burg"
+	},
+	{
+		"city" : "Evinayong"
+	},
+	{
+		"city" : "Eversdal"
+	},
+	{
+		"city" : "Evaton"
+	},
+	{
+		"city" : "Evander"
+	},
+	{
+		"city" : "Estcourt"
+	},
+	{
+		"city" : "Essenwood"
+	},
+	{
+		"city" : "Essaouira"
+	},
+	{
+		"city" : "Espargos"
+	},
+	{
+		"city" : "Eshowe"
+	},
+	{
+		"city" : "Es Senia"
+	},
+	{
+		"city" : "Errachidia"
+	},
+	{
+		"city" : "Ermelo"
+	},
+	{
+		"city" : "Equestria"
+	},
+	{
+		"city" : "Epping"
+	},
+	{
+		"city" : "Enugu-Ukwu"
+	},
+	{
+		"city" : "Enugu"
+	},
+	{
+		"city" : "Entebbe"
+	},
+	{
+		"city" : "Engcobo"
+	},
+	{
+		"city" : "Enfidha"
+	},
+	{
+		"city" : "Empangeni"
+	},
+	{
+		"city" : "Emmarentia"
+	},
+	{
+		"city" : "Emmaloba"
+	},
+	{
+		"city" : "Emene"
+	},
+	{
+		"city" : "Embu"
+	},
+	{
+		"city" : "Embakasi"
+	},
+	{
+		"city" : "Embaba"
+	},
+	{
+		"city" : "Emalahleni"
+	},
+	{
+		"city" : "Elysium"
+	},
+	{
+		"city" : "Elsburg"
+	},
+	{
+		"city" : "Eloff"
+	},
+	{
+		"city" : "Elliot"
+	},
+	{
+		"city" : "Elelenwo"
+	},
+	{
+		"city" : "Elelenwa"
+	},
+	{
+		"city" : "Eldoret"
+	},
+	{
+		"city" : "Eldoradopark"
+	},
+	{
+		"city" : "El-Kseur"
+	},
+	{
+		"city" : "El Tarf"
+	},
+	{
+		"city" : "El Shorouk"
+	},
+	{
+		"city" : "El Oued"
+	},
+	{
+		"city" : "El Ouatia"
+	},
+	{
+		"city" : "El Omaria"
+	},
+	{
+		"city" : "El Ogla"
+	},
+	{
+		"city" : "El Mourouj"
+	},
+	{
+		"city" : "El Milia"
+	},
+	{
+		"city" : "El Mihan"
+	},
+	{
+		"city" : "El Menzeh"
+	},
+	{
+		"city" : "El Meghaïer"
+	},
+	{
+		"city" : "El Malah"
+	},
+	{
+		"city" : "El Madania"
+	},
+	{
+		"city" : "El Ksaiba"
+	},
+	{
+		"city" : "El Khroub"
+	},
+	{
+		"city" : "El Kef"
+	},
+	{
+		"city" : "El Kantara"
+	},
+	{
+		"city" : "El Kala"
+	},
+	{
+		"city" : "El Jem"
+	},
+	{
+		"city" : "El Jadida"
+	},
+	{
+		"city" : "El Haouaria"
+	},
+	{
+		"city" : "El Hamma"
+	},
+	{
+		"city" : "El Hajeb"
+	},
+	{
+		"city" : "El Hadjira"
+	},
+	{
+		"city" : "El Hadjar"
+	},
+	{
+		"city" : "El Gouna"
+	},
+	{
+		"city" : "El Fahs"
+	},
+	{
+		"city" : "El Eulma"
+	},
+	{
+		"city" : "El Dabaa"
+	},
+	{
+		"city" : "El Biar"
+	},
+	{
+		"city" : "El Bayadh"
+	},
+	{
+		"city" : "El Attaf"
+	},
+	{
+		"city" : "El Aouinet"
+	},
+	{
+		"city" : "El Anasser"
+	},
+	{
+		"city" : "El Amria"
+	},
+	{
+		"city" : "El Alia"
+	},
+	{
+		"city" : "El Alamein"
+	},
+	{
+		"city" : "El Aioun"
+	},
+	{
+		"city" : "El Affroun"
+	},
+	{
+		"city" : "El Achour"
+	},
+	{
+		"city" : "El Achir"
+	},
+	{
+		"city" : "El Abiodh Sidi Cheikh"
+	},
+	{
+		"city" : "Ekurhuleni"
+	},
+	{
+		"city" : "Ekiti State"
+	},
+	{
+		"city" : "Ekangala"
+	},
+	{
+		"city" : "Egbeda"
+	},
+	{
+		"city" : "Eersterivier"
+	},
+	{
+		"city" : "Eenhana"
+	},
+	{
+		"city" : "Eendekuil"
+	},
+	{
+		"city" : "Edukurom"
+	},
+	{
+		"city" : "Edouangani I"
+	},
+	{
+		"city" : "Edgemead"
+	},
+	{
+		"city" : "Edfu"
+	},
+	{
+		"city" : "Edenville"
+	},
+	{
+		"city" : "Edenvale"
+	},
+	{
+		"city" : "Eden Park"
+	},
+	{
+		"city" : "Eden Glen"
+	},
+	{
+		"city" : "Ech Chettia"
+	},
+	{
+		"city" : "Ebute Ikorodu"
+	},
+	{
+		"city" : "Ebene CyberCity"
+	},
+	{
+		"city" : "Eastern Cape"
+	},
+	{
+		"city" : "East London"
+	},
+	{
+		"city" : "Dédougou"
+	},
+	{
+		"city" : "Dzarani"
+	},
+	{
+		"city" : "Dzaoudzi"
+	},
+	{
+		"city" : "Durbanville"
+	},
+	{
+		"city" : "Durban"
+	},
+	{
+		"city" : "Dunqulah"
+	},
+	{
+		"city" : "Dunkeld West"
+	},
+	{
+		"city" : "Dundee"
+	},
+	{
+		"city" : "Duncanville"
+	},
+	{
+		"city" : "Dullstroom"
+	},
+	{
+		"city" : "Duiwelskloof"
+	},
+	{
+		"city" : "Duduza"
+	},
+	{
+		"city" : "Driouch"
+	},
+	{
+		"city" : "Driefontein"
+	},
+	{
+		"city" : "Drean"
+	},
+	{
+		"city" : "Draria"
+	},
+	{
+		"city" : "Draa el Mizan"
+	},
+	{
+		"city" : "Draa Ben Khedda"
+	},
+	{
+		"city" : "Douéra"
+	},
+	{
+		"city" : "Douglasdale"
+	},
+	{
+		"city" : "Douglas"
+	},
+	{
+		"city" : "Douar Rouached"
+	},
+	{
+		"city" : "Douar Laarayech"
+	},
+	{
+		"city" : "Douar Kaddour Ben Yahia"
+	},
+	{
+		"city" : "Douar El Mennzel"
+	},
+	{
+		"city" : "Douaouda"
+	},
+	{
+		"city" : "Douane"
+	},
+	{
+		"city" : "Douala"
+	},
+	{
+		"city" : "Dosso"
+	},
+	{
+		"city" : "Doringbaai"
+	},
+	{
+		"city" : "Dordrecht"
+	},
+	{
+		"city" : "Doornpoort"
+	},
+	{
+		"city" : "Doonside"
+	},
+	{
+		"city" : "Dondo"
+	},
+	{
+		"city" : "Dokki"
+	},
+	{
+		"city" : "Doho Karachuon"
+	},
+	{
+		"city" : "Dogondoutchi"
+	},
+	{
+		"city" : "Dogbo"
+	},
+	{
+		"city" : "Dodoma"
+	},
+	{
+		"city" : "Dobsonville"
+	},
+	{
+		"city" : "Djougou"
+	},
+	{
+		"city" : "Djibouti"
+	},
+	{
+		"city" : "Djibloho"
+	},
+	{
+		"city" : "Djelida"
+	},
+	{
+		"city" : "Djelfa"
+	},
+	{
+		"city" : "Djebeniana"
+	},
+	{
+		"city" : "Djanet"
+	},
+	{
+		"city" : "Djamaa"
+	},
+	{
+		"city" : "Diébougou"
+	},
+	{
+		"city" : "Diyarb Najm"
+	},
+	{
+		"city" : "Disuq"
+	},
+	{
+		"city" : "Discovery"
+	},
+	{
+		"city" : "Dire Dawa"
+	},
+	{
+		"city" : "Dimbokro"
+	},
+	{
+		"city" : "Dimbaza"
+	},
+	{
+		"city" : "Dikirnis"
+	},
+	{
+		"city" : "Dikebu"
+	},
+	{
+		"city" : "Diffa"
+	},
+	{
+		"city" : "Diepsloot"
+	},
+	{
+		"city" : "Diepkloof Zone 5"
+	},
+	{
+		"city" : "Didouche Mourad"
+	},
+	{
+		"city" : "Diapaga"
+	},
+	{
+		"city" : "Diani"
+	},
+	{
+		"city" : "Diamniadio"
+	},
+	{
+		"city" : "Devland"
+	},
+	{
+		"city" : "Despatch"
+	},
+	{
+		"city" : "Dennilton"
+	},
+	{
+		"city" : "Deneysville"
+	},
+	{
+		"city" : "Den Den"
+	},
+	{
+		"city" : "Demnate"
+	},
+	{
+		"city" : "Dembeni"
+	},
+	{
+		"city" : "Delta"
+	},
+	{
+		"city" : "Delmas"
+	},
+	{
+		"city" : "Dellys"
+	},
+	{
+		"city" : "Deli Ibrahim"
+	},
+	{
+		"city" : "Delareyville"
+	},
+	{
+		"city" : "Degache"
+	},
+	{
+		"city" : "Debila"
+	},
+	{
+		"city" : "Debe Nek"
+	},
+	{
+		"city" : "Dealesville"
+	},
+	{
+		"city" : "De Kelders"
+	},
+	{
+		"city" : "De Doorns"
+	},
+	{
+		"city" : "De Deur"
+	},
+	{
+		"city" : "De Aar"
+	},
+	{
+		"city" : "Dbagh"
+	},
+	{
+		"city" : "Dayr Mawas"
+	},
+	{
+		"city" : "Dawwar Abu al `Asi"
+	},
+	{
+		"city" : "Daveyton"
+	},
+	{
+		"city" : "Darnall"
+	},
+	{
+		"city" : "Darnah"
+	},
+	{
+		"city" : "Darling"
+	},
+	{
+		"city" : "Daraw"
+	},
+	{
+		"city" : "Dar es Salaam"
+	},
+	{
+		"city" : "Dar el Beida"
+	},
+	{
+		"city" : "Dar Bouazza"
+	},
+	{
+		"city" : "Danville"
+	},
+	{
+		"city" : "Daniëlskuil"
+	},
+	{
+		"city" : "Damongo"
+	},
+	{
+		"city" : "Damietta"
+	},
+	{
+		"city" : "Dambai"
+	},
+	{
+		"city" : "Damanhur"
+	},
+	{
+		"city" : "Dalton"
+	},
+	{
+		"city" : "Daloa"
+	},
+	{
+		"city" : "Dakhla"
+	},
+	{
+		"city" : "Dakar Dodj"
+	},
+	{
+		"city" : "Dakar"
+	},
+	{
+		"city" : "Dakahlia"
+	},
+	{
+		"city" : "Dainfern"
+	},
+	{
+		"city" : "Dagotière"
+	},
+	{
+		"city" : "Dabakala"
+	},
+	{
+		"city" : "Cuvango"
+	},
+	{
+		"city" : "Curepipe"
+	},
+	{
+		"city" : "Cullinan"
+	},
+	{
+		"city" : "Cuito"
+	},
+	{
+		"city" : "Croydon"
+	},
+	{
+		"city" : "Cresta"
+	},
+	{
+		"city" : "Crawford"
+	},
+	{
+		"city" : "Craighall Park"
+	},
+	{
+		"city" : "Craighall"
+	},
+	{
+		"city" : "Cradock"
+	},
+	{
+		"city" : "Coyah"
+	},
+	{
+		"city" : "Cova Figueira"
+	},
+	{
+		"city" : "Cotonou"
+	},
+	{
+		"city" : "Coromandel"
+	},
+	{
+		"city" : "Constantine"
+	},
+	{
+		"city" : "Constantia Kloof"
+	},
+	{
+		"city" : "Congomah"
+	},
+	{
+		"city" : "Conakry"
+	},
+	{
+		"city" : "Cofimvaba"
+	},
+	{
+		"city" : "Cocody"
+	},
+	{
+		"city" : "Clocolan"
+	},
+	{
+		"city" : "Clifton"
+	},
+	{
+		"city" : "Clermont"
+	},
+	{
+		"city" : "Clausthal"
+	},
+	{
+		"city" : "Clarens"
+	},
+	{
+		"city" : "Clanwilliam"
+	},
+	{
+		"city" : "Cité El Khadhra"
+	},
+	{
+		"city" : "City of Tshwane"
+	},
+	{
+		"city" : "Citrusdal"
+	},
+	{
+		"city" : "Cilaos"
+	},
+	{
+		"city" : "Cidade Velha"
+	},
+	{
+		"city" : "Chuka"
+	},
+	{
+		"city" : "Christiana"
+	},
+	{
+		"city" : "Chorbane"
+	},
+	{
+		"city" : "Chongwe"
+	},
+	{
+		"city" : "Chloorkop"
+	},
+	{
+		"city" : "Chirundu"
+	},
+	{
+		"city" : "Chirongui"
+	},
+	{
+		"city" : "Chinhoyi"
+	},
+	{
+		"city" : "Chingoni"
+	},
+	{
+		"city" : "Chingola"
+	},
+	{
+		"city" : "Chimoio"
+	},
+	{
+		"city" : "Chiffa"
+	},
+	{
+		"city" : "Chiconi"
+	},
+	{
+		"city" : "Chichaoua"
+	},
+	{
+		"city" : "Chibombo"
+	},
+	{
+		"city" : "Chetouane"
+	},
+	{
+		"city" : "Cheria"
+	},
+	{
+		"city" : "Cherchell"
+	},
+	{
+		"city" : "Cheraga"
+	},
+	{
+		"city" : "Chemini"
+	},
+	{
+		"city" : "Chelghoum el Aid"
+	},
+	{
+		"city" : "Chekfa"
+	},
+	{
+		"city" : "Chegutu"
+	},
+	{
+		"city" : "Chefchaouen"
+	},
+	{
+		"city" : "Chebli"
+	},
+	{
+		"city" : "Chebba"
+	},
+	{
+		"city" : "Chatsworth"
+	},
+	{
+		"city" : "Chacha"
+	},
+	{
+		"city" : "Chabet el Ameur"
+	},
+	{
+		"city" : "Chaabat el Leham"
+	},
+	{
+		"city" : "Ceres"
+	},
+	{
+		"city" : "Century City"
+	},
+	{
+		"city" : "Centurion"
+	},
+	{
+		"city" : "Centre de Flacq"
+	},
+	{
+		"city" : "Cedarville"
+	},
+	{
+		"city" : "Cazenga"
+	},
+	{
+		"city" : "Catumbela"
+	},
+	{
+		"city" : "Cato Ridge"
+	},
+	{
+		"city" : "Cathcart"
+	},
+	{
+		"city" : "Casbah"
+	},
+	{
+		"city" : "Casablanca"
+	},
+	{
+		"city" : "Carthage"
+	},
+	{
+		"city" : "Carolina"
+	},
+	{
+		"city" : "Carnarvon"
+	},
+	{
+		"city" : "Carletonville"
+	},
+	{
+		"city" : "Capital Park"
+	},
+	{
+		"city" : "Cape Town"
+	},
+	{
+		"city" : "Cape St Francis"
+	},
+	{
+		"city" : "Cape Coast"
+	},
+	{
+		"city" : "Cannon Rocks"
+	},
+	{
+		"city" : "Canchungo"
+	},
+	{
+		"city" : "Camps Bay"
+	},
+	{
+		"city" : "Camperdown"
+	},
+	{
+		"city" : "Camp Diable"
+	},
+	{
+		"city" : "Cameia"
+	},
+	{
+		"city" : "Camana"
+	},
+	{
+		"city" : "Camabatela"
+	},
+	{
+		"city" : "Calvinia"
+	},
+	{
+		"city" : "Calodyne"
+	},
+	{
+		"city" : "Calitzdorp"
+	},
+	{
+		"city" : "Caledon"
+	},
+	{
+		"city" : "Calabar"
+	},
+	{
+		"city" : "Cairo Governorate"
+	},
+	{
+		"city" : "Cairo"
+	},
+	{
+		"city" : "Cacuaco"
+	},
+	{
+		"city" : "Cabinda"
+	},
+	{
+		"city" : "Béoumi"
+	},
+	{
+		"city" : "Béjaïa"
+	},
+	{
+		"city" : "Béja"
+	},
+	{
+		"city" : "Béchar"
+	},
+	{
+		"city" : "Bébédja"
+	},
+	{
+		"city" : "Bwari"
+	},
+	{
+		"city" : "Butterworth"
+	},
+	{
+		"city" : "Butha-Buthe"
+	},
+	{
+		"city" : "Butere"
+	},
+	{
+		"city" : "Bururi"
+	},
+	{
+		"city" : "Burgersfort"
+	},
+	{
+		"city" : "Burgersdorp"
+	},
+	{
+		"city" : "Burao"
+	},
+	{
+		"city" : "Bunia"
+	},
+	{
+		"city" : "Bungoma"
+	},
+	{
+		"city" : "Bunda"
+	},
+	{
+		"city" : "Bultfontein"
+	},
+	{
+		"city" : "Bulawayo"
+	},
+	{
+		"city" : "Bulaq Abu al `Ila"
+	},
+	{
+		"city" : "Bukoba"
+	},
+	{
+		"city" : "Bukavu"
+	},
+	{
+		"city" : "Bujumbura"
+	},
+	{
+		"city" : "Buchanan"
+	},
+	{
+		"city" : "Bubaque"
+	},
+	{
+		"city" : "Bubanza"
+	},
+	{
+		"city" : "Buba"
+	},
+	{
+		"city" : "Bryanston"
+	},
+	{
+		"city" : "Bronkhorstspruit"
+	},
+	{
+		"city" : "Broederstroom"
+	},
+	{
+		"city" : "Broadacres"
+	},
+	{
+		"city" : "Brits"
+	},
+	{
+		"city" : "Brisee Verdiere"
+	},
+	{
+		"city" : "Brikama Ba"
+	},
+	{
+		"city" : "Bria"
+	},
+	{
+		"city" : "Brezina"
+	},
+	{
+		"city" : "Breyten"
+	},
+	{
+		"city" : "Bredasdorp"
+	},
+	{
+		"city" : "Brazzaville"
+	},
+	{
+		"city" : "Bras-Panon"
+	},
+	{
+		"city" : "Bras Panon"
+	},
+	{
+		"city" : "Brandvlei"
+	},
+	{
+		"city" : "Brandfort"
+	},
+	{
+		"city" : "Bramsthan"
+	},
+	{
+		"city" : "Brakpan"
+	},
+	{
+		"city" : "Brackenham"
+	},
+	{
+		"city" : "Brackenfell"
+	},
+	{
+		"city" : "Brackendowns"
+	},
+	{
+		"city" : "Bouïra"
+	},
+	{
+		"city" : "Bouznika"
+	},
+	{
+		"city" : "Bouzeguene"
+	},
+	{
+		"city" : "Bouzarea"
+	},
+	{
+		"city" : "Bouyigra"
+	},
+	{
+		"city" : "Bouskoura"
+	},
+	{
+		"city" : "Bouskene"
+	},
+	{
+		"city" : "Boumia"
+	},
+	{
+		"city" : "Boumerdes"
+	},
+	{
+		"city" : "Boumerdas"
+	},
+	{
+		"city" : "Boumahra Ahmed"
+	},
+	{
+		"city" : "Bouly"
+	},
+	{
+		"city" : "Boulemane"
+	},
+	{
+		"city" : "Boukadir"
+	},
+	{
+		"city" : "Bougzoul"
+	},
+	{
+		"city" : "Bouguirat"
+	},
+	{
+		"city" : "Bougara"
+	},
+	{
+		"city" : "Bougaa"
+	},
+	{
+		"city" : "Boufarik"
+	},
+	{
+		"city" : "Boudouaou el Bahri"
+	},
+	{
+		"city" : "Boudouaou"
+	},
+	{
+		"city" : "Boudjima"
+	},
+	{
+		"city" : "Bouarfa"
+	},
+	{
+		"city" : "Bouar"
+	},
+	{
+		"city" : "Bouaké"
+	},
+	{
+		"city" : "Bouaflé"
+	},
+	{
+		"city" : "Bou Tlelis"
+	},
+	{
+		"city" : "Bou Saada"
+	},
+	{
+		"city" : "Bou Ismail"
+	},
+	{
+		"city" : "Bou Arfa"
+	},
+	{
+		"city" : "Botshabelo"
+	},
+	{
+		"city" : "Botrivier"
+	},
+	{
+		"city" : "Bothaville"
+	},
+	{
+		"city" : "Bothasig"
+	},
+	{
+		"city" : "Bothas Hill"
+	},
+	{
+		"city" : "Bossangoa"
+	},
+	{
+		"city" : "Bosmont"
+	},
+	{
+		"city" : "Boskruin"
+	},
+	{
+		"city" : "Boshof"
+	},
+	{
+		"city" : "Bosbokrand"
+	},
+	{
+		"city" : "Bosaso"
+	},
+	{
+		"city" : "Bordj el Kiffan"
+	},
+	{
+		"city" : "Bordj el Bahri"
+	},
+	{
+		"city" : "Bordj Zemoura"
+	},
+	{
+		"city" : "Bordj Okhriss"
+	},
+	{
+		"city" : "Bordj Ghdir"
+	},
+	{
+		"city" : "Bordj Bou Arreridj"
+	},
+	{
+		"city" : "Bordj Badji Mokhtar"
+	},
+	{
+		"city" : "Borama"
+	},
+	{
+		"city" : "Bonnievale"
+	},
+	{
+		"city" : "Bonga"
+	},
+	{
+		"city" : "Bonaero Park"
+	},
+	{
+		"city" : "Bomet"
+	},
+	{
+		"city" : "Bombom"
+	},
+	{
+		"city" : "Bolgatanga"
+	},
+	{
+		"city" : "Bole"
+	},
+	{
+		"city" : "Bol"
+	},
+	{
+		"city" : "Boksburg North"
+	},
+	{
+		"city" : "Boksburg"
+	},
+	{
+		"city" : "Bois Rouge"
+	},
+	{
+		"city" : "Bohicon"
+	},
+	{
+		"city" : "Boghni"
+	},
+	{
+		"city" : "Boeni"
+	},
+	{
+		"city" : "Bobo-Dioulasso"
+	},
+	{
+		"city" : "Bluff"
+	},
+	{
+		"city" : "Blue Downs"
+	},
+	{
+		"city" : "Blougra"
+	},
+	{
+		"city" : "Bloubergstrand"
+	},
+	{
+		"city" : "Bloemhof"
+	},
+	{
+		"city" : "Bloemfontein"
+	},
+	{
+		"city" : "Blinkpan"
+	},
+	{
+		"city" : "Blida"
+	},
+	{
+		"city" : "Blantyre"
+	},
+	{
+		"city" : "Blanco"
+	},
+	{
+		"city" : "Blairgowrie"
+	},
+	{
+		"city" : "Blackheath"
+	},
+	{
+		"city" : "Blackburn"
+	},
+	{
+		"city" : "Bizerte"
+	},
+	{
+		"city" : "Bizana"
+	},
+	{
+		"city" : "Biyala"
+	},
+	{
+		"city" : "Bissau"
+	},
+	{
+		"city" : "Biskra"
+	},
+	{
+		"city" : "Bishop Lavis"
+	},
+	{
+		"city" : "Bishoftu"
+	},
+	{
+		"city" : "Birtouta"
+	},
+	{
+		"city" : "Birkhadem"
+	},
+	{
+		"city" : "Birchleigh"
+	},
+	{
+		"city" : "Bir el Djir"
+	},
+	{
+		"city" : "Bir el Ater"
+	},
+	{
+		"city" : "Bir Mourad Rais"
+	},
+	{
+		"city" : "Bir Jdid"
+	},
+	{
+		"city" : "Bir Ghellalia"
+	},
+	{
+		"city" : "Bir Ghbalou"
+	},
+	{
+		"city" : "Bir Anzarane"
+	},
+	{
+		"city" : "Bingerville"
+	},
+	{
+		"city" : "Bimbo"
+	},
+	{
+		"city" : "Biltine"
+	},
+	{
+		"city" : "Bilqas"
+	},
+	{
+		"city" : "Bilbeis"
+	},
+	{
+		"city" : "Big Bend"
+	},
+	{
+		"city" : "Bicurga"
+	},
+	{
+		"city" : "Biba"
+	},
+	{
+		"city" : "Bhisho"
+	},
+	{
+		"city" : "Bhalil"
+	},
+	{
+		"city" : "Bettana"
+	},
+	{
+		"city" : "Bethlehem"
+	},
+	{
+		"city" : "Bethelsdorp"
+	},
+	{
+		"city" : "Bethalrand"
+	},
+	{
+		"city" : "Besbes"
+	},
+	{
+		"city" : "Bertoua"
+	},
+	{
+		"city" : "Berrouaghia"
+	},
+	{
+		"city" : "Berriane"
+	},
+	{
+		"city" : "Berrechid"
+	},
+	{
+		"city" : "Berrahal"
+	},
+	{
+		"city" : "Berlin"
+	},
+	{
+		"city" : "Berkane"
+	},
+	{
+		"city" : "Bergville"
+	},
+	{
+		"city" : "Bereaville"
+	},
+	{
+		"city" : "Berea"
+	},
+	{
+		"city" : "Benslimane"
+	},
+	{
+		"city" : "Bensekrane"
+	},
+	{
+		"city" : "Benoni"
+	},
+	{
+		"city" : "Benin City"
+	},
+	{
+		"city" : "Beni Saf"
+	},
+	{
+		"city" : "Beni Mellal"
+	},
+	{
+		"city" : "Beni Khiar"
+	},
+	{
+		"city" : "Beni Khalled"
+	},
+	{
+		"city" : "Beni Douala"
+	},
+	{
+		"city" : "Beni Amrane"
+	},
+	{
+		"city" : "Benguela"
+	},
+	{
+		"city" : "Benghazi"
+	},
+	{
+		"city" : "Benfica"
+	},
+	{
+		"city" : "Ben Taieb"
+	},
+	{
+		"city" : "Ben Guerir"
+	},
+	{
+		"city" : "Ben Arous"
+	},
+	{
+		"city" : "Ben Ahmed"
+	},
+	{
+		"city" : "Ben 'Aknoun"
+	},
+	{
+		"city" : "Belvédère"
+	},
+	{
+		"city" : "Bellville"
+	},
+	{
+		"city" : "Belle Rose"
+	},
+	{
+		"city" : "Belle Mare"
+	},
+	{
+		"city" : "Bellair"
+	},
+	{
+		"city" : "Belhar"
+	},
+	{
+		"city" : "Belfast"
+	},
+	{
+		"city" : "Beledweyne"
+	},
+	{
+		"city" : "Belas"
+	},
+	{
+		"city" : "Bela-Bela"
+	},
+	{
+		"city" : "Bela Bela"
+	},
+	{
+		"city" : "Bel Bachir"
+	},
+	{
+		"city" : "Bel Air Riviere Seche"
+	},
+	{
+		"city" : "Bekalta"
+	},
+	{
+		"city" : "Bejaad"
+	},
+	{
+		"city" : "Beitbridge"
+	},
+	{
+		"city" : "Beira"
+	},
+	{
+		"city" : "Beida Bordj"
+	},
+	{
+		"city" : "Beheira"
+	},
+	{
+		"city" : "Bedworth Park"
+	},
+	{
+		"city" : "Bedfordview"
+	},
+	{
+		"city" : "Bedford Gardens"
+	},
+	{
+		"city" : "Bedelia"
+	},
+	{
+		"city" : "Bechloul"
+	},
+	{
+		"city" : "Beaulieu"
+	},
+	{
+		"city" : "Beaufort West"
+	},
+	{
+		"city" : "Beau Bassin-Rose Hill"
+	},
+	{
+		"city" : "Bauchi"
+	},
+	{
+		"city" : "Batna City"
+	},
+	{
+		"city" : "Bathurst"
+	},
+	{
+		"city" : "Bata"
+	},
+	{
+		"city" : "Basyun"
+	},
+	{
+		"city" : "Bassonia"
+	},
+	{
+		"city" : "Bassar"
+	},
+	{
+		"city" : "Barrydale"
+	},
+	{
+		"city" : "Barkly West"
+	},
+	{
+		"city" : "Barkly East"
+	},
+	{
+		"city" : "Barika"
+	},
+	{
+		"city" : "Bariga"
+	},
+	{
+		"city" : "Bargny"
+	},
+	{
+		"city" : "Barberton"
+	},
+	{
+		"city" : "Baratier"
+	},
+	{
+		"city" : "Baraki"
+	},
+	{
+		"city" : "Banjul"
+	},
+	{
+		"city" : "Bani Suwayf"
+	},
+	{
+		"city" : "Bani Mazar"
+	},
+	{
+		"city" : "Banha"
+	},
+	{
+		"city" : "Bangui"
+	},
+	{
+		"city" : "Bangoran"
+	},
+	{
+		"city" : "Bangolo Tahouake"
+	},
+	{
+		"city" : "Banfora"
+	},
+	{
+		"city" : "Bandiagara"
+	},
+	{
+		"city" : "Bandele"
+	},
+	{
+		"city" : "Bandaboa"
+	},
+	{
+		"city" : "Banbalah"
+	},
+	{
+		"city" : "Bananes"
+	},
+	{
+		"city" : "Bamenda"
+	},
+	{
+		"city" : "Bambo Ouest"
+	},
+	{
+		"city" : "Bamako"
+	},
+	{
+		"city" : "Baltim"
+	},
+	{
+		"city" : "Ballitoville"
+	},
+	{
+		"city" : "Balfour"
+	},
+	{
+		"city" : "Balbala"
+	},
+	{
+		"city" : "Balaclava"
+	},
+	{
+		"city" : "Baidoa"
+	},
+	{
+		"city" : "Baghaï"
+	},
+	{
+		"city" : "Bagamoyo"
+	},
+	{
+		"city" : "Bafatá"
+	},
+	{
+		"city" : "Badr"
+	},
+	{
+		"city" : "Badou"
+	},
+	{
+		"city" : "Baba Hassen"
+	},
+	{
+		"city" : "Bab Ezzouar"
+	},
+	{
+		"city" : "Baardskeerdersbos"
+	},
+	{
+		"city" : "Azzaba"
+	},
+	{
+		"city" : "Azrou"
+	},
+	{
+		"city" : "Azilal"
+	},
+	{
+		"city" : "Azib Aboudaou"
+	},
+	{
+		"city" : "Azazga"
+	},
+	{
+		"city" : "Azamor"
+	},
+	{
+		"city" : "Az Zaytun"
+	},
+	{
+		"city" : "Az Zawiyah"
+	},
+	{
+		"city" : "Az Zamalik"
+	},
+	{
+		"city" : "Az Zabu"
+	},
+	{
+		"city" : "Ayobo"
+	},
+	{
+		"city" : "Awsim"
+	},
+	{
+		"city" : "Awka"
+	},
+	{
+		"city" : "Awasa"
+	},
+	{
+		"city" : "Avontuur"
+	},
+	{
+		"city" : "Aurora"
+	},
+	{
+		"city" : "Auckland Park"
+	},
+	{
+		"city" : "Au Cap"
+	},
+	{
+		"city" : "Attiecoube"
+	},
+	{
+		"city" : "Atteridgeville"
+	},
+	{
+		"city" : "Atsiaman"
+	},
+	{
+		"city" : "Atlasville"
+	},
+	{
+		"city" : "Atlantis"
+	},
+	{
+		"city" : "Ati"
+	},
+	{
+		"city" : "Atholl Gardens"
+	},
+	{
+		"city" : "Athlone"
+	},
+	{
+		"city" : "At Tall al Kabir"
+	},
+	{
+		"city" : "At Taj"
+	},
+	{
+		"city" : "Asyut"
+	},
+	{
+		"city" : "Aswān"
+	},
+	{
+		"city" : "Asubi"
+	},
+	{
+		"city" : "Aston Manor"
+	},
+	{
+		"city" : "Assomada"
+	},
+	{
+		"city" : "Assagay"
+	},
+	{
+		"city" : "Assa"
+	},
+	{
+		"city" : "Asosa"
+	},
+	{
+		"city" : "Asmara"
+	},
+	{
+		"city" : "Asilah"
+	},
+	{
+		"city" : "Ashton"
+	},
+	{
+		"city" : "Ashmun"
+	},
+	{
+		"city" : "Ashaiman"
+	},
+	{
+		"city" : "Ash-Shaykh Zayid"
+	},
+	{
+		"city" : "Ash Shatibi"
+	},
+	{
+		"city" : "Asfour"
+	},
+	{
+		"city" : "Asaba"
+	},
+	{
+		"city" : "As Sinbillawayn"
+	},
+	{
+		"city" : "As Santah"
+	},
+	{
+		"city" : "As Sanad"
+	},
+	{
+		"city" : "As Salihiyah"
+	},
+	{
+		"city" : "Arzew"
+	},
+	{
+		"city" : "Aryanah"
+	},
+	{
+		"city" : "Arusha"
+	},
+	{
+		"city" : "Arta"
+	},
+	{
+		"city" : "Arris"
+	},
+	{
+		"city" : "Arhribs"
+	},
+	{
+		"city" : "Arfoud"
+	},
+	{
+		"city" : "Arbatache"
+	},
+	{
+		"city" : "Arbaoua"
+	},
+	{
+		"city" : "Ar Rommani"
+	},
+	{
+		"city" : "Ar Rahmaniyah"
+	},
+	{
+		"city" : "Ar Rahad"
+	},
+	{
+		"city" : "Apapa Eleko"
+	},
+	{
+		"city" : "Aoulouz"
+	},
+	{
+		"city" : "Aokas"
+	},
+	{
+		"city" : "Antsiranana"
+	},
+	{
+		"city" : "Antsirabe"
+	},
+	{
+		"city" : "Antananarivo"
+	},
+	{
+		"city" : "Anonébéré"
+	},
+	{
+		"city" : "Annaba"
+	},
+	{
+		"city" : "Andoharanofotsy"
+	},
+	{
+		"city" : "An Nuzhah al Jadidah"
+	},
+	{
+		"city" : "An Nuhud"
+	},
+	{
+		"city" : "Ammi Moussa"
+	},
+	{
+		"city" : "Amizour"
+	},
+	{
+		"city" : "Amizmiz"
+	},
+	{
+		"city" : "Amilcar"
+	},
+	{
+		"city" : "Ambositra"
+	},
+	{
+		"city" : "Amandasig"
+	},
+	{
+		"city" : "Amalinda"
+	},
+	{
+		"city" : "Amagaz"
+	},
+	{
+		"city" : "Aluu"
+	},
+	{
+		"city" : "Alto Douro"
+	},
+	{
+		"city" : "Alrode"
+	},
+	{
+		"city" : "Aliwal North"
+	},
+	{
+		"city" : "Alimosho"
+	},
+	{
+		"city" : "Alice"
+	},
+	{
+		"city" : "Ali Sabih"
+	},
+	{
+		"city" : "Ali Mendjeli"
+	},
+	{
+		"city" : "Algiers"
+	},
+	{
+		"city" : "Alger Plage"
+	},
+	{
+		"city" : "Alexandria"
+	},
+	{
+		"city" : "Albion"
+	},
+	{
+		"city" : "Alberton North"
+	},
+	{
+		"city" : "Alberton"
+	},
+	{
+		"city" : "Albertina"
+	},
+	{
+		"city" : "Alausa"
+	},
+	{
+		"city" : "Alagba"
+	},
+	{
+		"city" : "Al-'Ubur"
+	},
+	{
+		"city" : "Al ‘Arīsh"
+	},
+	{
+		"city" : "Al `Atabah"
+	},
+	{
+		"city" : "Al `Amiriyah"
+	},
+	{
+		"city" : "Al `Ajuzah"
+	},
+	{
+		"city" : "Al Qusiyah"
+	},
+	{
+		"city" : "Al Qanayat"
+	},
+	{
+		"city" : "Al Qanatir al Khayriyah"
+	},
+	{
+		"city" : "Al Qalyubiyah"
+	},
+	{
+		"city" : "Al Qahirah al Jadidah"
+	},
+	{
+		"city" : "Al Qadarif"
+	},
+	{
+		"city" : "Al Minya"
+	},
+	{
+		"city" : "Al Matlin"
+	},
+	{
+		"city" : "Al Mansurah"
+	},
+	{
+		"city" : "Al Mahallah al Kubra"
+	},
+	{
+		"city" : "Al Ma`adi"
+	},
+	{
+		"city" : "Al Khankah"
+	},
+	{
+		"city" : "Al Hoceima"
+	},
+	{
+		"city" : "Al Hawamidiyah"
+	},
+	{
+		"city" : "Al Haram"
+	},
+	{
+		"city" : "Al Fqih Ben Calah"
+	},
+	{
+		"city" : "Al Fayyum"
+	},
+	{
+		"city" : "Al Abraq"
+	},
+	{
+		"city" : "Al 'Ayyat"
+	},
+	{
+		"city" : "Al 'Attawia"
+	},
+	{
+		"city" : "Al 'Ashir min Ramadan"
+	},
+	{
+		"city" : "Akure"
+	},
+	{
+		"city" : "Aksum"
+	},
+	{
+		"city" : "Akouda"
+	},
+	{
+		"city" : "Aklim"
+	},
+	{
+		"city" : "Akhmim"
+	},
+	{
+		"city" : "Akbou"
+	},
+	{
+		"city" : "Akasia"
+	},
+	{
+		"city" : "Ajah"
+	},
+	{
+		"city" : "Ait Yahia"
+	},
+	{
+		"city" : "Ait Ourir"
+	},
+	{
+		"city" : "Ait Melloul"
+	},
+	{
+		"city" : "Ain el Hadjel"
+	},
+	{
+		"city" : "Ain el Bya"
+	},
+	{
+		"city" : "Ain Touta"
+	},
+	{
+		"city" : "Ain Temouchent"
+	},
+	{
+		"city" : "Ain Tedeles"
+	},
+	{
+		"city" : "Ain Taya"
+	},
+	{
+		"city" : "Ain Taoujdat"
+	},
+	{
+		"city" : "Ain Smara"
+	},
+	{
+		"city" : "Ain Sefra"
+	},
+	{
+		"city" : "Ain Oussera"
+	},
+	{
+		"city" : "Ain Oulmene"
+	},
+	{
+		"city" : "Ain M'Lila"
+	},
+	{
+		"city" : "Ain Kercha"
+	},
+	{
+		"city" : "Ain Harrouda"
+	},
+	{
+		"city" : "Ain Fakroun"
+	},
+	{
+		"city" : "Ain Defla"
+	},
+	{
+		"city" : "Ain Bessem"
+	},
+	{
+		"city" : "Ain Beni Mathar"
+	},
+	{
+		"city" : "Ain Beida"
+	},
+	{
+		"city" : "Ahmed Rachedi"
+	},
+	{
+		"city" : "Ahfir"
+	},
+	{
+		"city" : "Aguelhok"
+	},
+	{
+		"city" : "Agouza"
+	},
+	{
+		"city" : "Agouraï"
+	},
+	{
+		"city" : "Aggeneys"
+	},
+	{
+		"city" : "Agege"
+	},
+	{
+		"city" : "Agareb"
+	},
+	{
+		"city" : "Agadir Tasguint"
+	},
+	{
+		"city" : "Agadir Oujgal"
+	},
+	{
+		"city" : "Agadir"
+	},
+	{
+		"city" : "Aga"
+	},
+	{
+		"city" : "Afourer"
+	},
+	{
+		"city" : "Aflou"
+	},
+	{
+		"city" : "Afikpo"
+	},
+	{
+		"city" : "Adrar"
+	},
+	{
+		"city" : "Adouia"
+	},
+	{
+		"city" : "Ado-Ekiti"
+	},
+	{
+		"city" : "Adjamé"
+	},
+	{
+		"city" : "Adjahil"
+	},
+	{
+		"city" : "Adisadel"
+	},
+	{
+		"city" : "Adendorp"
+	},
+	{
+		"city" : "Adelaide"
+	},
+	{
+		"city" : "Adekar Kebouche"
+	},
+	{
+		"city" : "Addo"
+	},
+	{
+		"city" : "Addis Ababa"
+	},
+	{
+		"city" : "Ad-Damazin"
+	},
+	{
+		"city" : "Ad Duqqi"
+	},
+	{
+		"city" : "Ad Dilinjat"
+	},
+	{
+		"city" : "Ad Darwa"
+	},
+	{
+		"city" : "Aconibe"
+	},
+	{
+		"city" : "Achada Monte"
+	},
+	{
+		"city" : "Accra"
+	},
+	{
+		"city" : "Abéché"
+	},
+	{
+		"city" : "Abuja"
+	},
+	{
+		"city" : "Abu Tij"
+	},
+	{
+		"city" : "Abu Qurqas"
+	},
+	{
+		"city" : "Abu Kabir"
+	},
+	{
+		"city" : "Abu Hummus"
+	},
+	{
+		"city" : "Abu Hammad"
+	},
+	{
+		"city" : "Abou el Hassan"
+	},
+	{
+		"city" : "Abomey-Calavi"
+	},
+	{
+		"city" : "Abomey"
+	},
+	{
+		"city" : "Abobo"
+	},
+	{
+		"city" : "Abidjan"
+	},
+	{
+		"city" : "Abeokuta"
+	},
+	{
+		"city" : "Abengourou"
+	},
+	{
+		"city" : "Abadou"
+	},
+	{
+		"city" : "Abadla"
+	},
+	{
+		"city" : "Aba"
+	},
+	{
+		"city" : "6th of October City"
+	},
+	{
+		"city" : "15 May City"
+	},
+	{
+		"city" : "'Ain el Melh"
+	},
+	{
+		"city" : "'Ain el Berd"
+	},
+	{
+		"city" : "'Ain Merane"
+	},
+	{
+		"city" : ""
+	}
+]}

@@ -140,7 +140,7 @@ function ChartLineISPDemo({chartType, description, keys, request, shouldFetch }:
       {shouldFetch && (
         <Query
           request={updatedRequest}
-          api="http://137.158.60.110:3000/query/line"
+          api="http://137.158.62.185:3000/query/line"
           onDataFetched={handleDataFetched}
           shouldFetch={shouldFetch}
         />

@@ -1,0 +1,9 @@
+export interface barData {
+    city: string;
+    isp: string;
+    countrycode: string
+    download: number;
+
+}
+
+export const bar: barData[] =[{"download":61.99996682149968,"city":"Bloemfontein","countrycode":"ZA","isp":"Afrihost (Pty) Ltd"},{"download":37.42670747422684,"city":"Bloemfontein","countrycode":"ZA","isp":"MTN SA"},{"download":17.814016405238156,"city":"Bloemfontein","countrycode":"ZA","isp":"Telkom SA Ltd."},{"download":40.79386686611818,"city":"Bloemfontein","countrycode":"ZA","isp":"Vodacom"},{"download":55.98916675190117,"city":"Cape Town","countrycode":"ZA","isp":"Afrihost (Pty) Ltd"},{"download":37.35905830375542,"city":"Cape Town","countrycode":"ZA","isp":"MTN SA"},{"download":26.985179339108058,"city":"Cape Town","countrycode":"ZA","isp":"Telkom SA Ltd."},{"download":45.405664376382816,"city":"Cape Town","countrycode":"ZA","isp":"Vodacom"},{"download":48.97790594244073,"city":"Durban","countrycode":"ZA","isp":"Afrihost (Pty) Ltd"},{"download":32.90134870287282,"city":"Durban","countrycode":"ZA","isp":"MTN SA"},{"download":21.121560369033176,"city":"Durban","countrycode":"ZA","isp":"Telkom SA Ltd."},{"download":32.58964422938203,"city":"Durban","countrycode":"ZA","isp":"Vodacom"},{"download":63.786649225813804,"city":"Johannesburg","countrycode":"ZA","isp":"Afrihost (Pty) Ltd"},{"download":38.80640867059857,"city":"Johannesburg","countrycode":"ZA","isp":"MTN SA"},{"download":23.142819530294133,"city":"Johannesburg","countrycode":"ZA","isp":"Telkom SA Ltd."},{"download":44.179682645981266,"city":"Johannesburg","countrycode":"ZA","isp":"Vodacom"},{"download":53.977008037520214,"city":"Pretoria","countrycode":"ZA","isp":"Afrihost (Pty) Ltd"},{"download":44.768023208033775,"city":"Pretoria","countrycode":"ZA","isp":"MTN SA"},{"download":25.59432063854791,"city":"Pretoria","countrycode":"ZA","isp":"Telkom SA Ltd."},{"download":34.46648359324515,"city":"Pretoria","countrycode":"ZA","isp":"Vodacom"}]

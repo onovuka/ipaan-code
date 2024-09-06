@@ -134,7 +134,7 @@ function ChartLineCountryDemo({chartType, request, keys, shouldFetch, africa }: 
       {shouldFetch && (
                       <Query
                           request={updatedRequest}
-                          api="http://137.158.60.110:3000/query/line"
+                          api="http://137.158.62.185:3000/query/line"
                           onDataFetched={handleDataFetched}
                           shouldFetch={shouldFetch}
                       />
@@ -146,7 +146,7 @@ function ChartLineCountryDemo({chartType, request, keys, shouldFetch, africa }: 
             
             <CardTitle>
 
-              Performance of internet per City Over Time
+              Performance of internet per Country Over Time
               
               </CardTitle>
 

@@ -1,0 +1,1 @@
+export const pieData = [{"city":"Cape Town","group_count":"979117","percentage_of_total":"49.86"},{"city":"Pretoria","group_count":"545638","percentage_of_total":"27.79"},{"city":"Durban","group_count":"405283","percentage_of_total":"20.64"},{"city":"Bloemfontein","group_count":"33613","percentage_of_total":"1.71"}]
