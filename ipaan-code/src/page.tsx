@@ -23,8 +23,6 @@ interface Requests {
 const Home: React.FC = () => {
     const [shouldFetch, setShouldFetch] = useState<boolean>(false);
 
-    const [hover, setHover] = useState<boolean>(true);
-
     const [overview, setOverview] = useState<boolean>(true);
 
     const [selectedOptions, setSelectedOptions] = useState<Requests>({
@@ -37,7 +35,7 @@ const Home: React.FC = () => {
         endDate: '',
     });
 
-    const [selectedFilter, setSelectedFilter] = useState<string>("ZA"); // Default filter
+    const [selectedFilter] = useState<string>("ZA"); // Default filter
 
     const handleSave = (newOptions: Requests) => {
         setSelectedOptions(newOptions);
@@ -62,7 +60,7 @@ const Home: React.FC = () => {
     const downloadHTML = () => {
 
         const htmlContent = document.documentElement.outerHTML;
-t
+
         const blob = new Blob([htmlContent], { type: 'text/html' });
         
         const link = document.createElement('a');
