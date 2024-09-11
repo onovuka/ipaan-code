@@ -1,3 +1,5 @@
+// Line chart to visualise internet performance over time per ISP
+
 import * as React from "react";
 import { CartesianGrid, Line, LineChart, XAxis, YAxis, Tooltip, Legend } from "recharts";
 import { chartConfigLine as chartConfig } from "@/data/lineConfig";
@@ -116,11 +118,17 @@ function ChartLineISPDemo({chartType, description, keys, request, shouldFetch }:
     const maxValue = data.reduce((max, item) => {
       if (activeChart === "lossrate") {
         return Math.max(max, item.lossrate || 0);
-      } else if (activeChart === "download") {
+      } 
+      
+      else if (activeChart === "download") {
         return Math.max(max, item.download || 0);
-      } else if (activeChart === "upload") {
+      } 
+      
+      else if (activeChart === "upload") {
         return Math.max(max, item.upload || 0);
-      } else if (activeChart === "latency") {
+      } 
+      
+      else if (activeChart === "latency") {
         return Math.max(max, item.latency || 0);
       }
       return max;
@@ -128,9 +136,13 @@ function ChartLineISPDemo({chartType, description, keys, request, shouldFetch }:
 
     if (activeChart === "lossrate") {
       return [0, maxValue + 10];
-    } else if (activeChart === "download" || activeChart === "upload" || activeChart === "latency") {
+    } 
+    
+    else if (activeChart === "download" || activeChart === "upload" || activeChart === "latency") {
       return [0, maxValue + 30];
-    } else {
+    } 
+    
+    else {
       return [0, 500];
     }
   }, [activeChart, data]);
@@ -203,7 +215,7 @@ function ChartLineISPDemo({chartType, description, keys, request, shouldFetch }:
               />
               <YAxis
                 label={{ value: yAxisLabel, angle: -90, position: 'insideLeft' }}
-                domain={yAxisDomain} // Apply the computed domain
+                domain={yAxisDomain} 
               />
               <Tooltip />
               <Legend />

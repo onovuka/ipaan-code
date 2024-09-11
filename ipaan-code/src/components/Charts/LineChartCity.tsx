@@ -1,3 +1,5 @@
+// Line chart to visualise internet performance over time in a city/cities
+
 import * as React from "react";
 import { CartesianGrid, Line, LineChart, XAxis, YAxis, Tooltip, Legend } from "recharts";
 import { chartConfigLine as chartConfig } from "@/data/lineConfig";
@@ -118,32 +120,24 @@ function LineChartCityDemo({ chartType, request, keys, shouldFetch }: Requests) 
 
   const groupedData = React.useMemo(() => groupDataByDate(), [data, activeChart]);
 
-  // Determine YAxis domain and label based on chartType
-  // const yAxisDomain = React.useMemo(() => {
-  //   if (activeChart === "lossrate") {
-  //     return [0, 30];
-  //   } else if (activeChart === "download" || activeChart === "upload") {
-  //     return [0, 180];
-  //   } else if (activeChart === "latency") {
-
-  //     return [0, 200];
-  //   } else {
-
-  //     return [0, 500];
-  //   }
-  // }, [activeChart, data]);
-
-  // Define domain based on chartType
+  // Defines domain based on the metrics being visualised.
   const yAxisDomain = React.useMemo(() => {
-    // Calculate max value based on activeChart
+    // Calculates maximum value of the y axis based on the activeChart
+
     const maxValue = data.reduce((max, item) => {
       if (activeChart === "lossrate") {
         return Math.max(max, item.lossrate || 0);
-      } else if (activeChart === "download") {
+      } 
+      
+      else if (activeChart === "download") {
         return Math.max(max, item.download || 0);
-      } else if (activeChart === "upload") {
+      } 
+      
+      else if (activeChart === "upload") {
         return Math.max(max, item.upload || 0);
-      } else if (activeChart === "latency") {
+      } 
+      
+      else if (activeChart === "latency") {
         return Math.max(max, item.latency || 0);
       }
       return max;
@@ -152,11 +146,16 @@ function LineChartCityDemo({ chartType, request, keys, shouldFetch }: Requests) 
     // Adjust domain based on chartType
     if (activeChart === "lossrate") {
       return [0, maxValue + 10];
-    } else if (activeChart === "download" || activeChart === "upload" || activeChart === "latency") {
+    } 
+    
+    else if (activeChart === "download" || activeChart === "upload" || activeChart === "latency") {
       return [0, maxValue + 30];
-    } else {
-      return [0, 500]; // Default domain for other cases
+    } 
+    
+    else {
+      return [0, 500]; 
     }
+
   }, [activeChart, data]);
 
   const yAxisLabel = React.useMemo(() => {

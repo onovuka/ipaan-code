@@ -1,15 +1,14 @@
 import React, { useRef, useEffect } from 'react';
 import { MapContainer, TileLayer, GeoJSON } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import geojsonData from '../../data/MapGeojson.json'; // Adjust the path based on your file location
-import L from 'leaflet'; // Import Leaflet to use its features
+import geojsonData from '../../data/MapGeojson.json';
+import L from 'leaflet'; 
 
 const MapComponent: React.FC = () => {
-  // Create refs to store the map and GeoJSON layer
+
   const mapRef = useRef<L.Map | null>(null);
   const geojsonRef = useRef<L.GeoJSON | null>(null);
 
-  // Function to determine color based on speed
   const getColor = (speed: number): string => {
 
     return speed > 50  ? '#800026' :
@@ -22,7 +21,6 @@ const MapComponent: React.FC = () => {
                   '#FFEDA0';
   };
 
-  // Function to style each feature
   const style = (feature: { properties: { speed: number; }; }): L.PathOptions => {
     const color = getColor(feature.properties.speed);
 
@@ -36,7 +34,6 @@ const MapComponent: React.FC = () => {
     };
   };
 
-  // Function to handle mouseover event
   const highlightFeature = (e: L.LeafletEvent) => {
     const layer = e.target as L.GeoJSON;
     layer.setStyle({
@@ -57,13 +54,7 @@ const MapComponent: React.FC = () => {
     }
   };
 
-  // Function to handle click event
-  const zoomToFeature = (e: L.LeafletEvent) => {
-    const map = e.target._map; // Access the map object
-    map.fitBounds(e.target.getBounds());
-  };
 
-  // Function to apply event listeners to each feature
   const onEachFeature = (feature: any, layer: L.Layer) => {
     
     // Create the popup content
@@ -81,8 +72,7 @@ const MapComponent: React.FC = () => {
     });
   };
 
-  // Function to create and add the legend
-// Function to create and add the legend
+
 const createLegend = (map: L.Map) => {
     const legend = new L.Control({ position: 'bottomright' });
 
@@ -90,11 +80,11 @@ const createLegend = (map: L.Map) => {
         const div = L.DomUtil.create('div', 'info legend');
         const grades = [0, 5, 10, 15, 20, 30, 40, 50];
 
-        // Add CSS for the legend container
+        
         div.style.backgroundColor = 'white';
-        div.style.padding = '4px 6px'; // Reduced padding
-        div.style.borderRadius = '3px'; // Reduced border-radius
-        div.style.boxShadow = '0 0 3px rgba(0,0,0,0.3)'; // Reduced box-shadow
+        div.style.padding = '4px 6px'; 
+        div.style.borderRadius = '3px';
+        div.style.boxShadow = '0 0 3px rgba(0,0,0,0.3)'; 
 
         // Loop through density intervals and generate a label with a colored square for each interval
         for (let i = 0; i < grades.length; i++) {
@@ -109,9 +99,8 @@ const createLegend = (map: L.Map) => {
     };
 
     legend.addTo(map);
-};
+  };
   
-  // Use effect to add the legend after the map is mounted
   useEffect(() => {
     if (mapRef.current) {
       createLegend(mapRef.current);
@@ -134,7 +123,7 @@ const createLegend = (map: L.Map) => {
         data={geojsonData as any}
         style={style}
         onEachFeature={onEachFeature}
-        ref={geojsonRef} // Use the ref to store the GeoJSON layer
+        ref={geojsonRef} 
       />
     </MapContainer>
   );
