@@ -1,3 +1,5 @@
+// Overview of Internet Performance on the continent
+
 import * as React from "react";
 import { CartesianGrid, Line, LineChart, XAxis, YAxis, Tooltip } from "recharts";
 import { chartConfigLine as chartConfig } from "@/data/lineConfig";
@@ -49,8 +51,6 @@ function LineAfrica({chartType, request, keys, shouldFetch, africa }: Requests) 
       setDescription("Country Statistic");
     }
   }, [africa]); 
-
-  console.log("Request for africa: ", request)
 
 
 

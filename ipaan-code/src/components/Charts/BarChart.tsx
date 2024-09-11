@@ -1,6 +1,5 @@
 "use client";
 
-
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Label } from "recharts";
 import { useState } from "react";
 import { ChartContainer, ChartTooltipContent } from "@/components/ui/chart";
@@ -55,9 +54,10 @@ function ChartBarDemo({ chartType, request, keys, shouldFetch }: Requests) {
 
   
 
+  // Telkom ISP is undefined in api response -> set default for chart
   const DEFAULT_ISP = "Telkom SA Ltd.";
 
-  // Transform data for x axis:
+  // Transforms the data for x axis
   const transformedData: TransformedData[] = data.reduce((acc: TransformedData[], curr) => {
     const isp = curr.isp ?? DEFAULT_ISP;
 

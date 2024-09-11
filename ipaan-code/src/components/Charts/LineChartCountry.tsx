@@ -1,4 +1,6 @@
-// Component for l
+// Line chart to visualise internet performance over time in a country/countries
+
+
 import * as React from "react";
 import { CartesianGrid, Line, LineChart, XAxis, YAxis, Tooltip } from "recharts";
 import { chartConfigLine as chartConfig } from "@/data/lineConfig";
@@ -7,7 +9,6 @@ import { useEffect, useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ChartContainer } from "@/components/ui/chart";
 
-// Fetching data from the API:
 import Query from "../Tools/Request"
 
 interface Requests {
@@ -20,13 +21,13 @@ interface Requests {
     startDate: string;
     endDate: string;
   };
-  filter: string; // name of country selected for mock data
-  chartType: keyof typeof chartConfig; // options: download or latency
+  filter: string; 
+  chartType: keyof typeof chartConfig; //  download (for donwload/upload speeds) or latency (for MinRTT/Packet Loss %)
   description: string;
-  keys: Array<keyof typeof chartConfig>; // New property
+  keys: Array<keyof typeof chartConfig>; 
   section: string; 
   shouldFetch: boolean;
-  africa: boolean; // if aggregate of entire continent
+  africa: boolean; // if chart is overview data
 }
 
 const colorPalette = [
@@ -57,21 +58,22 @@ function ChartLineCountryDemo({chartType, request, keys, shouldFetch, africa }: 
 
 
   const updatedRequest = africa ? {
+    // Empty fields if api is fetching continent overview data
     filters: {
-      countries: [],  // Empty array if africa is true
-      cities: [],     // Empty array if africa is true
-      isps: [],       // Empty array if africa is true
+      countries: [],  
+      cities: [],     
+      isps: [],       
     },
-    startDate: request.startDate, // Preserve existing startDate
-    endDate: request.endDate,     // Preserve existing endDate
+    startDate: request.startDate, 
+    endDate: request.endDate,     
   } : {
     filters: {
       countries: request.filters.countries, // Preserve existing countries
-      cities: [], // Set to empty
-      isps: [],   // Set to empty
+      cities: [], 
+      isps: [],   
     },
-    startDate: request.startDate, // Preserve existing startDate
-    endDate: request.endDate,     // Preserve existing endDate
+    startDate: request.startDate, 
+    endDate: request.endDate,     
   };
 
   const handleDataFetched = (fetchedData: any) => {
@@ -179,7 +181,7 @@ function ChartLineCountryDemo({chartType, request, keys, shouldFetch, africa }: 
             className="flex-1 w-full"
           >
             <LineChart
-              data={groupedData} // Provide grouped data to LineChart
+              data={groupedData} 
               margin={{ left: 12, right: 12 }}
               className="w-full"
             >
