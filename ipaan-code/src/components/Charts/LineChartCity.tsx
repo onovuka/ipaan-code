@@ -30,7 +30,7 @@ interface Requests {
     startDate: string;
     endDate: string;
   };
-  filter: string; // name of country selected for mock data
+  filter: string; 
   chartType: keyof typeof chartConfig; // options: download, latency, lossrate
   description: string;
   keys: Array<keyof typeof chartConfig>; // New property

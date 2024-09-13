@@ -6,14 +6,14 @@ const logoData = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAC7gAAAh6CAYAAAAc
 
 function Header() {
   return (
-    <Box mb="30px" display="flex" alignItems="center" justifyContent="space-between"> {/* Added justifyContent */}
-      <Box display="flex" alignItems="center"> {/* Grouped logo and text */}
+    <Box mb="30px" display="flex" alignItems="center" justifyContent="space-between"> 
+      <Box display="flex" alignItems="center"> 
         <img
           src={logoData}
           alt="IPAAN Logo"
           style={{ width: 150, height: 100, marginRight: 10, marginTop: -10 }}
         />
-        <Box display="flex" flexDirection="column"> {/* Added Box for vertical layout */}
+        <Box display="flex" flexDirection="column"> 
           <Typography variant="h2" fontWeight="bold" sx={{ m: "0 0 5px 0" }}>
             IPAAN
           </Typography>
@@ -22,7 +22,7 @@ function Header() {
             </Typography>
         </Box>
       </Box>
-      <Box position="absolute" top="50px" right="10px"> {/* Absolute positioning for Darkmode */}
+      <Box position="absolute" top="50px" right="10px">
         <Darkmode />
       </Box>
     </Box>
