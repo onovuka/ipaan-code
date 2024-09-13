@@ -33,7 +33,7 @@ function FilterList({ initialOptions, onChange, selectionType, max }: FilterList
   if (selectionType === "Country") {
     max = 6;
   } else {
-    max = 6; // This can be removed or customized later if needed
+    max = 6; 
   }
 
   return (

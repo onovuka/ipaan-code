@@ -39,7 +39,6 @@ const Home: React.FC = () => {
 
     const handleSave = (newOptions: Requests) => {
         setSelectedOptions(newOptions);
-        console.log("Saved for request ", selectedOptions);
         setShouldFetch(true);
     };
 

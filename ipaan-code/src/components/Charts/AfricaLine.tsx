@@ -72,8 +72,6 @@ function LineAfrica({chartType, request, keys, shouldFetch, africa }: Requests) 
     endDate: request.endDate,    
   };
 
-  console.log("Updated Request ", updatedRequest)
-
   const handleDataFetched = (fetchedData: any) => {
     const modifiedData = africa
       ? fetchedData.map((entry: any) => ({
@@ -83,13 +81,7 @@ function LineAfrica({chartType, request, keys, shouldFetch, africa }: Requests) 
       : fetchedData;
       
     setData(modifiedData);
-    console.log("Data for Africa", modifiedData); 
   };
-
-  console.log("Data for Africa", data); 
-
-
-
 
   const [activeChart, setActiveChart] = React.useState<keyof typeof chartConfig>(chartType);
 
