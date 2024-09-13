@@ -9,42 +9,32 @@ interface FilterListProps {
 }
 
 function FilterList({ initialOptions, onChange, selectionType, max }: FilterListProps) {
+  const [options, setOptions] = useState<Option[]>(initialOptions);
 
-    const [tempSelectedOptions, setTempSelectedOptions] = useState<Option[]>([]);
-    const [options, setOptions] = useState<Option[]>(initialOptions);
-
-      // Update options when initialOptions changes
+  // Update options when initialOptions changes
   useEffect(() => {
     setOptions(initialOptions);
   }, [initialOptions]);
-  
 
-// Handle change event for temporary selection
-const handleTempChange = (selected: Option[]) => {
-  if (selected.some(option => option.value === 'select all')) {
-    // Create a new array excluding the "select all" option
-    setTempSelectedOptions(initialOptions.filter(option => option.value !== 'select all'));
+  // Handle change event for temporary selection
+  const handleTempChange = (selected: Option[]) => {
+    if (selected.some(option => option.value === 'select all')) {
+      // Update options to disable "select all" and enable others
+      setOptions(prevOptions => prevOptions.map(option => (
+        option.value === 'select all' ? option : { ...option, disable: true }
+      )));
+    } else {
+      setOptions(initialOptions); // Reset options to initialOptions
+    }
     
-    // setTempSelectedOptions(selectedOptionsWithoutSelectAll);
-    
-    // Update options to disable "select all" and enable others
-    setOptions(prevOptions => prevOptions.map(option => (
-      option.value === 'select all' ? option : { ...option, disable: true }
-    )));
+    onChange(selected); // Propagate selected options up to parent component
+  };
+
+  if (selectionType === "Country") {
+    max = 6;
   } else {
-    setTempSelectedOptions(selected);
-    setOptions(initialOptions); // Reset options to initialOptions
+    max = 6; // This can be removed or customized later if needed
   }
-  
-  onChange(selected); // Propagate selected options up to parent component
-};
-
-if (selectionType == "Country"){
-  max=6
-} else{
-  max=6
-}
-
 
   return (
     <div>
@@ -60,12 +50,9 @@ if (selectionType == "Country"){
           </p>
         }
         onChange={handleTempChange}
-
-        />
-
+      />
     </div>
   );
-};
+}
 
 export default FilterList;
-

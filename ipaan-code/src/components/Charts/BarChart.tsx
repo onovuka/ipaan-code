@@ -37,6 +37,8 @@ function ChartBarDemo({ chartType, request, keys, shouldFetch }: Requests) {
 
   const [activeChart, setActiveChart] = useState<keyof typeof chartConfig>(chartType);
 
+  console.log(request);
+
 
   const updatedRequest = {
     filters: {

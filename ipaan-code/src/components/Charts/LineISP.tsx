@@ -135,7 +135,7 @@ function ChartLineISPDemo({chartType, description, keys, request, shouldFetch }:
     }, 0);
 
     if (activeChart === "lossrate") {
-      return [0, maxValue + 10];
+      return [0, 50];;
     } 
     
     else if (activeChart === "download" || activeChart === "upload" || activeChart === "latency") {
