@@ -33,3 +33,8 @@ The application fetches data from an API and allows users to filter data based o
 - Shadcn/ui components
 ### Back end 
 - Api
+
+## Installation
+Step-by-step guide on how to install the project locally.
+1. Vite requires Node.js version 18+ or 20+
+
