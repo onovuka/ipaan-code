@@ -2,7 +2,7 @@
 
 IPAAN is a Computer Science honours project at the University of Cape Town aiming to design and develop an internet performance analysis tool using internet performance data obtained from Measurement Lab.
 
-Project Members: Owethu Novuka and Kyler. Supervised by Josiah Chavula.
+Project Members: Owethu Novuka and Kyler Rienderhoff. Supervised by Josiah Chavula, PhD.
 
 The project was split into the following sections:
 
