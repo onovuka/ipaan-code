@@ -1,6 +1,7 @@
 // Component for making requests to the backend.
 
 import { useEffect } from 'react';
+import React from "react";
 
 interface Requests {
     filters: {

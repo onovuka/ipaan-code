@@ -1,5 +1,4 @@
-"use client";
-
+import React from "react";
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Label } from "recharts";
 import { useState } from "react";
 import { ChartContainer, ChartTooltipContent } from "@/components/ui/chart";

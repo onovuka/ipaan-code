@@ -1,5 +1,6 @@
 // leaflet-heat.d.ts
 import * as L from 'leaflet';
+import React from "react";
 
 declare module 'leaflet' {
   interface HeatLayerOptions extends L.LayerOptions {

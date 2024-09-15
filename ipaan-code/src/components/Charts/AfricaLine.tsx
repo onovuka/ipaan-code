@@ -1,6 +1,5 @@
 // Overview of Internet Performance on the continent
-
-import * as React from "react";
+import React from "react";
 import { CartesianGrid, Line, LineChart, XAxis, YAxis, Tooltip } from "recharts";
 import { chartConfigLine as chartConfig } from "@/data/lineConfig";
 import { useEffect, useState } from "react";

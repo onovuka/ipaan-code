@@ -1,6 +1,7 @@
 // Line chart to visualise internet performance over time per ISP
 
-import * as React from "react";
+
+import React from "react";
 import { CartesianGrid, Line, LineChart, XAxis, YAxis, Tooltip, Legend } from "recharts";
 import { chartConfigLine as chartConfig } from "@/data/lineConfig";
 import { useState } from "react";
