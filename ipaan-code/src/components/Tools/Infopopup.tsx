@@ -12,6 +12,8 @@ import {
 import { Info } from "lucide-react"
 
 import { definitions } from "@/data/Info"
+
+import React from "react";
   
 
 interface popupProps{
