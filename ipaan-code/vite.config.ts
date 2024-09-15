@@ -10,6 +10,6 @@ export default defineConfig({
     },
   },
 
-    base: './', // Change this if your app is served from a subdirectory
+    base: '/', 
 
 });
