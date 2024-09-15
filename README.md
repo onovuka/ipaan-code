@@ -42,7 +42,7 @@ Step-by-step guide on how to install and run the project locally.
 4. Navigate to the ipaan-code project directory.
 5. Install Dependencies: npm install
 6. Run the Development Server: npm run dev
-7. Open Your Browser: Navigate to http://localhost:3000 to view the dashboard.
+7. Open Your Browser: Navigate to http://localhost to view the dashboard.
 
 ## Usage
 - Interactive Charts: Explore broadband metrics using various chart types.
